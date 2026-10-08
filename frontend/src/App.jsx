@@ -12,6 +12,9 @@ const heatCells = [
   { id: 'c6', name: 'Green-belt boundary', lat: 28.708, lng: 77.163, priority: 53, covered_now: true },
   { id: 'c7', name: 'Dense housing south', lat: 28.7017, lng: 77.1539, priority: 91, covered_now: false },
   { id: 'c8', name: 'School-side lane', lat: 28.7055, lng: 77.1536, priority: 68, covered_now: false },
+  { id: 'c9', name: 'North industrial fringe', lat: 28.7089, lng: 77.1572, priority: 64, covered_now: false },
+  { id: 'c10', name: 'South service lane', lat: 28.698, lng: 77.1532, priority: 57, covered_now: false },
+  { id: 'c11', name: 'Factory gate cluster', lat: 28.7002, lng: 77.164, priority: 72, covered_now: false },
 ]
 
 const existingPoints = [

@@ -9,14 +9,15 @@
     {"id": "c5", "name": "Transit junction", "lat": 28.6990, "lng": 77.1560, "priority": 79, "covered_now": false},
     {"id": "c6", "name": "Green-belt boundary", "lat": 28.7080, "lng": 77.1630, "priority": 53, "covered_now": true},
     {"id": "c7", "name": "Dense housing south", "lat": 28.7017, "lng": 77.1539, "priority": 91, "covered_now": false},
-    {"id": "c8", "name": "School-side lane", "lat": 28.7055, "lng": 77.1536, "priority": 68, "covered_now": false}
+    {"id": "c8", "name": "School-side lane", "lat": 28.7055, "lng": 77.1536, "priority": 68, "covered_now": false},
+    {"id": "c9", "name": "North industrial fringe", "lat": 28.7089, "lng": 77.1572, "priority": 64, "covered_now": false},
+    {"id": "c10", "name": "South service lane", "lat": 28.6980, "lng": 77.1532, "priority": 57, "covered_now": false},
+    {"id": "c11", "name": "Factory gate cluster", "lat": 28.7002, "lng": 77.1640, "priority": 72, "covered_now": false}
   ],
   "sites": [
-    {"id": "s1", "name": "Workshop shade node", "kind": "Shade + water", "lat": 28.7015, "lng": 77.1594, "cost_lakh": 7, "covers": ["c1", "c2"]},
-    {"id": "s2", "name": "Bharat Nagar cool point", "kind": "Shade + water", "lat": 28.7035, "lng": 77.1555, "cost_lakh": 8, "covers": ["c3", "c7", "c8"]},
+    {"id": "s1", "name": "Workshop shade node", "kind": "Shade + water", "lat": 28.7015, "lng": 77.1615, "cost_lakh": 10, "covers": ["c2", "c11"]},
+    {"id": "s2", "name": "Bharat Nagar cool point", "kind": "Shade + water", "lat": 28.7035, "lng": 77.1555, "cost_lakh": 7, "covers": ["c3", "c8"]},
     {"id": "s3", "name": "Transit misting point", "kind": "Water + seating", "lat": 28.6996, "lng": 77.1569, "cost_lakh": 5, "covers": ["c1", "c5", "c7"]},
-    {"id": "s4", "name": "Market awning", "kind": "Shade + water", "lat": 28.7062, "lng": 77.1582, "cost_lakh": 6, "covers": ["c3", "c4", "c8"]},
-    {"id": "s5", "name": "Green-edge rest point", "kind": "Rest + water", "lat": 28.7072, "lng": 77.1624, "cost_lakh": 5, "covers": ["c4", "c6"]},
-    {"id": "s6", "name": "Housing lane canopy", "kind": "Shade + water", "lat": 28.7026, "lng": 77.1544, "cost_lakh": 7, "covers": ["c7", "c8"]}
+    {"id": "s4", "name": "North–south shade link", "kind": "Shade + water", "lat": 28.7032, "lng": 77.1550, "cost_lakh": 8, "covers": ["c9", "c10"]}
   ]
 }
