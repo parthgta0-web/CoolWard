@@ -1,0 +1,16 @@
+# JavaScript
+frontend/node_modules/
+frontend/dist/
+
+# Python
+.aws-sam/
+backend/__pycache__/
+backend/.venv/
+*.pyc
+
+# Local operating-system files
+.DS_Store
+Thumbs.db
+
+# Raw data is shared separately and is never committed to the public repository.
+data/raw/

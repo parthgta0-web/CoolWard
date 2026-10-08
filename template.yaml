@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: CoolWard local Lambda-compatible optimiser
+
+Globals:
+  Function:
+    Timeout: 10
+    MemorySize: 256
+    Runtime: python3.12
+
+Resources:
+  OptimiseFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: backend/
+      Handler: app.handler
+      Events:
+        OptimiseApi:
+          Type: Api
+          Properties:
+            Path: /api/optimise
+            Method: post
