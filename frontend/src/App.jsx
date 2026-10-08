@@ -67,11 +67,11 @@ function App() {
         <div>
           <p className="eyebrow">LAST-MILE HEAT REFUGE PLANNER</p>
           <h1>Turn heat maps into <em>accountable ward action.</em></h1>
-          <p className="hero-copy">Place shade, water and rest points where a fixed budget can give the most heat-priority residents a five-minute walk to relief.</p>
+          <p className="hero-copy">Place shade, water and rest points where a fixed budget can improve five-minute access across the highest heat-priority areas.</p>
         </div>
         <aside className="method-card">
           <span className="method-number">01</span>
-          <div><b>Transparent by design</b><p>Every recommended site shows its cost, coverage gain and planning basis.</p></div>
+          <div><b>Planning aid, not a forecast</b><p>Every recommended site shows its cost, coverage gain and planning basis.</p></div>
         </aside>
       </section>
 
@@ -126,7 +126,7 @@ function App() {
         </div>)}</div>
       </section>}
 
-      <footer>{plan?.disclaimer || 'Prototype only: existing relief locations are mapped in OpenStreetMap and unverified.'}</footer>
+      <footer>{plan?.disclaimer || 'Prototype only: existing relief locations are mapped in OpenStreetMap and unverified.'} Heat priority is not a health forecast; water quality, site permission and capacity are not assessed.</footer>
     </main>
   )
 }
