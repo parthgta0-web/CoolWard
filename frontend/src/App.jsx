@@ -23,24 +23,33 @@ const existingPoints = [
   { name: 'Mapped green-belt access', lat: 28.7084, lng: 77.1622 },
 ]
 
+const budgetTiers = [5, 10, 15, 20, 25, 30, 35]
+
 function App() {
   const [budget, setBudget] = useState(20)
   const [plan, setPlan] = useState(null)
+  const [budgetComparison, setBudgetComparison] = useState([])
   const [status, setStatus] = useState('Choose a budget, then generate a plan.')
   const selectedIds = useMemo(() => new Set(plan?.selected_sites?.flatMap((site) => site.covers) ?? []), [plan])
 
   async function generatePlan() {
     setStatus('Optimising coverage…')
     try {
-      const response = await fetch('/api/optimise', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ budget_lakh: budget }),
-      })
-      const body = await response.json()
-      if (!response.ok) throw new Error(body.error || 'The optimiser could not run.')
-      setPlan(body)
-      setStatus(`Plan generated: ${body.selected_sites.length} cooling points selected.`)
+      const optimiseForBudget = async (budgetLakh) => {
+        const response = await fetch('/api/optimise', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ budget_lakh: budgetLakh }),
+        })
+        const body = await response.json()
+        if (!response.ok) throw new Error(body.error || 'The optimiser could not run.')
+        return body
+      }
+      const plans = await Promise.all(budgetTiers.map(optimiseForBudget))
+      const activePlan = plans.find((item) => item.budget_lakh === budget)
+      setPlan(activePlan)
+      setBudgetComparison(plans)
+      setStatus(`Plan generated: ${activePlan.selected_sites.length} cooling points selected.`)
     } catch (error) {
       setStatus(`Local API unavailable — start SAM Local, then try again. (${error.message})`)
     }
@@ -109,6 +118,13 @@ function App() {
       </section>
 
       {plan && <section className="recommendations"><div><p className="eyebrow">RECOMMENDED LOCATIONS</p><h2>What the ward can do next</h2></div><div className="site-list">{plan.selected_sites.map((site, index) => <article key={site.id}><span>0{index + 1}</span><div><b>{site.name}</b><p>{site.kind} · ₹{site.cost_lakh} lakh · covers +{site.new_priority_covered} heat-priority score</p></div></article>)}</div></section>}
+
+      {budgetComparison.length > 0 && <section className="budget-comparison">
+        <div><p className="eyebrow">BUDGET TRADE-OFF</p><h2>Every ₹5L should buy a visible gain.</h2><p>This is the planning trade-off a ward officer can explain in a meeting.</p></div>
+        <div className="tier-list">{budgetComparison.map((tier) => <div className={tier.budget_lakh === budget ? 'tier active-tier' : 'tier'} key={tier.budget_lakh}>
+          <b>₹{tier.budget_lakh}L</b><div className="tier-track"><span style={{ width: `${tier.after_coverage_percent}%` }} /></div><strong>{tier.after_coverage_percent}%</strong><small>{tier.selected_sites.length} point{tier.selected_sites.length === 1 ? '' : 's'}</small>
+        </div>)}</div>
+      </section>}
 
       <footer>{plan?.disclaimer || 'Prototype only: existing relief locations are mapped in OpenStreetMap and unverified.'}</footer>
     </main>
