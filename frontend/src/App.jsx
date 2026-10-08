@@ -15,6 +15,7 @@ const heatCells = [
   { id: 'c9', name: 'North industrial fringe', lat: 28.7089, lng: 77.1572, priority: 64, covered_now: false },
   { id: 'c10', name: 'South service lane', lat: 28.698, lng: 77.1532, priority: 57, covered_now: false },
   { id: 'c11', name: 'Factory gate cluster', lat: 28.7002, lng: 77.164, priority: 72, covered_now: false },
+  { id: 'c12', name: 'East workshop cluster', lat: 28.7048, lng: 77.165, priority: 49, covered_now: false },
 ]
 
 const existingPoints = [
