@@ -1,0 +1,38 @@
+{
+  "300": {
+    "coverage_percent_by_budget": [
+      38.1159,
+      60.5503,
+      76.5945,
+      86.8742,
+      90.5876,
+      93.4544,
+      95.2262
+    ],
+    "larger_budget_never_reduces_coverage": true
+  },
+  "400": {
+    "coverage_percent_by_budget": [
+      58.1852,
+      85.6141,
+      94.344,
+      97.912,
+      97.912,
+      97.912,
+      97.912
+    ],
+    "larger_budget_never_reduces_coverage": true
+  },
+  "500": {
+    "coverage_percent_by_budget": [
+      78.8755,
+      95.8115,
+      96.9535,
+      97.912,
+      97.912,
+      97.912,
+      97.912
+    ],
+    "larger_budget_never_reduces_coverage": true
+  }
+}

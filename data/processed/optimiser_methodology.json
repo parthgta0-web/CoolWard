@@ -1,0 +1,495 @@
+{
+  "priority_formula": "modelled WorldPop population \u00d7 relative multi-scene heat rank",
+  "priority_label": "modelled priority score",
+  "coverage": "Shortest-path network distance on the Phase 1 filtered pedestrian graph; disconnected components have no path.",
+  "thresholds_m": [
+    300,
+    400,
+    500
+  ],
+  "default_threshold_m": 400,
+  "threshold_label": "network-distance planning assumption, not proof of a five-minute walk",
+  "snap_rule": "closest graph vertex; distances over 100 m fail and are not treated as reachable",
+  "candidate_cost": "\u20b95 lakh standard planning unit \u2014 not a procurement quote",
+  "optimiser": "deterministic greedy maximum marginal modelled-priority gain; ties resolve by candidate_id",
+  "scenario_interpretation": {
+    "primary_no_verified_full_service_baseline": {
+      "label": "Primary planning scenario \u2014 no verified full-service baseline",
+      "baseline_relief": [],
+      "baseline_note": "Mapped parks, toilets, and shelter are contextual OSM references only; none is assumed to be a functioning full heat-refuge service."
+    },
+    "mapped_shelter_sensitivity": {
+      "label": "Mapped-shelter sensitivity scenario",
+      "baseline_relief": [
+        {
+          "id": "way:1395134789",
+          "node": [
+            713273.6,
+            3175096.7
+          ],
+          "snap_distance_m": 22.18,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "shelter",
+          "status": "OSM-mapped, unverified"
+        }
+      ],
+      "baseline_note": "Only the single OSM-mapped shelter is counted, and it remains unverified."
+    },
+    "all_osm_amenities_stress_test": {
+      "label": "All-OSM-amenities stress test",
+      "baseline_relief": [
+        {
+          "id": "node:13683331383",
+          "node": [
+            713502.1,
+            3174602.9
+          ],
+          "snap_distance_m": 54.11,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "toilet",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:77968342",
+          "node": [
+            711787.3,
+            3175159.4
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:77968344",
+          "node": [
+            712148.0,
+            3175321.9
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:77968356",
+          "node": [
+            711525.1,
+            3174990.6
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154361",
+          "node": [
+            711870.4,
+            3174568.8
+          ],
+          "snap_distance_m": 4.96,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154367",
+          "node": [
+            711969.8,
+            3174168.8
+          ],
+          "snap_distance_m": 3.27,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154443",
+          "node": [
+            712326.4,
+            3174373.1
+          ],
+          "snap_distance_m": 2.15,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154507",
+          "node": [
+            712082.4,
+            3174223.5
+          ],
+          "snap_distance_m": 2.12,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154574",
+          "node": [
+            711774.7,
+            3174610.2
+          ],
+          "snap_distance_m": 2.54,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154635",
+          "node": [
+            711878.6,
+            3174260.2
+          ],
+          "snap_distance_m": 3.57,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154655",
+          "node": [
+            711706.0,
+            3174760.6
+          ],
+          "snap_distance_m": 2.25,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154703",
+          "node": [
+            711936.3,
+            3174414.7
+          ],
+          "snap_distance_m": 3.82,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154704",
+          "node": [
+            712517.8,
+            3174389.9
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154754",
+          "node": [
+            711857.8,
+            3174686.9
+          ],
+          "snap_distance_m": 1.02,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154776",
+          "node": [
+            712593.8,
+            3174812.4
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154794",
+          "node": [
+            711989.8,
+            3174491.4
+          ],
+          "snap_distance_m": 4.16,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154815",
+          "node": [
+            711909.4,
+            3174690.1
+          ],
+          "snap_distance_m": 0.91,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154824",
+          "node": [
+            712117.3,
+            3174239.2
+          ],
+          "snap_distance_m": 1.58,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154855",
+          "node": [
+            712002.1,
+            3174579.0
+          ],
+          "snap_distance_m": 3.18,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154911",
+          "node": [
+            712251.5,
+            3174341.0
+          ],
+          "snap_distance_m": 3.12,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78154942",
+          "node": [
+            712926.9,
+            3175108.3
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78164609",
+          "node": [
+            713445.3,
+            3174779.8
+          ],
+          "snap_distance_m": 54.2,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78164642",
+          "node": [
+            713308.9,
+            3175056.5
+          ],
+          "snap_distance_m": 94.64,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:78164686",
+          "node": [
+            713075.5,
+            3175198.0
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:293181412",
+          "node": [
+            713250.3,
+            3174568.3
+          ],
+          "snap_distance_m": 1.65,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:707631334",
+          "node": [
+            712188.2,
+            3174387.6
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:707631335",
+          "node": [
+            712036.4,
+            3174593.5
+          ],
+          "snap_distance_m": 5.71,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:707631336",
+          "node": [
+            711983.8,
+            3174668.1
+          ],
+          "snap_distance_m": 4.71,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:707631340",
+          "node": [
+            711425.7,
+            3174675.1
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:970834703",
+          "node": [
+            712134.4,
+            3174938.5
+          ],
+          "snap_distance_m": 7.14,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:970867250",
+          "node": [
+            712593.0,
+            3174462.4
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:970867251",
+          "node": [
+            712665.8,
+            3174601.8
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:970867252",
+          "node": [
+            712555.0,
+            3174392.4
+          ],
+          "snap_distance_m": 0.0,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:970867254",
+          "node": [
+            712668.2,
+            3174827.6
+          ],
+          "snap_distance_m": 3.35,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:970872138",
+          "node": [
+            712310.9,
+            3174846.5
+          ],
+          "snap_distance_m": 24.94,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:970872139",
+          "node": [
+            712357.0,
+            3175065.6
+          ],
+          "snap_distance_m": 39.83,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "park",
+          "status": "OSM-mapped, unverified"
+        },
+        {
+          "id": "way:1395134789",
+          "node": [
+            713273.6,
+            3175096.7
+          ],
+          "snap_distance_m": 22.18,
+          "snapped": true,
+          "snap_status": "snapped",
+          "relief_type": "shelter",
+          "status": "OSM-mapped, unverified"
+        }
+      ],
+      "baseline_note": "Unrealistic optimistic assumption: all OSM-mapped parks, toilet, and shelter are treated as functioning full-service heat refuges. This is not a recommended planning result."
+    }
+  },
+  "limitations": [
+    "Not people protected, service uptake, health impact, public-land verification, water safety, capacity, or accessibility verification.",
+    "Network fragmentation is preserved; inaccessible/disconnected demand remains uncovered.",
+    "No scenario verifies actual park service, water availability, public-land permission, or real procurement cost."
+  ]
+}

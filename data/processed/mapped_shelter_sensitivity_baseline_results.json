@@ -1,0 +1,26 @@
+{
+  "300": {
+    "scenario": "Mapped-shelter sensitivity scenario",
+    "baseline_assumption": "Only the single OSM-mapped shelter is counted, and it remains unverified.",
+    "network_distance_planning_assumption_m": 300,
+    "covered_demand_cells": 0,
+    "modelled_priority_coverage_percent": 0.0,
+    "modelled_priority_score_covered": 0.0
+  },
+  "400": {
+    "scenario": "Mapped-shelter sensitivity scenario",
+    "baseline_assumption": "Only the single OSM-mapped shelter is counted, and it remains unverified.",
+    "network_distance_planning_assumption_m": 400,
+    "covered_demand_cells": 0,
+    "modelled_priority_coverage_percent": 0.0,
+    "modelled_priority_score_covered": 0.0
+  },
+  "500": {
+    "scenario": "Mapped-shelter sensitivity scenario",
+    "baseline_assumption": "Only the single OSM-mapped shelter is counted, and it remains unverified.",
+    "network_distance_planning_assumption_m": 500,
+    "covered_demand_cells": 0,
+    "modelled_priority_coverage_percent": 0.0,
+    "modelled_priority_score_covered": 0.0
+  }
+}

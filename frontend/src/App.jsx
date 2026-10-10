@@ -1,134 +1,59 @@
-import { useMemo, useState } from 'react'
-import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet'
+import { useEffect, useMemo, useState } from 'react'
+import { CircleMarker, GeoJSON, MapContainer, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './App.css'
 
-const heatCells = [
-  { id: 'c1', name: 'Industrial east', lat: 28.7007, lng: 77.1607, priority: 95, covered_now: false },
-  { id: 'c2', name: 'Workshop lane', lat: 28.7022, lng: 77.1588, priority: 88, covered_now: false },
-  { id: 'c3', name: 'Bharat Nagar edge', lat: 28.704, lng: 77.1568, priority: 82, covered_now: false },
-  { id: 'c4', name: 'Market approach', lat: 28.706, lng: 77.1596, priority: 72, covered_now: true },
-  { id: 'c5', name: 'Transit junction', lat: 28.699, lng: 77.156, priority: 79, covered_now: false },
-  { id: 'c6', name: 'Green-belt boundary', lat: 28.708, lng: 77.163, priority: 53, covered_now: true },
-  { id: 'c7', name: 'Dense housing south', lat: 28.7017, lng: 77.1539, priority: 91, covered_now: false },
-  { id: 'c8', name: 'School-side lane', lat: 28.7055, lng: 77.1536, priority: 68, covered_now: false },
-  { id: 'c9', name: 'North industrial fringe', lat: 28.7089, lng: 77.1572, priority: 64, covered_now: false },
-  { id: 'c10', name: 'South service lane', lat: 28.698, lng: 77.1532, priority: 57, covered_now: false },
-  { id: 'c11', name: 'Factory gate cluster', lat: 28.7002, lng: 77.164, priority: 72, covered_now: false },
-  { id: 'c12', name: 'East workshop cluster', lat: 28.7048, lng: 77.165, priority: 49, covered_now: false },
-]
+const budgets = [5, 10, 15, 20, 25, 30, 35]
+const heatColour = (rank) => rank > 0.75 ? '#c94834' : rank > 0.5 ? '#e27b3d' : rank > 0.25 ? '#e9b958' : '#f7dfa4'
 
-const existingPoints = [
-  { name: 'Mapped park / relief point', lat: 28.7065, lng: 77.1606 },
-  { name: 'Mapped green-belt access', lat: 28.7084, lng: 77.1622 },
-]
-
-const budgetTiers = [5, 10, 15, 20, 25, 30, 35]
+function featureCentre(feature) {
+  const geometry = feature.geometry
+  if (geometry.type === 'Point') return [geometry.coordinates[1], geometry.coordinates[0]]
+  const ring = geometry.coordinates[0]
+  const [lng, lat] = ring.reduce((total, coordinate) => [total[0] + coordinate[0], total[1] + coordinate[1]], [0, 0])
+  return [lat / ring.length, lng / ring.length]
+}
 
 function App() {
   const [budget, setBudget] = useState(20)
-  const [plan, setPlan] = useState(null)
-  const [budgetComparison, setBudgetComparison] = useState([])
-  const [status, setStatus] = useState('Choose a budget, then generate a plan.')
-  const selectedIds = useMemo(() => new Set(plan?.selected_sites?.flatMap((site) => site.covers) ?? []), [plan])
+  const [plans, setPlans] = useState([])
+  const [layers, setLayers] = useState(null)
+  const [status, setStatus] = useState('Loading the local 400 m planning scenario…')
 
-  async function generatePlan() {
-    setStatus('Optimising coverage…')
+  async function loadPlans() {
+    setStatus('Loading validated local scenarios…')
     try {
-      const optimiseForBudget = async (budgetLakh) => {
-        const response = await fetch('/api/optimise', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ budget_lakh: budgetLakh }),
-        })
+      const responses = await Promise.all(budgets.map(async (budgetLakh) => {
+        const response = await fetch('/api/optimise', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ budget_lakh: budgetLakh }) })
         const body = await response.json()
         if (!response.ok) throw new Error(body.error || 'The optimiser could not run.')
         return body
-      }
-      const plans = await Promise.all(budgetTiers.map(optimiseForBudget))
-      const activePlan = plans.find((item) => item.budget_lakh === budget)
-      setPlan(activePlan)
-      setBudgetComparison(plans)
-      setStatus(`Plan generated: ${activePlan.selected_sites.length} cooling points selected.`)
-    } catch (error) {
-      setStatus(`Local API unavailable — start SAM Local, then try again. (${error.message})`)
-    }
+      }))
+      setPlans(responses); setLayers(responses[0].layers)
+      setStatus('Validated primary scenario loaded from SAM Local.')
+    } catch (error) { setStatus(`Local API unavailable — start SAM Local, then retry. (${error.message})`) }
   }
 
-  return (
-    <main>
-      <header className="topbar">
-        <div className="brand"><span className="brand-mark">C</span><span>CoolWard</span></div>
-        <div className="pilot-label">Delhi pilot · Wazirpur–Bharat Nagar</div>
-        <div className="status-dot"><span /> Local planning model</div>
-      </header>
+  useEffect(() => { loadPlans() }, [])
+  const plan = useMemo(() => plans.find((item) => item.budget_lakh === budget), [plans, budget])
+  const selectedIds = useMemo(() => new Set(plan?.selected_sites?.map((site) => site.candidate_id) ?? []), [plan])
+  const heatCells = layers?.heat_priority_demand_cells?.features ?? []
+  const candidates = layers?.possible_candidate_sites?.features ?? []
+  const references = layers?.osm_contextual_references?.features ?? []
 
-      <section className="hero">
-        <div>
-          <p className="eyebrow">LAST-MILE HEAT REFUGE PLANNER</p>
-          <h1>Turn heat maps into <em>accountable ward action.</em></h1>
-          <p className="hero-copy">Place shade, water and rest points where a fixed budget can improve five-minute access across the highest heat-priority areas.</p>
-        </div>
-        <aside className="method-card">
-          <span className="method-number">01</span>
-          <div><b>Planning aid, not a forecast</b><p>Every recommended site shows its cost, coverage gain and planning basis.</p></div>
-        </aside>
-      </section>
-
-      <section className="workspace">
-        <aside className="controls">
-          <p className="eyebrow">PLANNING INPUT</p>
-          <h2>Set the ward budget</h2>
-          <div className="budget-value">₹{budget} <small>lakh</small></div>
-          <input aria-label="Budget in lakh" type="range" min="5" max="35" step="5" value={budget} onChange={(event) => setBudget(Number(event.target.value))} />
-          <div className="range-labels"><span>₹5L</span><span>₹35L</span></div>
-          <button onClick={generatePlan}>Generate optimal plan <span>→</span></button>
-          <p className="api-status">{status}</p>
-
-          <div className="legend">
-            <p className="eyebrow">MAP LEGEND</p>
-            <div><i className="legend-dot high" /> High heat-priority cell</div>
-            <div><i className="legend-dot current" /> Existing mapped relief access</div>
-            <div><i className="legend-dot selected" /> Recommended cooling point</div>
-          </div>
-        </aside>
-
-        <section className="map-panel" aria-label="Heat-priority planning map">
-          <div className="map-title"><span>Heat-priority & access map</span><small>Demonstration planning inputs</small></div>
-          <MapContainer center={[28.7035, 77.1585]} zoom={15} scrollWheelZoom className="map">
-            <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            {heatCells.map((cell) => {
-              const improved = selectedIds.has(cell.id)
-              return <CircleMarker key={cell.id} center={[cell.lat, cell.lng]} radius={Math.max(9, cell.priority / 6)} pathOptions={{ color: improved ? '#0f766e' : '#e85d3f', fillColor: improved ? '#10b981' : '#ef6a4b', fillOpacity: 0.68, weight: 2 }}>
-                <Popup><b>{cell.name}</b><br />Heat-priority score: {cell.priority}{improved && <><br />Covered by this plan</>}</Popup>
-              </CircleMarker>
-            })}
-            {existingPoints.map((point) => <CircleMarker key={point.name} center={[point.lat, point.lng]} radius={6} pathOptions={{ color: '#1d4ed8', fillColor: '#60a5fa', fillOpacity: 1, weight: 2 }}><Popup>{point.name}<br />OSM-mapped, unverified</Popup></CircleMarker>)}
-            {plan?.selected_sites.map((site) => <CircleMarker key={site.id} center={[site.lat, site.lng]} radius={9} pathOptions={{ color: '#064e3b', fillColor: '#f4bf4f', fillOpacity: 1, weight: 3 }}><Popup><b>{site.name}</b><br />{site.kind}<br />₹{site.cost_lakh} lakh · +{site.new_priority_covered} priority score</Popup></CircleMarker>)}
-          </MapContainer>
-          <p className="map-note">Heat-priority cells combine demonstration heat and population inputs. Final satellite, population and walking-network layers will replace these documented prototype inputs.</p>
-        </section>
-      </section>
-
-      <section className="results">
-        <div className="result-intro"><p className="eyebrow">PLAN OUTCOME</p><h2>{plan ? 'A transparent coverage gain.' : 'Your plan will appear here.'}</h2></div>
-        <div className="metric"><span>Coverage today</span><b>{plan ? `${plan.baseline_coverage_percent}%` : '—'}</b><small>heat-priority score with mapped access</small></div>
-        <div className="metric accent"><span>Coverage after plan</span><b>{plan ? `${plan.after_coverage_percent}%` : '—'}</b><small>within the selected budget</small></div>
-        <div className="metric"><span>Budget used</span><b>{plan ? `₹${plan.spent_lakh}L` : '—'}</b><small>{plan ? `${plan.selected_sites.length} sites selected` : 'run the optimiser'}</small></div>
-      </section>
-
-      {plan && <section className="recommendations"><div><p className="eyebrow">RECOMMENDED LOCATIONS</p><h2>What the ward can do next</h2></div><div className="site-list">{plan.selected_sites.map((site, index) => <article key={site.id}><span>0{index + 1}</span><div><b>{site.name}</b><p>{site.kind} · ₹{site.cost_lakh} lakh · covers +{site.new_priority_covered} heat-priority score</p></div></article>)}</div></section>}
-
-      {budgetComparison.length > 0 && <section className="budget-comparison">
-        <div><p className="eyebrow">BUDGET TRADE-OFF</p><h2>Every ₹5L should buy a visible gain.</h2><p>This is the planning trade-off a ward officer can explain in a meeting.</p></div>
-        <div className="tier-list">{budgetComparison.map((tier) => <div className={tier.budget_lakh === budget ? 'tier active-tier' : 'tier'} key={tier.budget_lakh}>
-          <b>₹{tier.budget_lakh}L</b><div className="tier-track"><span style={{ width: `${tier.after_coverage_percent}%` }} /></div><strong>{tier.after_coverage_percent}%</strong><small>{tier.selected_sites.length} point{tier.selected_sites.length === 1 ? '' : 's'}</small>
-        </div>)}</div>
-      </section>}
-
-      <footer>{plan?.disclaimer || 'Prototype only: existing relief locations are mapped in OpenStreetMap and unverified.'} Heat priority is not a health forecast; water quality, site permission and capacity are not assessed.</footer>
-    </main>
-  )
+  return <main>
+    <header className="topbar"><div className="brand"><span className="brand-mark">C</span><span>CoolWard</span></div><div className="pilot-label">Wazirpur–Bharat Nagar pilot · local planning scenario</div><div className="status-dot"><span /> SAM Local API</div></header>
+    <section className="hero"><div><p className="eyebrow">LOCAL HEAT-RESPITE PLANNING AID</p><h1>Prioritise possible sites with <em>transparent assumptions.</em></h1><p>Primary scenario: no verified full-service baseline. Results use a 400 m network-distance planning assumption, not a guaranteed five-minute walk.</p></div><button className="reload" onClick={loadPlans}>Refresh local scenario</button></section>
+    <section className="workspace">
+      <aside className="controls"><p className="eyebrow">PRIMARY SCENARIO</p><h2>Budget selection</h2><div className="budget-value">₹{budget}<small> lakh</small></div><input aria-label="Budget in lakh" type="range" min="5" max="35" step="5" value={budget} onChange={(event) => setBudget(Number(event.target.value))} /><div className="range-labels"><span>₹5L</span><span>₹35L</span></div><p className="api-status">{status}</p><div className="legend"><p className="eyebrow">MAP LAYERS</p><div><i className="legend-dot heat" /> Relative heat-priority demand cell</div><div><i className="legend-dot reference" /> OSM-mapped contextual reference — unverified</div><div><i className="legend-dot candidate" /> Possible site</div><div><i className="legend-dot selected" /> Selected possible site</div></div></aside>
+      <section className="map-panel" aria-label="Primary planning scenario map"><div className="map-title"><span>Modelled-priority & possible-site map</span><small>400 m network-distance planning assumption</small></div><MapContainer center={[28.6805, 77.1705]} zoom={15} scrollWheelZoom className="map">{layers && <><GeoJSON data={layers.context} style={{ color: '#8393a1', weight: 1, fillOpacity: 0.02 }} /><GeoJSON data={layers.filtered_pedestrian_network} style={{ color: '#8e9aa4', weight: 1, opacity: 0.55 }} /><GeoJSON data={layers.heat_priority_demand_cells} style={(feature) => ({ color: '#fffaf0', weight: 0.5, fillColor: heatColour(feature.properties.relative_heat_rank), fillOpacity: 0.72 })} /><GeoJSON data={layers.reporting_core} style={{ color: '#142b42', weight: 3, fillOpacity: 0 }} />{references.map((feature) => <CircleMarker key={`reference-${feature.properties.osm_key}`} center={featureCentre(feature)} radius={4} pathOptions={{ color: '#63778a', fillColor: '#b9c5ce', fillOpacity: 0.85, weight: 1 }}><Popup><b>OSM-mapped contextual reference — unverified</b><br />{feature.properties.relief_type}</Popup></CircleMarker>)}{candidates.map((feature) => { const selected = selectedIds.has(feature.properties.candidate_id); return <CircleMarker key={feature.properties.candidate_id} center={featureCentre(feature)} radius={selected ? 8 : 3} pathOptions={{ color: selected ? '#5c3610' : '#88959d', fillColor: selected ? '#f2b94b' : '#edf1f2', fillOpacity: selected ? 1 : 0.55, weight: selected ? 2 : 1 }}><Popup><b>{selected ? 'Selected possible site' : 'Possible site'}</b><br />{feature.properties.candidate_id}<br />Requires land, access, water, and operations verification.</Popup></CircleMarker>})}</>}</MapContainer><p className="map-note">Only reporting-core demand-cell centroids are scored. OSM parks, toilet, and shelter remain unverified contextual references and are not counted as baseline service.</p></section>
+    </section>
+    <section className="results"><div className="result-intro"><p className="eyebrow">SELECTED PLAN</p><h2>{plan ? `₹${budget}L scenario` : 'Waiting for SAM Local'}</h2></div><div className="metric accent"><span>Modelled-priority coverage</span><b>{plan ? `${plan.modelled_priority_coverage_percent}%` : '—'}</b><small>Not people protected or health impact</small></div><div className="metric"><span>Actual spend</span><b>{plan ? `₹${plan.spent_lakh}L` : '—'}</b><small>{plan ? `${plan.selected_sites.length} standard planning unit${plan.selected_sites.length === 1 ? '' : 's'}` : 'Loading'}</small></div><div className="metric"><span>Unallocated</span><b>{plan ? `₹${plan.unallocated_lakh}L` : '—'}</b><small>{plan?.unallocated_lakh ? 'No further candidate has marginal gain' : 'No remaining budget'}</small></div></section>
+    <section className="assumptions" aria-label="Planning limitations and assumptions"><p className="eyebrow">LIMITATIONS & ASSUMPTIONS</p><div className="assumption-grid"><span>Relative multi-scene land-surface-temperature priority</span><span>2024 modelled WorldPop population</span><span>Unverified OSM context</span><span>Fragmented pedestrian network</span><span>One structurally unreachable demand cell</span><span>No verified full-service baseline assumed</span></div></section>
+    {plan && <section className="recommendations"><div><p className="eyebrow">SELECTED POSSIBLE SITES</p><h2>Verification is required before any action.</h2><p>Each is a ₹5 lakh standard planning unit — not a procurement quote.</p></div><div className="site-list">{plan.selected_sites.map((site, index) => <article key={site.candidate_id}><span>0{index + 1}</span><div><b>{site.candidate_id}</b><p>Marginal modelled-priority gain: {site.marginal_gain_modelled_priority_score.toFixed(2)} · {site.newly_covered_demand_cells} newly covered demand cells</p><small>Possible site — requires land, access, water, and operations verification.</small></div></article>)}</div></section>}
+    {plans.length > 0 && <section className="budget-comparison"><div><p className="eyebrow">BUDGET TRADE-OFF</p><h2>Marginal gains plateau after ₹20L.</h2><p>Extra budget remains unallocated where no possible candidate adds modelled-priority gain.</p></div><div className="tier-list">{plans.map((tier) => <div className={tier.budget_lakh === budget ? 'tier active-tier' : 'tier'} key={tier.budget_lakh}><b>₹{tier.budget_lakh}L</b><div className="tier-track"><span style={{ width: `${tier.modelled_priority_coverage_percent}%` }} /></div><strong>{tier.modelled_priority_coverage_percent}%</strong><small>{tier.unallocated_lakh ? `₹${tier.unallocated_lakh}L unallocated` : `₹${tier.spent_lakh}L spent`}</small></div>)}</div></section>}
+    <footer>{plan?.disclaimer || 'Local scenario data is loading.'} {plan?.standard_unit_cost_label}</footer>
+  </main>
 }
 
 export default App

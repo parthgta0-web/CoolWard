@@ -15,42 +15,21 @@ def load_data():
 
 
 def optimise(data, budget_lakh):
-    """Choose sites greedily by newly covered heat-priority score per lakh."""
-    cells = {cell["id"]: cell for cell in data["cells"]}
-    covered = {cell["id"] for cell in data["cells"] if cell["covered_now"]}
-    selected = []
-    spent = 0
-    remaining = list(data["sites"])
-
-    while remaining:
-        viable = [site for site in remaining if spent + site["cost_lakh"] <= budget_lakh]
-        if not viable:
-            break
-
-        def value(site):
-            new_score = sum(cells[cell_id]["priority"] for cell_id in site["covers"] if cell_id not in covered)
-            return new_score / site["cost_lakh"]
-
-        best = max(viable, key=value)
-        gain = sum(cells[cell_id]["priority"] for cell_id in best["covers"] if cell_id not in covered)
-        if gain == 0:
-            break
-        selected.append({**best, "new_priority_covered": gain})
-        covered.update(best["covers"])
-        spent += best["cost_lakh"]
-        remaining.remove(best)
-
-    total_priority = sum(cell["priority"] for cell in data["cells"])
-    baseline_priority = sum(cell["priority"] for cell in data["cells"] if cell["covered_now"])
+    """Return a pre-validated primary 400 m planning scenario result."""
+    try:
+        plan = data["plans"][str(budget_lakh)]
+    except KeyError as error:
+        supported = ", ".join(sorted(data["plans"], key=int))
+        raise ValueError(f"Budget must be one of ₹{supported.replace(', ', 'L, ₹')}L.") from error
     return {
-        "budget_lakh": budget_lakh,
-        "spent_lakh": spent,
-        "selected_sites": selected,
-        "baseline_coverage_percent": round(100 * baseline_priority / total_priority, 1),
-        "after_coverage_percent": round(100 * sum(cells[cell_id]["priority"] for cell_id in covered) / total_priority, 1),
-        "new_priority_covered": sum(site["new_priority_covered"] for site in selected),
+        **plan,
         "study_area": data["study_area"],
+        "scenario": data["scenario"],
+        "network_distance_planning_assumption_m": data["network_distance_planning_assumption_m"],
+        "standard_unit_cost_label": data["standard_unit_cost_label"],
         "disclaimer": data["disclaimer"],
+        "limitations": data["limitations"],
+        "layers": data["layers"],
     }
 
 
@@ -59,8 +38,8 @@ def handler(event, context):
     try:
         body = json.loads(event.get("body") or "{}")
         budget_lakh = int(body.get("budget_lakh", 20))
-        if budget_lakh < 5 or budget_lakh > 50:
-            raise ValueError("Budget must be between ₹5 lakh and ₹50 lakh.")
+        if budget_lakh not in {5, 10, 15, 20, 25, 30, 35}:
+            raise ValueError("Budget must be one of ₹5L, ₹10L, ₹15L, ₹20L, ₹25L, ₹30L, or ₹35L.")
         result = optimise(load_data(), budget_lakh)
         logger.info("Optimisation complete", extra={"budget_lakh": budget_lakh, "site_count": len(result["selected_sites"])})
         return response(200, result)

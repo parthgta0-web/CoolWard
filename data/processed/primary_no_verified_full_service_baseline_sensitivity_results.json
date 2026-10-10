@@ -1,0 +1,764 @@
+{
+  "300": [
+    {
+      "budget_lakh": 5,
+      "spent_lakh": 5,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 2295.938068,
+          "newly_covered_demand_cells": 19,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 300,
+      "modelled_priority_coverage_percent": 38.1159,
+      "modelled_priority_score_covered": 2295.938068,
+      "new_modelled_priority_score_covered": 2295.938068,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 10,
+      "spent_lakh": 10,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 2295.938068,
+          "newly_covered_demand_cells": 19,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1351.350841,
+          "newly_covered_demand_cells": 17,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 300,
+      "modelled_priority_coverage_percent": 60.5503,
+      "modelled_priority_score_covered": 3647.288909,
+      "new_modelled_priority_score_covered": 3647.288909,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 15,
+      "spent_lakh": 15,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 2295.938068,
+          "newly_covered_demand_cells": 19,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1351.350841,
+          "newly_covered_demand_cells": 17,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_016",
+          "marginal_gain_modelled_priority_score": 966.434933,
+          "newly_covered_demand_cells": 10,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 300,
+      "modelled_priority_coverage_percent": 76.5945,
+      "modelled_priority_score_covered": 4613.723842,
+      "new_modelled_priority_score_covered": 4613.723842,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 20,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 2295.938068,
+          "newly_covered_demand_cells": 19,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1351.350841,
+          "newly_covered_demand_cells": 17,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_016",
+          "marginal_gain_modelled_priority_score": 966.434933,
+          "newly_covered_demand_cells": 10,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_020",
+          "marginal_gain_modelled_priority_score": 619.205847,
+          "newly_covered_demand_cells": 4,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 300,
+      "modelled_priority_coverage_percent": 86.8742,
+      "modelled_priority_score_covered": 5232.929689,
+      "new_modelled_priority_score_covered": 5232.929689,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 25,
+      "spent_lakh": 25,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 2295.938068,
+          "newly_covered_demand_cells": 19,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1351.350841,
+          "newly_covered_demand_cells": 17,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_016",
+          "marginal_gain_modelled_priority_score": 966.434933,
+          "newly_covered_demand_cells": 10,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_020",
+          "marginal_gain_modelled_priority_score": 619.205847,
+          "newly_covered_demand_cells": 4,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_038",
+          "marginal_gain_modelled_priority_score": 223.68002,
+          "newly_covered_demand_cells": 4,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 300,
+      "modelled_priority_coverage_percent": 90.5876,
+      "modelled_priority_score_covered": 5456.609709,
+      "new_modelled_priority_score_covered": 5456.609709,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 30,
+      "spent_lakh": 30,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 2295.938068,
+          "newly_covered_demand_cells": 19,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1351.350841,
+          "newly_covered_demand_cells": 17,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_016",
+          "marginal_gain_modelled_priority_score": 966.434933,
+          "newly_covered_demand_cells": 10,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_020",
+          "marginal_gain_modelled_priority_score": 619.205847,
+          "newly_covered_demand_cells": 4,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_038",
+          "marginal_gain_modelled_priority_score": 223.68002,
+          "newly_covered_demand_cells": 4,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 172.683521,
+          "newly_covered_demand_cells": 3,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 300,
+      "modelled_priority_coverage_percent": 93.4544,
+      "modelled_priority_score_covered": 5629.29323,
+      "new_modelled_priority_score_covered": 5629.29323,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 35,
+      "spent_lakh": 35,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 2295.938068,
+          "newly_covered_demand_cells": 19,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1351.350841,
+          "newly_covered_demand_cells": 17,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_016",
+          "marginal_gain_modelled_priority_score": 966.434933,
+          "newly_covered_demand_cells": 10,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_020",
+          "marginal_gain_modelled_priority_score": 619.205847,
+          "newly_covered_demand_cells": 4,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_038",
+          "marginal_gain_modelled_priority_score": 223.68002,
+          "newly_covered_demand_cells": 4,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 172.683521,
+          "newly_covered_demand_cells": 3,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_037",
+          "marginal_gain_modelled_priority_score": 106.724588,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 300,
+      "modelled_priority_coverage_percent": 95.2262,
+      "modelled_priority_score_covered": 5736.017818,
+      "new_modelled_priority_score_covered": 5736.017818,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    }
+  ],
+  "400": [
+    {
+      "budget_lakh": 5,
+      "spent_lakh": 5,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 3504.82781,
+          "newly_covered_demand_cells": 30,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 400,
+      "modelled_priority_coverage_percent": 58.1852,
+      "modelled_priority_score_covered": 3504.82781,
+      "new_modelled_priority_score_covered": 3504.82781,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 10,
+      "spent_lakh": 10,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 3504.82781,
+          "newly_covered_demand_cells": 30,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1652.197235,
+          "newly_covered_demand_cells": 22,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 400,
+      "modelled_priority_coverage_percent": 85.6141,
+      "modelled_priority_score_covered": 5157.025045,
+      "new_modelled_priority_score_covered": 5157.025045,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 15,
+      "spent_lakh": 15,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 3504.82781,
+          "newly_covered_demand_cells": 30,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1652.197235,
+          "newly_covered_demand_cells": 22,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_025",
+          "marginal_gain_modelled_priority_score": 525.8553,
+          "newly_covered_demand_cells": 5,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 400,
+      "modelled_priority_coverage_percent": 94.344,
+      "modelled_priority_score_covered": 5682.880345,
+      "new_modelled_priority_score_covered": 5682.880345,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 20,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 3504.82781,
+          "newly_covered_demand_cells": 30,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1652.197235,
+          "newly_covered_demand_cells": 22,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_025",
+          "marginal_gain_modelled_priority_score": 525.8553,
+          "newly_covered_demand_cells": 5,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 214.917596,
+          "newly_covered_demand_cells": 3,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 400,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 25,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 3504.82781,
+          "newly_covered_demand_cells": 30,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1652.197235,
+          "newly_covered_demand_cells": 22,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_025",
+          "marginal_gain_modelled_priority_score": 525.8553,
+          "newly_covered_demand_cells": 5,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 214.917596,
+          "newly_covered_demand_cells": 3,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 400,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 30,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 3504.82781,
+          "newly_covered_demand_cells": 30,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1652.197235,
+          "newly_covered_demand_cells": 22,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_025",
+          "marginal_gain_modelled_priority_score": 525.8553,
+          "newly_covered_demand_cells": 5,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 214.917596,
+          "newly_covered_demand_cells": 3,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 400,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 35,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_019",
+          "marginal_gain_modelled_priority_score": 3504.82781,
+          "newly_covered_demand_cells": 30,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_046",
+          "marginal_gain_modelled_priority_score": 1652.197235,
+          "newly_covered_demand_cells": 22,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_025",
+          "marginal_gain_modelled_priority_score": 525.8553,
+          "newly_covered_demand_cells": 5,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 214.917596,
+          "newly_covered_demand_cells": 3,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 400,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    }
+  ],
+  "500": [
+    {
+      "budget_lakh": 5,
+      "spent_lakh": 5,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 4751.11975,
+          "newly_covered_demand_cells": 46,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 500,
+      "modelled_priority_coverage_percent": 78.8755,
+      "modelled_priority_score_covered": 4751.11975,
+      "new_modelled_priority_score_covered": 4751.11975,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 10,
+      "spent_lakh": 10,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 4751.11975,
+          "newly_covered_demand_cells": 46,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_039",
+          "marginal_gain_modelled_priority_score": 1020.153369,
+          "newly_covered_demand_cells": 12,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 500,
+      "modelled_priority_coverage_percent": 95.8115,
+      "modelled_priority_score_covered": 5771.273118,
+      "new_modelled_priority_score_covered": 5771.273118,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 15,
+      "spent_lakh": 15,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 4751.11975,
+          "newly_covered_demand_cells": 46,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_039",
+          "marginal_gain_modelled_priority_score": 1020.153369,
+          "newly_covered_demand_cells": 12,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 68.789545,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 500,
+      "modelled_priority_coverage_percent": 96.9535,
+      "modelled_priority_score_covered": 5840.062664,
+      "new_modelled_priority_score_covered": 5840.062664,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 20,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 4751.11975,
+          "newly_covered_demand_cells": 46,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_039",
+          "marginal_gain_modelled_priority_score": 1020.153369,
+          "newly_covered_demand_cells": 12,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 68.789545,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_030",
+          "marginal_gain_modelled_priority_score": 57.735277,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 500,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 25,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 4751.11975,
+          "newly_covered_demand_cells": 46,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_039",
+          "marginal_gain_modelled_priority_score": 1020.153369,
+          "newly_covered_demand_cells": 12,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 68.789545,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_030",
+          "marginal_gain_modelled_priority_score": 57.735277,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 500,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 30,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 4751.11975,
+          "newly_covered_demand_cells": 46,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_039",
+          "marginal_gain_modelled_priority_score": 1020.153369,
+          "newly_covered_demand_cells": 12,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 68.789545,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_030",
+          "marginal_gain_modelled_priority_score": 57.735277,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 500,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    },
+    {
+      "budget_lakh": 35,
+      "spent_lakh": 20,
+      "selected_sites": [
+        {
+          "candidate_id": "candidate_026",
+          "marginal_gain_modelled_priority_score": 4751.11975,
+          "newly_covered_demand_cells": 46,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_039",
+          "marginal_gain_modelled_priority_score": 1020.153369,
+          "newly_covered_demand_cells": 12,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_045",
+          "marginal_gain_modelled_priority_score": 68.789545,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        },
+        {
+          "candidate_id": "candidate_030",
+          "marginal_gain_modelled_priority_score": 57.735277,
+          "newly_covered_demand_cells": 1,
+          "cost_lakh": 5,
+          "label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+        }
+      ],
+      "scenario": "Primary planning scenario \u2014 no verified full-service baseline",
+      "network_distance_planning_assumption_m": 500,
+      "modelled_priority_coverage_percent": 97.912,
+      "modelled_priority_score_covered": 5897.797941,
+      "new_modelled_priority_score_covered": 5897.797941,
+      "coverage_label": "modelled-priority coverage; not people protected or health impact"
+    }
+  ]
+}

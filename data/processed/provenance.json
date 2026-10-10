@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "generated_at_utc": "2026-10-10T10:08:15.287223+00:00",
+    "crs_for_distance_area_network": "EPSG:32643",
+    "reporting_rule": "Only demand cells with centroid in study_area_core are included in summary outcomes.",
+    "network_distance_planning_assumption_m": 400,
+    "network_distance_note": "Planning assumption only; not proof of a five-minute walk.",
+    "heat_method": "Median of supplied, QA-unmasked Landsat C2 L2 ST_B10 values from scenes 01, 02, 03 and 05, transformed to Celsius then ranked relatively across supplied WorldPop-scale context cells.",
+    "heat_limitations": "Relative multi-scene land-surface-temperature priority only; not single-date temperature, peak-afternoon air temperature, measured exposure, or intervention effect.",
+    "excluded_landsat_scene": "scene_04: excluded completely by the pilot-data rule",
+    "core_summary": {
+      "demand_cells": 61,
+      "population_people": 12840.48,
+      "cells_with_heat": 61,
+      "relative_heat_rank_min": 0.0678,
+      "relative_heat_rank_median": 0.4492,
+      "relative_heat_rank_max": 0.9746
+    },
+    "existing_relief_by_type": {
+      "park": 35,
+      "toilet": 1,
+      "shelter": 1
+    },
+    "possible_candidate_sites": 100,
+    "pedestrian_graph": {
+      "nodes": 1936,
+      "edges": 2309,
+      "components": 26
+    }
+  },
+  "raw_files": [
+    {
+      "path": "landsat/landsat/scene_01/QA_PIXEL.tif",
+      "sha256": "10d519dcca263078625cb1096d350674aa3527dfc0242ec5663e3de7233b6ae0"
+    },
+    {
+      "path": "landsat/landsat/scene_01/SR_B4.tif",
+      "sha256": "0d4e4805e269e08a3f7a0c102cd4fbbf8c16c0c8de2e5123411ed4f65432ea65"
+    },
+    {
+      "path": "landsat/landsat/scene_01/SR_B5.tif",
+      "sha256": "f3fea7a47120895df21327d2420deeadd5bc6f2e1619a3cc383ba0f8db5dc7e9"
+    },
+    {
+      "path": "landsat/landsat/scene_01/ST_B10.tif",
+      "sha256": "df6a292c9c089af8b5a83ff6af9201ecf1059ecbb2a4c978dbe7107576820fe6"
+    },
+    {
+      "path": "landsat/landsat/scene_02/QA_PIXEL.tif",
+      "sha256": "cc0905d4ec5a7254b707fbe39f972932532a915fd98dccab6e2c12b9a40c0de2"
+    },
+    {
+      "path": "landsat/landsat/scene_02/SR_B4.tif",
+      "sha256": "b2a793596ba6309d40c9ce1ff488240ed750eae52a3555a774c435d1c3348247"
+    },
+    {
+      "path": "landsat/landsat/scene_02/SR_B5.tif",
+      "sha256": "f7a5a0169977b0dea67708b5b4a13b4b9f411824888b7184028d9537fa22aded"
+    },
+    {
+      "path": "landsat/landsat/scene_02/ST_B10.tif",
+      "sha256": "6404f4bb35b46178bd1cff31a446c18de0ed19671b2cb6dea9f2489fc0ca9b60"
+    },
+    {
+      "path": "landsat/landsat/scene_03/QA_PIXEL.tif",
+      "sha256": "0469f9cf696f799fc53dc4949f30a2c904fba0a069985de0347e4dfaacb1ff40"
+    },
+    {
+      "path": "landsat/landsat/scene_03/SR_B4.tif",
+      "sha256": "b0be6fde9ce62448dc1136524c76d2c5cbddaf1490197d39c257aa6aac3a836d"
+    },
+    {
+      "path": "landsat/landsat/scene_03/SR_B5.tif",
+      "sha256": "d77eebbca828eca33bac6aedf9e9c8bd348ab909e8867c04ef4f6b6b255292dc"
+    },
+    {
+      "path": "landsat/landsat/scene_03/ST_B10.tif",
+      "sha256": "fd36e109ed742dd92f5527227a2283f43044954a59bc4b61ac61cc2562e85986"
+    },
+    {
+      "path": "landsat/landsat/scene_04/QA_PIXEL.tif",
+      "sha256": "3e8d08a403f979b4be335c259c05ce6d93a8f9b66db6d108084e63bdd51242a5"
+    },
+    {
+      "path": "landsat/landsat/scene_04/SR_B4.tif",
+      "sha256": "00fdb40c44b77853f0e1cb438409c67e4f3b0f93037b49093dddcdc4a3e1880b"
+    },
+    {
+      "path": "landsat/landsat/scene_04/SR_B5.tif",
+      "sha256": "cef32eaf00b8343db6c53f98f7ab318ab26ed4576497a52116aaec06b41eb3ef"
+    },
+    {
+      "path": "landsat/landsat/scene_04/ST_B10.tif",
+      "sha256": "fb23f87c6d394c1335325ef6a8fb5620bbb43e23fbff0a1ad1f3699c725f47a5"
+    },
+    {
+      "path": "landsat/landsat/scene_05/QA_PIXEL.tif",
+      "sha256": "da7afbe64523a7b63fa87af4e1bfc5d49bad476e1a628060fe7954b0d1f73e61"
+    },
+    {
+      "path": "landsat/landsat/scene_05/SR_B4.tif",
+      "sha256": "6a31596d117e426169e0096aec2ee77b8a6553bdb5af9b80dad0f2e853a31ff7"
+    },
+    {
+      "path": "landsat/landsat/scene_05/SR_B5.tif",
+      "sha256": "10523b8fb73af524767d1a9b13131445660a57e620bb77bd55e14d809ce37e4f"
+    },
+    {
+      "path": "landsat/landsat/scene_05/ST_B10.tif",
+      "sha256": "1cc7d5f196646387bb080498e3a51ef7669ccdc54a72865fb09bddd4c16779f9"
+    },
+    {
+      "path": "landsat/landsat_scene_shortlist.csv",
+      "sha256": "8e01f79a509247241ac0fbbc90dfd8d50c9a11fc5a7d01bea1988a55722efb25"
+    },
+    {
+      "path": "landsat/study_area_context.geojson",
+      "sha256": "8b0f9c3529d6f21ee7e70cfa75f76c2608d064571965bd0078f2ac7ae345ee1c"
+    },
+    {
+      "path": "osm/buildings.geojson",
+      "sha256": "0570cfd6261ec57fba8bbe48361240945fa255b51679223d25a4443e18502af2"
+    },
+    {
+      "path": "osm/existing_relief_locations.geojson",
+      "sha256": "3ace3205fb31858937720c38607e5296ddfd20dfb3c365c8f2a4b7b8b85399e1"
+    },
+    {
+      "path": "osm/parks_green_areas.geojson",
+      "sha256": "035fca20251d17ded062bd2d86136ced86f23aed457248dd0a286e59dd3e8149"
+    },
+    {
+      "path": "osm/schools_community_facilities.geojson",
+      "sha256": "f0729c7748fda3b1258266b4693d29bb142fbebeca74f47aa73655fb18f92fcd"
+    },
+    {
+      "path": "osm/walkable_roads_paths.geojson",
+      "sha256": "c006a7de6bae7028ee3e55f33a92c5e687a8623e6f94695740ba218b551595c3"
+    },
+    {
+      "path": "population/study_area_context.geojson",
+      "sha256": "7a8a1a2918ebdb79d49fadbb229ed5337a53cb38631b1c4e68d1ecbba5fd48a1"
+    },
+    {
+      "path": "population/worldpop_2024_100m_study_area.tif",
+      "sha256": "6dc976077d7ed877bbb4fc9282aeed0b524a16fd361ec5560eaea670418afc9f"
+    },
+    {
+      "path": "population/worldpop_2024_100m_study_area.tif.aux.xml",
+      "sha256": "d2262bbe7bd524744b0afd158b8dbdfd274e8f87337839b087ef86fa0afa9016"
+    },
+    {
+      "path": "sources.csv",
+      "sha256": "5559aeee1c04b682ef85c377150d964e5362f24bf187863e89319b76e4549003"
+    },
+    {
+      "path": "study_area_context.geojson",
+      "sha256": "7a8a1a2918ebdb79d49fadbb229ed5337a53cb38631b1c4e68d1ecbba5fd48a1"
+    },
+    {
+      "path": "study_area_core.geojson",
+      "sha256": "081b92964a4900e5e08431e8070cff3913495828376d0d1f7026cf8e5cda96b7"
+    },
+    {
+      "path": "study_area_roads.geojson",
+      "sha256": "40638672ba474dc492fd28f196081af77655fbf166a7d064af0af616fb592058"
+    }
+  ],
+  "source_record_copied_from": "data/raw/datawp/datawp/sources.csv",
+  "processing_constants": {
+    "metric_crs": "EPSG:32643",
+    "lst_scale": 0.00341802,
+    "lst_offset_kelvin": 149.0,
+    "candidate_context_distance_m": 30,
+    "candidate_spacing_m": 100
+  }
+}

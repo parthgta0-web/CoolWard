@@ -1,0 +1,710 @@
+{
+  "generated_at_utc": "2026-10-10T10:08:10.429665+00:00",
+  "raw_root": "C:\\Users\\parth\\Documents\\Codex\\2026-10-05\\hey-x20\\CoolWard\\data\\raw\\datawp\\datawp",
+  "canonical_boundaries": {
+    "core": "study_area_core.geojson",
+    "context": "study_area_context.geojson"
+  },
+  "files": [
+    {
+      "path": "landsat/landsat/scene_01/QA_PIXEL.tif",
+      "bytes": 357017,
+      "sha256": "10d519dcca263078625cb1096d350674aa3527dfc0242ec5663e3de7233b6ae0"
+    },
+    {
+      "path": "landsat/landsat/scene_01/SR_B4.tif",
+      "bytes": 90411463,
+      "sha256": "0d4e4805e269e08a3f7a0c102cd4fbbf8c16c0c8de2e5123411ed4f65432ea65"
+    },
+    {
+      "path": "landsat/landsat/scene_01/SR_B5.tif",
+      "bytes": 91391572,
+      "sha256": "f3fea7a47120895df21327d2420deeadd5bc6f2e1619a3cc383ba0f8db5dc7e9"
+    },
+    {
+      "path": "landsat/landsat/scene_01/ST_B10.tif",
+      "bytes": 86628333,
+      "sha256": "df6a292c9c089af8b5a83ff6af9201ecf1059ecbb2a4c978dbe7107576820fe6"
+    },
+    {
+      "path": "landsat/landsat/scene_02/QA_PIXEL.tif",
+      "bytes": 411892,
+      "sha256": "cc0905d4ec5a7254b707fbe39f972932532a915fd98dccab6e2c12b9a40c0de2"
+    },
+    {
+      "path": "landsat/landsat/scene_02/SR_B4.tif",
+      "bytes": 91751178,
+      "sha256": "b2a793596ba6309d40c9ce1ff488240ed750eae52a3555a774c435d1c3348247"
+    },
+    {
+      "path": "landsat/landsat/scene_02/SR_B5.tif",
+      "bytes": 91443109,
+      "sha256": "f7a5a0169977b0dea67708b5b4a13b4b9f411824888b7184028d9537fa22aded"
+    },
+    {
+      "path": "landsat/landsat/scene_02/ST_B10.tif",
+      "bytes": 86088921,
+      "sha256": "6404f4bb35b46178bd1cff31a446c18de0ed19671b2cb6dea9f2489fc0ca9b60"
+    },
+    {
+      "path": "landsat/landsat/scene_03/QA_PIXEL.tif",
+      "bytes": 341160,
+      "sha256": "0469f9cf696f799fc53dc4949f30a2c904fba0a069985de0347e4dfaacb1ff40"
+    },
+    {
+      "path": "landsat/landsat/scene_03/SR_B4.tif",
+      "bytes": 89798319,
+      "sha256": "b0be6fde9ce62448dc1136524c76d2c5cbddaf1490197d39c257aa6aac3a836d"
+    },
+    {
+      "path": "landsat/landsat/scene_03/SR_B5.tif",
+      "bytes": 90492862,
+      "sha256": "d77eebbca828eca33bac6aedf9e9c8bd348ab909e8867c04ef4f6b6b255292dc"
+    },
+    {
+      "path": "landsat/landsat/scene_03/ST_B10.tif",
+      "bytes": 85164378,
+      "sha256": "fd36e109ed742dd92f5527227a2283f43044954a59bc4b61ac61cc2562e85986"
+    },
+    {
+      "path": "landsat/landsat/scene_04/QA_PIXEL.tif",
+      "bytes": 538428,
+      "sha256": "3e8d08a403f979b4be335c259c05ce6d93a8f9b66db6d108084e63bdd51242a5"
+    },
+    {
+      "path": "landsat/landsat/scene_04/SR_B4.tif",
+      "bytes": 93260084,
+      "sha256": "00fdb40c44b77853f0e1cb438409c67e4f3b0f93037b49093dddcdc4a3e1880b"
+    },
+    {
+      "path": "landsat/landsat/scene_04/SR_B5.tif",
+      "bytes": 93278999,
+      "sha256": "cef32eaf00b8343db6c53f98f7ab318ab26ed4576497a52116aaec06b41eb3ef"
+    },
+    {
+      "path": "landsat/landsat/scene_04/ST_B10.tif",
+      "bytes": 87506186,
+      "sha256": "fb23f87c6d394c1335325ef6a8fb5620bbb43e23fbff0a1ad1f3699c725f47a5"
+    },
+    {
+      "path": "landsat/landsat/scene_05/QA_PIXEL.tif",
+      "bytes": 436979,
+      "sha256": "da7afbe64523a7b63fa87af4e1bfc5d49bad476e1a628060fe7954b0d1f73e61"
+    },
+    {
+      "path": "landsat/landsat/scene_05/SR_B4.tif",
+      "bytes": 92107044,
+      "sha256": "6a31596d117e426169e0096aec2ee77b8a6553bdb5af9b80dad0f2e853a31ff7"
+    },
+    {
+      "path": "landsat/landsat/scene_05/SR_B5.tif",
+      "bytes": 92036993,
+      "sha256": "10523b8fb73af524767d1a9b13131445660a57e620bb77bd55e14d809ce37e4f"
+    },
+    {
+      "path": "landsat/landsat/scene_05/ST_B10.tif",
+      "bytes": 85691690,
+      "sha256": "1cc7d5f196646387bb080498e3a51ef7669ccdc54a72865fb09bddd4c16779f9"
+    },
+    {
+      "path": "landsat/landsat_scene_shortlist.csv",
+      "bytes": 1928,
+      "sha256": "8e01f79a509247241ac0fbbc90dfd8d50c9a11fc5a7d01bea1988a55722efb25"
+    },
+    {
+      "path": "landsat/study_area_context.geojson",
+      "bytes": 1586,
+      "sha256": "8b0f9c3529d6f21ee7e70cfa75f76c2608d064571965bd0078f2ac7ae345ee1c"
+    },
+    {
+      "path": "osm/buildings.geojson",
+      "bytes": 577730,
+      "sha256": "0570cfd6261ec57fba8bbe48361240945fa255b51679223d25a4443e18502af2"
+    },
+    {
+      "path": "osm/existing_relief_locations.geojson",
+      "bytes": 20424,
+      "sha256": "3ace3205fb31858937720c38607e5296ddfd20dfb3c365c8f2a4b7b8b85399e1"
+    },
+    {
+      "path": "osm/parks_green_areas.geojson",
+      "bytes": 15711,
+      "sha256": "035fca20251d17ded062bd2d86136ced86f23aed457248dd0a286e59dd3e8149"
+    },
+    {
+      "path": "osm/schools_community_facilities.geojson",
+      "bytes": 7764,
+      "sha256": "f0729c7748fda3b1258266b4693d29bb142fbebeca74f47aa73655fb18f92fcd"
+    },
+    {
+      "path": "osm/walkable_roads_paths.geojson",
+      "bytes": 366897,
+      "sha256": "c006a7de6bae7028ee3e55f33a92c5e687a8623e6f94695740ba218b551595c3"
+    },
+    {
+      "path": "population/study_area_context.geojson",
+      "bytes": 512,
+      "sha256": "7a8a1a2918ebdb79d49fadbb229ed5337a53cb38631b1c4e68d1ecbba5fd48a1"
+    },
+    {
+      "path": "population/worldpop_2024_100m_study_area.tif",
+      "bytes": 1321,
+      "sha256": "6dc976077d7ed877bbb4fc9282aeed0b524a16fd361ec5560eaea670418afc9f"
+    },
+    {
+      "path": "population/worldpop_2024_100m_study_area.tif.aux.xml",
+      "bytes": 452,
+      "sha256": "d2262bbe7bd524744b0afd158b8dbdfd274e8f87337839b087ef86fa0afa9016"
+    },
+    {
+      "path": "sources.csv",
+      "bytes": 5948,
+      "sha256": "5559aeee1c04b682ef85c377150d964e5362f24bf187863e89319b76e4549003"
+    },
+    {
+      "path": "study_area_context.geojson",
+      "bytes": 512,
+      "sha256": "7a8a1a2918ebdb79d49fadbb229ed5337a53cb38631b1c4e68d1ecbba5fd48a1"
+    },
+    {
+      "path": "study_area_core.geojson",
+      "bytes": 403,
+      "sha256": "081b92964a4900e5e08431e8070cff3913495828376d0d1f7026cf8e5cda96b7"
+    },
+    {
+      "path": "study_area_roads.geojson",
+      "bytes": 578,
+      "sha256": "40638672ba474dc492fd28f196081af77655fbf166a7d064af0af616fb592058"
+    }
+  ],
+  "vectors": {
+    "landsat/study_area_context.geojson": {
+      "features": 1,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "osm/buildings.geojson": {
+      "features": 645,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "osm/existing_relief_locations.geojson": {
+      "features": 37,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "osm/parks_green_areas.geojson": {
+      "features": 36,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "osm/schools_community_facilities.geojson": {
+      "features": 8,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "osm/walkable_roads_paths.geojson": {
+      "features": 723,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "population/study_area_context.geojson": {
+      "features": 1,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "study_area_context.geojson": {
+      "features": 1,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "study_area_core.geojson": {
+      "features": 1,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    },
+    "study_area_roads.geojson": {
+      "features": 1,
+      "crs": "EPSG:4326",
+      "invalid_geometries": 0,
+      "missing_or_empty_geometries": 0
+    }
+  },
+  "rasters": {
+    "landsat/landsat/scene_01/QA_PIXEL.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": null,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_01/SR_B4.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_01/SR_B5.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_01/ST_B10.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_02/QA_PIXEL.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": null,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_02/SR_B4.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_02/SR_B5.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_02/ST_B10.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_03/QA_PIXEL.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": null,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_03/SR_B4.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_03/SR_B5.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_03/ST_B10.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_04/QA_PIXEL.tif": {
+      "crs": "EPSG:32643",
+      "width": 7531,
+      "height": 7681,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": null,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": false
+    },
+    "landsat/landsat/scene_04/SR_B4.tif": {
+      "crs": "EPSG:32643",
+      "width": 7531,
+      "height": 7681,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": false
+    },
+    "landsat/landsat/scene_04/SR_B5.tif": {
+      "crs": "EPSG:32643",
+      "width": 7531,
+      "height": 7681,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": false
+    },
+    "landsat/landsat/scene_04/ST_B10.tif": {
+      "crs": "EPSG:32643",
+      "width": 7531,
+      "height": 7681,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": false
+    },
+    "landsat/landsat/scene_05/QA_PIXEL.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": null,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_05/SR_B4.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_05/SR_B5.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "landsat/landsat/scene_05/ST_B10.tif": {
+      "crs": "EPSG:32643",
+      "width": 7591,
+      "height": 7741,
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "nodata": 0.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    },
+    "population/worldpop_2024_100m_study_area.tif": {
+      "crs": "EPSG:4326",
+      "width": 14,
+      "height": 11,
+      "resolution": [
+        0.00083333333000013,
+        0.00083333333000013
+      ],
+      "nodata": -9999.0,
+      "geometric_context_overlap": true,
+      "pipeline_eligible": true
+    }
+  },
+  "osm_duplicate_ids": [
+    {
+      "element": "way",
+      "id": "350079684",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "77968342",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "77968344",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "77968356",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154361",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154367",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154443",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154507",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154574",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154635",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154655",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154703",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154704",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154754",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154776",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154794",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154815",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154824",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154855",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154911",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78154942",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78164609",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78164642",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "78164686",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "293181412",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "707631334",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "707631335",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "707631336",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "707631340",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "970834703",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "970867250",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "970867251",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "970867252",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "970867254",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "970872138",
+      "occurrences": 2
+    },
+    {
+      "element": "way",
+      "id": "970872139",
+      "occurrences": 2
+    }
+  ],
+  "roads": {
+    "private_or_no_access_segments": 95,
+    "highway_counts": {
+      "residential": 419,
+      "service": 140,
+      "footway": 137,
+      "living_street": 21,
+      "path": 5,
+      "steps": 1
+    },
+    "missing_values": {
+      "id": 0,
+      "element": 0,
+      "highway": 0,
+      "access": 614
+    },
+    "pedestrian_graph": {
+      "eligible_segments": 628,
+      "nodes": 1936,
+      "edges": 2309,
+      "components": 26,
+      "largest_component_nodes": 1130,
+      "largest_component_share": 0.5837,
+      "usable": true
+    }
+  },
+  "warnings": [
+    "36 OSM element/id pairs occur in more than one OSM layer; de-duplication is required by use case.",
+    "95 private/no-access road segments are excluded from the pedestrian graph.",
+    "scene_04 is excluded completely by the pilot-data rule; it is never used in derived layers."
+  ],
+  "errors": []
+}

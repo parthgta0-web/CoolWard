@@ -1,0 +1,26 @@
+{
+  "300": {
+    "scenario": "All-OSM-amenities stress test",
+    "baseline_assumption": "Unrealistic optimistic assumption: all OSM-mapped parks, toilet, and shelter are treated as functioning full-service heat refuges. This is not a recommended planning result.",
+    "network_distance_planning_assumption_m": 300,
+    "covered_demand_cells": 56,
+    "modelled_priority_coverage_percent": 94.7579,
+    "modelled_priority_score_covered": 5707.807788
+  },
+  "400": {
+    "scenario": "All-OSM-amenities stress test",
+    "baseline_assumption": "Unrealistic optimistic assumption: all OSM-mapped parks, toilet, and shelter are treated as functioning full-service heat refuges. This is not a recommended planning result.",
+    "network_distance_planning_assumption_m": 400,
+    "covered_demand_cells": 60,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941
+  },
+  "500": {
+    "scenario": "All-OSM-amenities stress test",
+    "baseline_assumption": "Unrealistic optimistic assumption: all OSM-mapped parks, toilet, and shelter are treated as functioning full-service heat refuges. This is not a recommended planning result.",
+    "network_distance_planning_assumption_m": 500,
+    "covered_demand_cells": 60,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941
+  }
+}

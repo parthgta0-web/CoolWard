@@ -1,0 +1,79 @@
+[
+  {
+    "budget_lakh": 5,
+    "spent_lakh": 0,
+    "selected_sites": [],
+    "scenario": "All-OSM-amenities stress test",
+    "network_distance_planning_assumption_m": 400,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941,
+    "new_modelled_priority_score_covered": 0.0,
+    "coverage_label": "modelled-priority coverage; not people protected or health impact"
+  },
+  {
+    "budget_lakh": 10,
+    "spent_lakh": 0,
+    "selected_sites": [],
+    "scenario": "All-OSM-amenities stress test",
+    "network_distance_planning_assumption_m": 400,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941,
+    "new_modelled_priority_score_covered": 0.0,
+    "coverage_label": "modelled-priority coverage; not people protected or health impact"
+  },
+  {
+    "budget_lakh": 15,
+    "spent_lakh": 0,
+    "selected_sites": [],
+    "scenario": "All-OSM-amenities stress test",
+    "network_distance_planning_assumption_m": 400,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941,
+    "new_modelled_priority_score_covered": 0.0,
+    "coverage_label": "modelled-priority coverage; not people protected or health impact"
+  },
+  {
+    "budget_lakh": 20,
+    "spent_lakh": 0,
+    "selected_sites": [],
+    "scenario": "All-OSM-amenities stress test",
+    "network_distance_planning_assumption_m": 400,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941,
+    "new_modelled_priority_score_covered": 0.0,
+    "coverage_label": "modelled-priority coverage; not people protected or health impact"
+  },
+  {
+    "budget_lakh": 25,
+    "spent_lakh": 0,
+    "selected_sites": [],
+    "scenario": "All-OSM-amenities stress test",
+    "network_distance_planning_assumption_m": 400,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941,
+    "new_modelled_priority_score_covered": 0.0,
+    "coverage_label": "modelled-priority coverage; not people protected or health impact"
+  },
+  {
+    "budget_lakh": 30,
+    "spent_lakh": 0,
+    "selected_sites": [],
+    "scenario": "All-OSM-amenities stress test",
+    "network_distance_planning_assumption_m": 400,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941,
+    "new_modelled_priority_score_covered": 0.0,
+    "coverage_label": "modelled-priority coverage; not people protected or health impact"
+  },
+  {
+    "budget_lakh": 35,
+    "spent_lakh": 0,
+    "selected_sites": [],
+    "scenario": "All-OSM-amenities stress test",
+    "network_distance_planning_assumption_m": 400,
+    "modelled_priority_coverage_percent": 97.912,
+    "modelled_priority_score_covered": 5897.797941,
+    "new_modelled_priority_score_covered": 0.0,
+    "coverage_label": "modelled-priority coverage; not people protected or health impact"
+  }
+]

@@ -1,0 +1,2651 @@
+{
+  "demand_cells": [
+    {
+      "id": "demand_028",
+      "node": [
+        711733.8,
+        3174798.9
+      ],
+      "snap_distance_m": 21.66,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.159561,
+      "relative_heat_rank": 0.47457627,
+      "modelled_priority_score": 101.16047
+    },
+    {
+      "id": "demand_029",
+      "node": [
+        711824.5,
+        3174813.6
+      ],
+      "snap_distance_m": 33.27,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 212.898834,
+      "relative_heat_rank": 0.27118644,
+      "modelled_priority_score": 57.735277
+    },
+    {
+      "id": "demand_030",
+      "node": [
+        711941.3,
+        3174799.4
+      ],
+      "snap_distance_m": 40.4,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 210.336349,
+      "relative_heat_rank": 0.38983051,
+      "modelled_priority_score": 81.995526
+    },
+    {
+      "id": "demand_031",
+      "node": [
+        712014.9,
+        3174773.0
+      ],
+      "snap_distance_m": 30.34,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 203.667313,
+      "relative_heat_rank": 0.61864407,
+      "modelled_priority_score": 125.997575
+    },
+    {
+      "id": "demand_032",
+      "node": [
+        712092.3,
+        3174830.8
+      ],
+      "snap_distance_m": 52.12,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 209.032608,
+      "relative_heat_rank": 0.60169492,
+      "modelled_priority_score": 125.773857
+    },
+    {
+      "id": "demand_039",
+      "node": [
+        711683.5,
+        3174701.5
+      ],
+      "snap_distance_m": 26.87,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.159561,
+      "relative_heat_rank": 0.74576271,
+      "modelled_priority_score": 158.966452
+    },
+    {
+      "id": "demand_040",
+      "node": [
+        711742.7,
+        3174686.3
+      ],
+      "snap_distance_m": 1.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.159561,
+      "relative_heat_rank": 0.46610169,
+      "modelled_priority_score": 99.354033
+    },
+    {
+      "id": "demand_041",
+      "node": [
+        711840.0,
+        3174679.7
+      ],
+      "snap_distance_m": 17.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.539459,
+      "relative_heat_rank": 0.23728814,
+      "modelled_priority_score": 50.67038
+    },
+    {
+      "id": "demand_042",
+      "node": [
+        711909.4,
+        3174690.1
+      ],
+      "snap_distance_m": 2.87,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.539459,
+      "relative_heat_rank": 0.15254237,
+      "modelled_priority_score": 32.573816
+    },
+    {
+      "id": "demand_043",
+      "node": [
+        712001.7,
+        3174676.7
+      ],
+      "snap_distance_m": 19.73,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 215.180649,
+      "relative_heat_rank": 0.3220339,
+      "modelled_priority_score": 69.295463
+    },
+    {
+      "id": "demand_044",
+      "node": [
+        712051.6,
+        3174688.2
+      ],
+      "snap_distance_m": 18.39,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 219.382874,
+      "relative_heat_rank": 0.31355932,
+      "modelled_priority_score": 68.789545
+    },
+    {
+      "id": "demand_045",
+      "node": [
+        712203.4,
+        3174703.5
+      ],
+      "snap_distance_m": 53.33,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 223.936493,
+      "relative_heat_rank": 0.45762712,
+      "modelled_priority_score": 102.479412
+    },
+    {
+      "id": "demand_051",
+      "node": [
+        711653.3,
+        3174588.9
+      ],
+      "snap_distance_m": 11.29,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 212.047058,
+      "relative_heat_rank": 0.88983051,
+      "modelled_priority_score": 188.685942
+    },
+    {
+      "id": "demand_052",
+      "node": [
+        711734.5,
+        3174592.7
+      ],
+      "snap_distance_m": 10.98,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.159561,
+      "relative_heat_rank": 0.65254237,
+      "modelled_priority_score": 139.095646
+    },
+    {
+      "id": "demand_053",
+      "node": [
+        711829.3,
+        3174594.4
+      ],
+      "snap_distance_m": 2.76,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 211.622971,
+      "relative_heat_rank": 0.36440678,
+      "modelled_priority_score": 77.116845
+    },
+    {
+      "id": "demand_054",
+      "node": [
+        711903.9,
+        3174586.5
+      ],
+      "snap_distance_m": 11.48,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 212.47261,
+      "relative_heat_rank": 0.24576271,
+      "modelled_priority_score": 52.217845
+    },
+    {
+      "id": "demand_055",
+      "node": [
+        712002.1,
+        3174579.0
+      ],
+      "snap_distance_m": 23.17,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 216.044556,
+      "relative_heat_rank": 0.20338983,
+      "modelled_priority_score": 43.941266
+    },
+    {
+      "id": "demand_056",
+      "node": [
+        712036.4,
+        3174593.5
+      ],
+      "snap_distance_m": 35.39,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 222.031296,
+      "relative_heat_rank": 0.06779661,
+      "modelled_priority_score": 15.052969
+    },
+    {
+      "id": "demand_057",
+      "node": [
+        712157.9,
+        3174619.8
+      ],
+      "snap_distance_m": 19.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 223.936493,
+      "relative_heat_rank": 0.19491525,
+      "modelled_priority_score": 43.648638
+    },
+    {
+      "id": "demand_058",
+      "node": [
+        712246.3,
+        3174615.1
+      ],
+      "snap_distance_m": 17.18,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 222.817719,
+      "relative_heat_rank": 0.18644068,
+      "modelled_priority_score": 41.542287
+    },
+    {
+      "id": "demand_059",
+      "node": [
+        712320.8,
+        3174606.8
+      ],
+      "snap_distance_m": 5.76,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 223.639084,
+      "relative_heat_rank": 0.16101695,
+      "modelled_priority_score": 36.009683
+    },
+    {
+      "id": "demand_065",
+      "node": [
+        711752.6,
+        3174496.5
+      ],
+      "snap_distance_m": 7.66,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 211.246506,
+      "relative_heat_rank": 0.8559322,
+      "modelled_priority_score": 180.812687
+    },
+    {
+      "id": "demand_066",
+      "node": [
+        711844.7,
+        3174506.9
+      ],
+      "snap_distance_m": 16.59,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 209.365753,
+      "relative_heat_rank": 0.51694915,
+      "modelled_priority_score": 108.231449
+    },
+    {
+      "id": "demand_067",
+      "node": [
+        711918.4,
+        3174500.1
+      ],
+      "snap_distance_m": 9.64,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 214.208466,
+      "relative_heat_rank": 0.34745763,
+      "modelled_priority_score": 74.428365
+    },
+    {
+      "id": "demand_068",
+      "node": [
+        711989.8,
+        3174491.4
+      ],
+      "snap_distance_m": 14.92,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 211.622971,
+      "relative_heat_rank": 0.40677966,
+      "modelled_priority_score": 86.08392
+    },
+    {
+      "id": "demand_069",
+      "node": [
+        712083.6,
+        3174480.4
+      ],
+      "snap_distance_m": 29.35,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 217.129333,
+      "relative_heat_rank": 0.08474576,
+      "modelled_priority_score": 18.400791
+    },
+    {
+      "id": "demand_070",
+      "node": [
+        712174.0,
+        3174522.0
+      ],
+      "snap_distance_m": 23.5,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 222.031296,
+      "relative_heat_rank": 0.22881356,
+      "modelled_priority_score": 50.803771
+    },
+    {
+      "id": "demand_071",
+      "node": [
+        712247.3,
+        3174515.5
+      ],
+      "snap_distance_m": 12.52,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 223.936493,
+      "relative_heat_rank": 0.26271186,
+      "modelled_priority_score": 58.830774
+    },
+    {
+      "id": "demand_072",
+      "node": [
+        712311.6,
+        3174515.5
+      ],
+      "snap_distance_m": 6.51,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 222.817719,
+      "relative_heat_rank": 0.25423729,
+      "modelled_priority_score": 56.648573
+    },
+    {
+      "id": "demand_073",
+      "node": [
+        712396.5,
+        3174490.0
+      ],
+      "snap_distance_m": 23.74,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 221.576401,
+      "relative_heat_rank": 0.27966102,
+      "modelled_priority_score": 61.966282
+    },
+    {
+      "id": "demand_074",
+      "node": [
+        712478.9,
+        3174510.2
+      ],
+      "snap_distance_m": 5.07,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 223.936493,
+      "relative_heat_rank": 0.41525424,
+      "modelled_priority_score": 92.990578
+    },
+    {
+      "id": "demand_079",
+      "node": [
+        711772.9,
+        3174440.7
+      ],
+      "snap_distance_m": 39.51,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.262772,
+      "relative_heat_rank": 0.97457627,
+      "modelled_priority_score": 207.840837
+    },
+    {
+      "id": "demand_080",
+      "node": [
+        711838.7,
+        3174424.1
+      ],
+      "snap_distance_m": 15.69,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 211.246506,
+      "relative_heat_rank": 0.75423729,
+      "modelled_priority_score": 159.329992
+    },
+    {
+      "id": "demand_081",
+      "node": [
+        711894.3,
+        3174396.6
+      ],
+      "snap_distance_m": 23.45,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 211.28894,
+      "relative_heat_rank": 0.63559322,
+      "modelled_priority_score": 134.293818
+    },
+    {
+      "id": "demand_082",
+      "node": [
+        711979.5,
+        3174414.3
+      ],
+      "snap_distance_m": 13.59,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.539459,
+      "relative_heat_rank": 0.66101695,
+      "modelled_priority_score": 141.153202
+    },
+    {
+      "id": "demand_083",
+      "node": [
+        712091.9,
+        3174398.3
+      ],
+      "snap_distance_m": 24.34,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 217.129333,
+      "relative_heat_rank": 0.49152542,
+      "modelled_priority_score": 106.724588
+    },
+    {
+      "id": "demand_084",
+      "node": [
+        712156.2,
+        3174423.3
+      ],
+      "snap_distance_m": 6.47,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 222.031296,
+      "relative_heat_rank": 0.1779661,
+      "modelled_priority_score": 39.514044
+    },
+    {
+      "id": "demand_085",
+      "node": [
+        712219.6,
+        3174412.5
+      ],
+      "snap_distance_m": 18.75,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 222.031296,
+      "relative_heat_rank": 0.21186441,
+      "modelled_priority_score": 47.040529
+    },
+    {
+      "id": "demand_086",
+      "node": [
+        712310.3,
+        3174407.1
+      ],
+      "snap_distance_m": 15.33,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 224.638062,
+      "relative_heat_rank": 0.38135593,
+      "modelled_priority_score": 85.667057
+    },
+    {
+      "id": "demand_087",
+      "node": [
+        712399.1,
+        3174415.4
+      ],
+      "snap_distance_m": 6.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 220.132706,
+      "relative_heat_rank": 0.42372881,
+      "modelled_priority_score": 93.27657
+    },
+    {
+      "id": "demand_088",
+      "node": [
+        712479.7,
+        3174422.4
+      ],
+      "snap_distance_m": 2.1,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 224.638062,
+      "relative_heat_rank": 0.29661017,
+      "modelled_priority_score": 66.629934
+    },
+    {
+      "id": "demand_092",
+      "node": [
+        711752.2,
+        3174322.7
+      ],
+      "snap_distance_m": 5.9,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 207.453735,
+      "relative_heat_rank": 0.94067797,
+      "modelled_priority_score": 195.147158
+    },
+    {
+      "id": "demand_093",
+      "node": [
+        711814.1,
+        3174320.9
+      ],
+      "snap_distance_m": 17.92,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.159561,
+      "relative_heat_rank": 0.78813559,
+      "modelled_priority_score": 167.998637
+    },
+    {
+      "id": "demand_094",
+      "node": [
+        711902.8,
+        3174320.0
+      ],
+      "snap_distance_m": 10.52,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.539459,
+      "relative_heat_rank": 0.6440678,
+      "modelled_priority_score": 137.533889
+    },
+    {
+      "id": "demand_095",
+      "node": [
+        711959.9,
+        3174292.6
+      ],
+      "snap_distance_m": 45.3,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 211.622971,
+      "relative_heat_rank": 0.77118644,
+      "modelled_priority_score": 163.200765
+    },
+    {
+      "id": "demand_096",
+      "node": [
+        712086.3,
+        3174308.8
+      ],
+      "snap_distance_m": 17.42,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 214.208466,
+      "relative_heat_rank": 0.61016949,
+      "modelled_priority_score": 130.703471
+    },
+    {
+      "id": "demand_097",
+      "node": [
+        712168.2,
+        3174324.8
+      ],
+      "snap_distance_m": 10.55,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 217.234467,
+      "relative_heat_rank": 0.39830508,
+      "modelled_priority_score": 86.525593
+    },
+    {
+      "id": "demand_098",
+      "node": [
+        712251.5,
+        3174341.0
+      ],
+      "snap_distance_m": 19.49,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 221.736404,
+      "relative_heat_rank": 0.33050847,
+      "modelled_priority_score": 73.285761
+    },
+    {
+      "id": "demand_099",
+      "node": [
+        712302.3,
+        3174320.1
+      ],
+      "snap_distance_m": 19.68,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 173.234024,
+      "relative_heat_rank": 0.37288136,
+      "modelled_priority_score": 64.595738
+    },
+    {
+      "id": "demand_100",
+      "node": [
+        712397.2,
+        3174328.6
+      ],
+      "snap_distance_m": 4.82,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 219.734985,
+      "relative_heat_rank": 0.54237288,
+      "modelled_priority_score": 119.178297
+    },
+    {
+      "id": "demand_101",
+      "node": [
+        712473.3,
+        3174321.8
+      ],
+      "snap_distance_m": 13.31,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 223.33757,
+      "relative_heat_rank": 0.50847458,
+      "modelled_priority_score": 113.561476
+    },
+    {
+      "id": "demand_105",
+      "node": [
+        711860.6,
+        3174254.3
+      ],
+      "snap_distance_m": 39.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 209.359375,
+      "relative_heat_rank": 0.8220339,
+      "modelled_priority_score": 172.100503
+    },
+    {
+      "id": "demand_106",
+      "node": [
+        711894.2,
+        3174224.6
+      ],
+      "snap_distance_m": 21.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.827377,
+      "relative_heat_rank": 0.58474576,
+      "modelled_priority_score": 125.034653
+    },
+    {
+      "id": "demand_107",
+      "node": [
+        711989.8,
+        3174223.5
+      ],
+      "snap_distance_m": 8.73,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 165.006989,
+      "relative_heat_rank": 0.66949153,
+      "modelled_priority_score": 110.47078
+    },
+    {
+      "id": "demand_108",
+      "node": [
+        712082.4,
+        3174223.5
+      ],
+      "snap_distance_m": 8.45,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 165.006989,
+      "relative_heat_rank": 0.62711864,
+      "modelled_priority_score": 103.478959
+    },
+    {
+      "id": "demand_109",
+      "node": [
+        712165.1,
+        3174238.5
+      ],
+      "snap_distance_m": 8.59,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 204.584854,
+      "relative_heat_rank": 0.48305085,
+      "modelled_priority_score": 98.824887
+    },
+    {
+      "id": "demand_110",
+      "node": [
+        712238.2,
+        3174227.7
+      ],
+      "snap_distance_m": 6.45,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 213.055542,
+      "relative_heat_rank": 0.43220339,
+      "modelled_priority_score": 92.083327
+    },
+    {
+      "id": "demand_111",
+      "node": [
+        712333.0,
+        3174243.3
+      ],
+      "snap_distance_m": 13.54,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 140.305405,
+      "relative_heat_rank": 0.44915254,
+      "modelled_priority_score": 63.018529
+    },
+    {
+      "id": "demand_114",
+      "node": [
+        711870.0,
+        3174137.6
+      ],
+      "snap_distance_m": 34.98,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 212.252213,
+      "relative_heat_rank": 0.88135593,
+      "modelled_priority_score": 187.069747
+    },
+    {
+      "id": "demand_115",
+      "node": [
+        711935.1,
+        3174132.5
+      ],
+      "snap_distance_m": 18.64,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 161.774246,
+      "relative_heat_rank": 0.76271186,
+      "modelled_priority_score": 123.387137
+    },
+    {
+      "id": "demand_116",
+      "node": [
+        712020.2,
+        3174153.2
+      ],
+      "snap_distance_m": 27.5,
+      "snapped": true,
+      "snap_status": "snapped",
+      "population_people": 163.475769,
+      "relative_heat_rank": 0.69491525,
+      "modelled_priority_score": 113.601806
+    }
+  ],
+  "existing_mapped_relief": [
+    {
+      "id": "node:13683331383",
+      "node": [
+        713502.1,
+        3174602.9
+      ],
+      "snap_distance_m": 54.11,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "toilet",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:77968342",
+      "node": [
+        711787.3,
+        3175159.4
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:77968344",
+      "node": [
+        712148.0,
+        3175321.9
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:77968356",
+      "node": [
+        711525.1,
+        3174990.6
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154361",
+      "node": [
+        711870.4,
+        3174568.8
+      ],
+      "snap_distance_m": 4.96,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154367",
+      "node": [
+        711969.8,
+        3174168.8
+      ],
+      "snap_distance_m": 3.27,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154443",
+      "node": [
+        712326.4,
+        3174373.1
+      ],
+      "snap_distance_m": 2.15,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154507",
+      "node": [
+        712082.4,
+        3174223.5
+      ],
+      "snap_distance_m": 2.12,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154574",
+      "node": [
+        711774.7,
+        3174610.2
+      ],
+      "snap_distance_m": 2.54,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154635",
+      "node": [
+        711878.6,
+        3174260.2
+      ],
+      "snap_distance_m": 3.57,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154655",
+      "node": [
+        711706.0,
+        3174760.6
+      ],
+      "snap_distance_m": 2.25,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154703",
+      "node": [
+        711936.3,
+        3174414.7
+      ],
+      "snap_distance_m": 3.82,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154704",
+      "node": [
+        712517.8,
+        3174389.9
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154754",
+      "node": [
+        711857.8,
+        3174686.9
+      ],
+      "snap_distance_m": 1.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154776",
+      "node": [
+        712593.8,
+        3174812.4
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154794",
+      "node": [
+        711989.8,
+        3174491.4
+      ],
+      "snap_distance_m": 4.16,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154815",
+      "node": [
+        711909.4,
+        3174690.1
+      ],
+      "snap_distance_m": 0.91,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154824",
+      "node": [
+        712117.3,
+        3174239.2
+      ],
+      "snap_distance_m": 1.58,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154855",
+      "node": [
+        712002.1,
+        3174579.0
+      ],
+      "snap_distance_m": 3.18,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154911",
+      "node": [
+        712251.5,
+        3174341.0
+      ],
+      "snap_distance_m": 3.12,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78154942",
+      "node": [
+        712926.9,
+        3175108.3
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78164609",
+      "node": [
+        713445.3,
+        3174779.8
+      ],
+      "snap_distance_m": 54.2,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78164642",
+      "node": [
+        713308.9,
+        3175056.5
+      ],
+      "snap_distance_m": 94.64,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:78164686",
+      "node": [
+        713075.5,
+        3175198.0
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:293181412",
+      "node": [
+        713250.3,
+        3174568.3
+      ],
+      "snap_distance_m": 1.65,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:707631334",
+      "node": [
+        712188.2,
+        3174387.6
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:707631335",
+      "node": [
+        712036.4,
+        3174593.5
+      ],
+      "snap_distance_m": 5.71,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:707631336",
+      "node": [
+        711983.8,
+        3174668.1
+      ],
+      "snap_distance_m": 4.71,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:707631340",
+      "node": [
+        711425.7,
+        3174675.1
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:970834703",
+      "node": [
+        712134.4,
+        3174938.5
+      ],
+      "snap_distance_m": 7.14,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:970867250",
+      "node": [
+        712593.0,
+        3174462.4
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:970867251",
+      "node": [
+        712665.8,
+        3174601.8
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:970867252",
+      "node": [
+        712555.0,
+        3174392.4
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:970867254",
+      "node": [
+        712668.2,
+        3174827.6
+      ],
+      "snap_distance_m": 3.35,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:970872138",
+      "node": [
+        712310.9,
+        3174846.5
+      ],
+      "snap_distance_m": 24.94,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:970872139",
+      "node": [
+        712357.0,
+        3175065.6
+      ],
+      "snap_distance_m": 39.83,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "park",
+      "status": "OSM-mapped, unverified"
+    },
+    {
+      "id": "way:1395134789",
+      "node": [
+        713273.6,
+        3175096.7
+      ],
+      "snap_distance_m": 22.18,
+      "snapped": true,
+      "snap_status": "snapped",
+      "relief_type": "shelter",
+      "status": "OSM-mapped, unverified"
+    }
+  ],
+  "possible_candidate_sites": [
+    {
+      "id": "candidate_001",
+      "node": [
+        711168.8,
+        3174637.2
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_002",
+      "node": [
+        711252.2,
+        3174746.5
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_003",
+      "node": [
+        711255.5,
+        3174577.7
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_004",
+      "node": [
+        711350.3,
+        3174634.8
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_005",
+      "node": [
+        711420.6,
+        3174706.3
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_006",
+      "node": [
+        711433.8,
+        3174577.2
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_007",
+      "node": [
+        711458.1,
+        3175054.5
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_008",
+      "node": [
+        711503.8,
+        3174948.8
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_009",
+      "node": [
+        711619.1,
+        3174886.2
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_010",
+      "node": [
+        711648.0,
+        3174737.1
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_011",
+      "node": [
+        711698.6,
+        3174626.0
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_012",
+      "node": [
+        711723.4,
+        3174926.6
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_013",
+      "node": [
+        711735.5,
+        3175136.6
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_014",
+      "node": [
+        711809.7,
+        3174543.2
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_015",
+      "node": [
+        711819.4,
+        3175018.7
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_016",
+      "node": [
+        711829.9,
+        3174641.4
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_017",
+      "node": [
+        711843.3,
+        3174294.2
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_018",
+      "node": [
+        711856.8,
+        3174915.1
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_019",
+      "node": [
+        711859.8,
+        3174433.3
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_020",
+      "node": [
+        711893.9,
+        3174182.4
+      ],
+      "snap_distance_m": 0.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_021",
+      "node": [
+        711897.3,
+        3175271.7
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_022",
+      "node": [
+        711914.4,
+        3174721.7
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_023",
+      "node": [
+        711924.6,
+        3174595.9
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_024",
+      "node": [
+        711944.9,
+        3175163.2
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_025",
+      "node": [
+        711967.7,
+        3174817.4
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_026",
+      "node": [
+        711973.3,
+        3174483.6
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_027",
+      "node": [
+        711999.5,
+        3175258.0
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_028",
+      "node": [
+        712008.6,
+        3174232.1
+      ],
+      "snap_distance_m": 0.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_029",
+      "node": [
+        712021.1,
+        3174700.9
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility,green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_030",
+      "node": [
+        712036.4,
+        3174593.5
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_031",
+      "node": [
+        712083.6,
+        3174480.4
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_032",
+      "node": [
+        712093.4,
+        3174292.8
+      ],
+      "snap_distance_m": 0.07,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_033",
+      "node": [
+        712095.7,
+        3175228.6
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_034",
+      "node": [
+        712097.8,
+        3175361.3
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_035",
+      "node": [
+        712123.4,
+        3174765.8
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_036",
+      "node": [
+        712134.4,
+        3174938.5
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_037",
+      "node": [
+        712151.6,
+        3174376.5
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_038",
+      "node": [
+        712157.9,
+        3174619.8
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_039",
+      "node": [
+        712183.5,
+        3174504.8
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_040",
+      "node": [
+        712209.4,
+        3175011.3
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_041",
+      "node": [
+        712225.1,
+        3174287.3
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_042",
+      "node": [
+        712233.7,
+        3174766.7
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_043",
+      "node": [
+        712281.7,
+        3175222.5
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_044",
+      "node": [
+        712291.0,
+        3175112.9
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_045",
+      "node": [
+        712310.9,
+        3174846.5
+      ],
+      "snap_distance_m": 0.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_046",
+      "node": [
+        712326.4,
+        3174373.1
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_047",
+      "node": [
+        712375.0,
+        3175176.2
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_048",
+      "node": [
+        712378.5,
+        3175277.8
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_049",
+      "node": [
+        712385.5,
+        3175046.8
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_050",
+      "node": [
+        712453.8,
+        3175378.1
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_051",
+      "node": [
+        712473.3,
+        3174321.8
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_052",
+      "node": [
+        712489.8,
+        3175161.9
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_053",
+      "node": [
+        712493.7,
+        3175275.5
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_054",
+      "node": [
+        712513.9,
+        3174418.2
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_055",
+      "node": [
+        712561.4,
+        3174824.0
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_056",
+      "node": [
+        712565.6,
+        3174282.7
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_057",
+      "node": [
+        712567.8,
+        3174527.2
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_058",
+      "node": [
+        712601.1,
+        3175111.4
+      ],
+      "snap_distance_m": 0.07,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_059",
+      "node": [
+        712608.3,
+        3174385.0
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_060",
+      "node": [
+        712616.4,
+        3174949.7
+      ],
+      "snap_distance_m": 0.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_061",
+      "node": [
+        712648.4,
+        3174660.4
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_062",
+      "node": [
+        712658.8,
+        3174764.5
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_063",
+      "node": [
+        712666.5,
+        3175241.6
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_064",
+      "node": [
+        712691.7,
+        3174446.4
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_065",
+      "node": [
+        712697.4,
+        3175035.7
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_066",
+      "node": [
+        712711.6,
+        3175349.2
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_067",
+      "node": [
+        712722.8,
+        3174556.2
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_068",
+      "node": [
+        712729.8,
+        3174882.8
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility,green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_069",
+      "node": [
+        712751.0,
+        3175182.2
+      ],
+      "snap_distance_m": 0.0,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_070",
+      "node": [
+        712781.6,
+        3174399.1
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_071",
+      "node": [
+        712803.4,
+        3175039.1
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_072",
+      "node": [
+        712815.4,
+        3174494.7
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_073",
+      "node": [
+        712820.8,
+        3175285.4
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_074",
+      "node": [
+        712829.1,
+        3174748.5
+      ],
+      "snap_distance_m": 0.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_075",
+      "node": [
+        712849.7,
+        3175159.9
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_076",
+      "node": [
+        712865.0,
+        3174946.9
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_077",
+      "node": [
+        712894.9,
+        3174827.4
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_078",
+      "node": [
+        712899.4,
+        3174409.6
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_079",
+      "node": [
+        712900.1,
+        3174552.2
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_080",
+      "node": [
+        712938.6,
+        3174714.5
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_081",
+      "node": [
+        712957.6,
+        3175086.7
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_082",
+      "node": [
+        712967.1,
+        3174930.8
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_083",
+      "node": [
+        713019.4,
+        3174842.7
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_084",
+      "node": [
+        713021.8,
+        3174601.4
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_085",
+      "node": [
+        713062.1,
+        3175032.3
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_086",
+      "node": [
+        713075.5,
+        3175198.0
+      ],
+      "snap_distance_m": 0.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_087",
+      "node": [
+        713105.3,
+        3174661.7
+      ],
+      "snap_distance_m": 0.02,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility,green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_088",
+      "node": [
+        713130.9,
+        3174942.4
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_089",
+      "node": [
+        713147.1,
+        3175268.6
+      ],
+      "snap_distance_m": 0.06,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_090",
+      "node": [
+        713162.7,
+        3175081.7
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility,green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_091",
+      "node": [
+        713241.3,
+        3174537.6
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_092",
+      "node": [
+        713249.6,
+        3175166.0
+      ],
+      "snap_distance_m": 0.01,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility,green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_093",
+      "node": [
+        713261.2,
+        3175014.8
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_094",
+      "node": [
+        713267.5,
+        3175404.9
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_095",
+      "node": [
+        713298.4,
+        3174867.7
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility,green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_096",
+      "node": [
+        713326.4,
+        3174594.5
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_097",
+      "node": [
+        713363.3,
+        3175275.3
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_098",
+      "node": [
+        713400.1,
+        3174740.2
+      ],
+      "snap_distance_m": 0.05,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility,green_space",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_099",
+      "node": [
+        713494.7,
+        3174822.9
+      ],
+      "snap_distance_m": 0.04,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    },
+    {
+      "id": "candidate_100",
+      "node": [
+        713587.1,
+        3174903.8
+      ],
+      "snap_distance_m": 0.03,
+      "snapped": true,
+      "snap_status": "snapped",
+      "context_type": "community_facility",
+      "status": "possible location \u2014 not confirmed public land",
+      "cost_lakh": 5,
+      "cost_label": "\u20b95 lakh standard planning unit \u2014 not a procurement quote"
+    }
+  ],
+  "graph": {
+    "nodes": 1936,
+    "edges": 2309,
+    "components": 26
+  },
+  "snap_max_distance_m": 100
+}
