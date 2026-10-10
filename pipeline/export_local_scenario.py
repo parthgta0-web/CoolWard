@@ -33,6 +33,7 @@ def main() -> None:
     core = load_json(RAW / "study_area_core.geojson")
     context = load_json(RAW / "study_area_context.geojson")
     scenarios = load_json(PROCESSED / "primary_no_verified_full_service_baseline_budget_scenarios.json")
+    coverage_manifest = load_json(PROCESSED / "selected_site_covered_demand_cells_400m.json")
     methodology = load_json(PROCESSED / "optimiser_methodology.json")
     candidate_by_id = feature_index(candidates, "candidate_id")
     plans = {}
@@ -55,6 +56,7 @@ def main() -> None:
             "selected_sites": selected,
             "modelled_priority_coverage_percent": scenario["modelled_priority_coverage_percent"],
             "modelled_priority_score_covered": scenario["modelled_priority_score_covered"],
+            "covered_demand_cell_ids": coverage_manifest["plans"][str(budget)]["covered_demand_cell_ids"],
             "baseline_modelled_priority_coverage_percent": 0.0,
             "coverage_label": "Modelled-priority coverage — not people protected or health impact.",
         }

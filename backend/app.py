@@ -1,11 +1,11 @@
-"""Local Lambda-compatible maximum-coverage optimiser for CoolWard."""
+"""Serve validated, precomputed CoolWard planning scenarios through SAM Local."""
 
 import json
 from pathlib import Path
 
 from aws_lambda_powertools import Logger
 
-logger = Logger(service="coolward-optimiser")
+logger = Logger(service="coolward-planning-scenarios")
 DATA_PATH = Path(__file__).parent / "data" / "planning_data.json"
 
 
@@ -14,8 +14,8 @@ def load_data():
         return json.load(file)
 
 
-def optimise(data, budget_lakh):
-    """Return a pre-validated primary 400 m planning scenario result."""
+def get_precomputed_plan(data, budget_lakh):
+    """Return one validated, precomputed primary 400 m planning scenario."""
     try:
         plan = data["plans"][str(budget_lakh)]
     except KeyError as error:
@@ -37,14 +37,16 @@ def optimise(data, budget_lakh):
 def handler(event, context):
     try:
         body = json.loads(event.get("body") or "{}")
+        if not isinstance(body, dict):
+            raise ValueError("JSON request body must be an object.")
         budget_lakh = int(body.get("budget_lakh", 20))
         if budget_lakh not in {5, 10, 15, 20, 25, 30, 35}:
             raise ValueError("Budget must be one of ₹5L, ₹10L, ₹15L, ₹20L, ₹25L, ₹30L, or ₹35L.")
-        result = optimise(load_data(), budget_lakh)
-        logger.info("Optimisation complete", extra={"budget_lakh": budget_lakh, "site_count": len(result["selected_sites"])})
+        result = get_precomputed_plan(load_data(), budget_lakh)
+        logger.info("Precomputed planning scenario served", extra={"budget_lakh": budget_lakh, "site_count": len(result["selected_sites"])})
         return response(200, result)
     except (ValueError, json.JSONDecodeError) as error:
-        logger.warning("Invalid optimisation request", extra={"error": str(error)})
+        logger.warning("Invalid planning-scenario request", extra={"error": str(error)})
         return response(400, {"error": str(error)})
 
 

@@ -156,7 +156,7 @@ def validate(raw_root: Path) -> dict:
 
     return {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "raw_root": str(raw_root), "canonical_boundaries": {"core": "study_area_core.geojson", "context": "study_area_context.geojson"},
+        "raw_root": "data/raw/datawp/datawp", "canonical_boundaries": {"core": "study_area_core.geojson", "context": "study_area_context.geojson"},
         "files": files, "vectors": vector_results, "rasters": raster_results,
         "osm_duplicate_ids": duplicates, "roads": {"private_or_no_access_segments": int(len(private)), "highway_counts": highway_counts, "missing_values": missing_values, "pedestrian_graph": graph},
         "warnings": warnings, "errors": errors,

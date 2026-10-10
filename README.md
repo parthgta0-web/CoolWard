@@ -28,7 +28,7 @@ Every selected site is a **₹5 lakh standard planning unit — not a procuremen
 | WorldPop India population counts | 2024 | Native 3-arc-second cells, roughly 100 m; modelled people per cell, not a census count. |
 | OpenStreetMap | Retrieved 2026-10-09 | Roads/paths, buildings, green space, schools/community facilities, parks, toilet, and shelter context. Geometry, tagging, access, and operational status vary. |
 
-Landsat `scene_04` is excluded completely from processing and the planning model. Distance, area, and network work use EPSG:32643. Outcomes are calculated only for demand-cell centroids inside `study_area_core`; context and wider road geometry are used to reduce edge effects.
+Landsat `scene_04` is excluded completely by the pilot-data rule and is never used in derived layers; its full Landsat footprint geometrically touching the context is not treated as evidence that it is an appropriate pilot observation. Distance, area, and network work use EPSG:32643. Outcomes are calculated only for demand-cell centroids inside `study_area_core`; context and wider road geometry are used to reduce edge effects.
 
 ```text
 supplied raw layers
@@ -42,11 +42,13 @@ supplied raw layers
 
 Candidates are generated only from filtered pedestrian-network vertices within 30 m of mapped green space or a school, college, or community facility, then spatially thinned to 100 m. They are labelled **Possible site — requires land, access, water, and operations verification.** The rules are fixed for the reported scenario; they were not tuned to improve coverage.
 
+Demand-cell centroids are snapped to the filtered pedestrian network before evaluation (median snap distance about 17 m; maximum 53.33 m). The snap distance is not added to the 400 m network-distance planning assumption.
+
 ## Experimental ML audit
 
 A local scikit-learn `HistGradientBoostingRegressor` feasibility experiment was run on 118 cells using 9 fixed spatial cross-validation blocks. Its held-out MAE was **0.187395**, compared with **0.255021** for the mean baseline (a **26.5%** improvement); held-out R² was **0.379254**.
 
-Features were NDVI, green-area fraction, distance to mapped park, building fraction, and pedestrian-network density; population was excluded. The surrogate is retained as reproducible experimental evidence only and does not replace the transparent satellite-derived heat-priority score. One held-out fold underperformed the mean baseline, and NDVI and the target share Landsat source signal.
+Features were NDVI, green-area fraction, distance to mapped park, building fraction, and pedestrian-network density; population was excluded. The surrogate is retained as reproducible experimental evidence only and does not replace the transparent satellite-derived heat-priority score. Two of five held-out folds underperformed the mean baseline, and NDVI and the target share Landsat source signal.
 
 This experiment does not estimate air temperature, heat exposure, health risk, people protected, intervention effect, or site suitability. See the [model card](data/processed/ml_feasibility_model_card.md) and [validation chart](data/processed/ml_feasibility_validation.png).
 

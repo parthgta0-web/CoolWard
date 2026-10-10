@@ -225,6 +225,22 @@ def main() -> None:
     (processed / "sensitivity_results.json").write_text(json.dumps({str(key): value for key, value in primary["sensitivity"].items()}, indent=2), encoding="utf-8")
     (processed / "optimiser_methodology.json").write_text(json.dumps(methodology, indent=2), encoding="utf-8")
     (processed / "optimiser_checks.json").write_text(json.dumps(primary["checks"], indent=2), encoding="utf-8")
+    primary_candidate_sets = coverage_sets(graph, demand_snaps, candidate_snaps, DEFAULT_THRESHOLD_M)
+    coverage_manifest = {
+        "scenario": primary["definition"]["label"],
+        "network_distance_planning_assumption_m": DEFAULT_THRESHOLD_M,
+        "coverage_rule": "Demand-cell IDs reached by the active selected possible-site set on the filtered pedestrian graph.",
+        "plans": {},
+    }
+    for plan in primary["default"]:
+        selected_ids = [selection["candidate_id"] for selection in plan["selected_sites"]]
+        covered_ids = sorted(set().union(*(primary_candidate_sets[identifier] for identifier in selected_ids))) if selected_ids else []
+        coverage_manifest["plans"][str(plan["budget_lakh"])] = {
+            "selected_candidate_ids": selected_ids,
+            "covered_demand_cell_ids": covered_ids,
+            "covered_demand_cell_count": len(covered_ids),
+        }
+    (processed / "selected_site_covered_demand_cells_400m.json").write_text(json.dumps(coverage_manifest, indent=2), encoding="utf-8")
     make_chart(primary["sensitivity"], processed / "optimiser_scenarios_chart.png", primary["definition"]["label"])
     print(json.dumps({"primary_baseline": primary["baseline"], "primary_default_400m": primary["default"],
                       "failed_snaps": {"demand": sum(not x["snapped"] for x in demand_snaps), "relief": sum(not x["snapped"] for x in relief_snaps), "candidates": sum(not x["snapped"] for x in candidate_snaps)},

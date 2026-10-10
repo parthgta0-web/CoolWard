@@ -3,7 +3,7 @@
 import json
 import unittest
 
-from app import handler, load_data, optimise
+from app import get_precomputed_plan, handler, load_data
 
 
 class LocalLambdaContext:
@@ -26,7 +26,7 @@ class PrimaryScenarioTests(unittest.TestCase):
         }
         data = load_data()
         for budget, (coverage, count, spent, unallocated) in expected.items():
-            plan = optimise(data, budget)
+            plan = get_precomputed_plan(data, budget)
             self.assertEqual(plan["modelled_priority_coverage_percent"], coverage)
             self.assertEqual(len(plan["selected_sites"]), count)
             self.assertEqual(plan["spent_lakh"], spent)
@@ -34,8 +34,17 @@ class PrimaryScenarioTests(unittest.TestCase):
 
     def test_coverage_never_decreases_as_budget_increases(self):
         data = load_data()
-        coverage = [optimise(data, budget)["modelled_priority_coverage_percent"] for budget in (5, 10, 15, 20, 25, 30, 35)]
+        coverage = [get_precomputed_plan(data, budget)["modelled_priority_coverage_percent"] for budget in (5, 10, 15, 20, 25, 30, 35)]
         self.assertEqual(coverage, sorted(coverage))
+
+    def test_exported_covered_demand_ids_match_the_budget_plateau(self):
+        data = load_data()
+        expected_counts = {5: 30, 10: 52, 15: 57, 20: 60, 25: 60, 30: 60, 35: 60}
+        for budget, expected_count in expected_counts.items():
+            self.assertEqual(len(get_precomputed_plan(data, budget)["covered_demand_cell_ids"]), expected_count)
+        ceiling_coverage = get_precomputed_plan(data, 20)["covered_demand_cell_ids"]
+        for budget in (25, 30, 35):
+            self.assertEqual(get_precomputed_plan(data, budget)["covered_demand_cell_ids"], ceiling_coverage)
 
     def test_lambda_handler_returns_plateau_and_map_layers(self):
         response = handler({"body": json.dumps({"budget_lakh": 35})}, LocalLambdaContext())
@@ -44,6 +53,15 @@ class PrimaryScenarioTests(unittest.TestCase):
         self.assertEqual(body["unallocated_lakh"], 15)
         self.assertEqual(len(body["selected_sites"]), 4)
         self.assertIn("heat_priority_demand_cells", body["layers"])
+        self.assertEqual(len(body["covered_demand_cell_ids"]), 60)
+
+    def test_lambda_handler_rejects_non_object_json_bodies(self):
+        for invalid_body in ([], "not an object", None):
+            with self.subTest(invalid_body=invalid_body):
+                response = handler({"body": json.dumps(invalid_body)}, LocalLambdaContext())
+                body = json.loads(response["body"])
+                self.assertEqual(response["statusCode"], 400)
+                self.assertEqual(body["error"], "JSON request body must be an object.")
 
 
 if __name__ == "__main__":

@@ -13,11 +13,13 @@
 | Layer | Supplied data used | Processing note |
 |---|---|---|
 | Boundaries | `study_area_core.geojson`, `study_area_context.geojson`, and wider roads extent | Final reporting is limited to core demand-cell centroids; context and roads avoid edge effects. |
-| Heat | Four usable Landsat C2 L2 scenes: 2024-05-18, 2025-04-03, 2025-05-21, 2026-04-22 | QA-masked `ST_B10` forms a relative multi-scene land-surface-temperature rank. `scene_04` is excluded completely. |
+| Heat | Four usable Landsat C2 L2 scenes: 2024-05-18, 2025-04-03, 2025-05-21, 2026-04-22 | QA-masked `ST_B10` forms a relative multi-scene land-surface-temperature rank. `scene_04` is excluded completely by the pilot-data rule; geometric footprint overlap is not treated as proof that it is an appropriate pilot observation. |
 | Population | WorldPop India 2024 unconstrained counts | Native 3-arc-second, roughly 100 m, people-per-pixel demand cells are retained; counts are not upsampled to false 30 m precision. |
 | Walking/context | OSM roads/paths, buildings, green areas, parks, facilities, toilet, shelter | OSM was retrieved 2026-10-09 and is incomplete/unverified context, not proof of service or public access. |
 
 All distance, area, and network operations use EPSG:32643. Raw data validation records CRS, geometry validity, OSM ID duplication, private/no-access road exclusions, raster coverage, missing values, and graph fragmentation in `processed/data_quality_report.json`.
+
+Demand-cell centroids are snapped to the filtered pedestrian network before the coverage evaluation (median snap distance about 17 m; maximum 53.33 m). Snap distance is not added to the 400 m network-distance planning assumption.
 
 ## Derived layers and scenarios
 
@@ -37,7 +39,7 @@ Every possible site requires land, access, water, and operations verification. T
 
 A local scikit-learn `HistGradientBoostingRegressor` feasibility experiment used 118 cells and 9 fixed spatial cross-validation blocks to estimate the existing relative multi-scene satellite-derived heat-priority rank. Held-out MAE was **0.187395**, versus **0.255021** for the mean baseline (a **26.5%** improvement); held-out R² was **0.379254**.
 
-The features were NDVI, green-area fraction, distance to mapped park, building fraction, and pedestrian-network density. Population was excluded. The surrogate is retained as reproducible experimental evidence only; it does not replace the transparent satellite-derived heat-priority score. One held-out fold underperformed the mean baseline, and NDVI/target share Landsat source signal, so this is not independent predictive validation.
+The features were NDVI, green-area fraction, distance to mapped park, building fraction, and pedestrian-network density. Population was excluded. The surrogate is retained as reproducible experimental evidence only; it does not replace the transparent satellite-derived heat-priority score. Two of five held-out folds underperformed the mean baseline, and NDVI/target share Landsat source signal, so this is not independent predictive validation.
 
 The experiment does not estimate air temperature, heat exposure, health risk, people protected, intervention effect, or site suitability. See [the model card](processed/ml_feasibility_model_card.md) and [the validation chart](processed/ml_feasibility_validation.png).
 

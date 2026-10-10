@@ -25,7 +25,7 @@ Say: “The coloured cells are a relative multi-scene land-surface-temperature p
 
 Set the budget to ₹5L.
 
-Say: “At ₹5 lakh, one possible site is selected. The modelled-priority coverage is 58.1852%. This is not people protected or a measured health impact. The point is a possible site that still requires land, access, water, and operations verification.”
+Say: “At ₹5 lakh, one possible site is selected. The modelled-priority coverage is 58.2%. This is not people protected or a measured health impact. The point is a possible site that still requires land, access, water, and operations verification.”
 
 Point out the selected marker, selected-site card, and highlighted trade-off row.
 
@@ -33,7 +33,7 @@ Point out the selected marker, selected-site card, and highlighted trade-off row
 
 Set the budget to ₹20L.
 
-Say: “At ₹20 lakh, four possible sites reach 97.9120% of the modelled-priority score under the 400 m network-distance planning assumption. Each is a ₹5 lakh standard planning unit, not a procurement quote. The selected-site cards show the deterministic marginal gains.”
+Say: “At ₹20 lakh, four possible sites reach 97.9% of the modelled-priority score under the 400 m network-distance planning assumption. Each is a ₹5 lakh standard planning unit, not a procurement quote. The selected-site cards show the deterministic marginal gains.”
 
 Point out the four selected map markers and the total actual spend.
 
@@ -41,7 +41,7 @@ Point out the four selected map markers and the total actual spend.
 
 Set the budget to ₹35L.
 
-Say: “The coverage remains 97.9120%, with the same four sites and ₹20 lakh actual spend. The remaining ₹15 lakh is deliberately unallocated because no supplied candidate has marginal gain. That plateau is a planning finding, not an invitation to invent extra sites.”
+Say: “The coverage remains 97.9%, with the same four sites and ₹20 lakh actual spend. The remaining ₹15 lakh is deliberately unallocated because no supplied candidate has marginal gain. That plateau is a planning finding, not an invitation to invent extra sites.”
 
 Show the unallocated-budget metric and the highlighted ₹35L trade-off row.
 
@@ -50,5 +50,7 @@ Show the unallocated-budget metric and the highlighted ₹35L trade-off row.
 Show the limitations panel.
 
 Say: “The 400 m value is a network-distance planning assumption, not a guaranteed five-minute walk. The graph is fragmented and one demand cell is structurally unreachable. OSM context is unverified; there is no verified water, land, access, operations, capacity, or safety assessment. CoolWard helps prioritise field verification and accountable discussion; it does not authorise installation.”
+
+Say: “The experimental ML audit is retained as documented evidence only and does not drive site selection because its features and target share Landsat signal.”
 
 End on the selected-site list and limitations panel.

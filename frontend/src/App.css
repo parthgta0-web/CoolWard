@@ -29,6 +29,7 @@ input[type=range] { width: calc(100% + 16px); margin-left: -8px; padding: 0 8px;
 .legend { padding-top: 12px; border-top: 1px solid #e3e8e4; color: #596b63; font-size: .73rem; line-height: 2.1; }
 .legend-dot { display: inline-block; width: 14px; height: 14px; margin-right: 8px; border-radius: 50%; vertical-align: -2px; }
 .heat { background: #d55b3f; }
+.covered { background: repeating-linear-gradient(135deg, #f7dfa4 0 3px, #164d43 3px 5px); border: 2px dashed #164d43; }
 .reference { background: #b9c5ce; }
 .candidate { background: #f5f6f1; border: 2px solid #485964; }
 .selected { background: #f2b94b; border: 2px solid #485964; }
@@ -48,6 +49,13 @@ input[type=range] { width: calc(100% + 16px); margin-left: -8px; padding: 0 8px;
 .coverage-metric b { color: #087266; font-size: 2.45rem; }
 .unallocated-metric.has-unallocated { border-color: #e3b848; background: #fff3cf; }
 .unallocated-metric.has-unallocated b { color: #a76500; }
+
+.verification-context { max-width: 1240px; margin: 18px auto; padding: 22px 28px; border: 1px solid #b8d1c4; background: #f1f8f1; }
+.verification-context h2 { margin: 0; font-size: 1.3rem; letter-spacing: -.04em; }
+.verification-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+.verification-grid p { margin: 0; padding: 12px; border-left: 3px solid #8db99c; background: #fff; color: #4e6258; font-size: .79rem; line-height: 1.5; }
+.verification-grid b { color: #183d31; }
+.verification-takeaway { margin: 14px 0 0; color: #174a3b; font-size: .84rem; font-weight: 700; line-height: 1.45; }
 
 .assumptions { max-width: 1240px; margin: 18px auto; padding: 20px 28px; border-left: 4px solid #d55b3f; background: #fff4e8; }
 .assumption-grid { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -84,6 +92,8 @@ footer { max-width: 1240px; margin: 0 auto 28px; padding: 0 28px; color: #718078
   .pilot-label, .status-dot { display: none; }
   .hero { padding: 20px 18px 16px; }
   .workspace, .results, .recommendations, .budget-comparison { grid-template-columns: 1fr; margin-left: 14px; margin-right: 14px; padding: 0; }
+  .verification-context { margin-left: 14px; margin-right: 14px; padding: 20px; }
+  .verification-grid { grid-template-columns: 1fr; }
   .controls { border-right: 1px solid #d7ded8; border-bottom: 0; }
   .result-intro, .metric { border-right: 1px solid #d7ded8; }
   .recommendations, .budget-comparison { padding: 22px; }
