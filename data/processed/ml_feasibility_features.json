@@ -1,0 +1,1182 @@
+[
+  {
+    "cell_id": "demand_001",
+    "target_relative_heat_rank": 0.71186441,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.33169055,
+    "green_area_fraction_100m": 0.52413721,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.02681913,
+    "pedestrian_network_density_100m": 0.00770095
+  },
+  {
+    "cell_id": "demand_002",
+    "target_relative_heat_rank": 0.11016949,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.43700593,
+    "green_area_fraction_100m": 0.72190405,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.00274729
+  },
+  {
+    "cell_id": "demand_003",
+    "target_relative_heat_rank": 0.02542373,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.45763998,
+    "green_area_fraction_100m": 0.80361277,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.00351584
+  },
+  {
+    "cell_id": "demand_004",
+    "target_relative_heat_rank": 0.01694915,
+    "spatial_block": 8,
+    "median_qa_masked_ndvi": 0.4604555,
+    "green_area_fraction_100m": 0.59526086,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.05798091,
+    "pedestrian_network_density_100m": 0.00745841
+  },
+  {
+    "cell_id": "demand_005",
+    "target_relative_heat_rank": 0.72033898,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.26638791,
+    "green_area_fraction_100m": 0.22275035,
+    "distance_to_mapped_park_m": 36.1917337,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01382153
+  },
+  {
+    "cell_id": "demand_006",
+    "target_relative_heat_rank": 0.70338983,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.26570175,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 111.64339883,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01161218
+  },
+  {
+    "cell_id": "demand_007",
+    "target_relative_heat_rank": 0.55084746,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.35483238,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 107.42604516,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01573205
+  },
+  {
+    "cell_id": "demand_008",
+    "target_relative_heat_rank": 0.53389831,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.33280652,
+    "green_area_fraction_100m": 0.17989646,
+    "distance_to_mapped_park_m": 34.65976697,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01808945
+  },
+  {
+    "cell_id": "demand_009",
+    "target_relative_heat_rank": 0.83050847,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.24372263,
+    "green_area_fraction_100m": 0.59348624,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.0121631
+  },
+  {
+    "cell_id": "demand_010",
+    "target_relative_heat_rank": 0.81355932,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.26418309,
+    "green_area_fraction_100m": 0.94766672,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.0
+  },
+  {
+    "cell_id": "demand_011",
+    "target_relative_heat_rank": 0.09322034,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.39957096,
+    "green_area_fraction_100m": 0.80747699,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.05409842,
+    "pedestrian_network_density_100m": 0.00225287
+  },
+  {
+    "cell_id": "demand_012",
+    "target_relative_heat_rank": 0.05084746,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.40293102,
+    "green_area_fraction_100m": 0.51957209,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0992793,
+    "pedestrian_network_density_100m": 0.00988846
+  },
+  {
+    "cell_id": "demand_013",
+    "target_relative_heat_rank": 0.03389831,
+    "spatial_block": 8,
+    "median_qa_masked_ndvi": 0.32198426,
+    "green_area_fraction_100m": 0.28678382,
+    "distance_to_mapped_park_m": 51.27347611,
+    "building_area_fraction_100m": 0.1626509,
+    "pedestrian_network_density_100m": 0.0123023
+  },
+  {
+    "cell_id": "demand_014",
+    "target_relative_heat_rank": 0.79661017,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.24452751,
+    "green_area_fraction_100m": 0.13297794,
+    "distance_to_mapped_park_m": 30.13271015,
+    "building_area_fraction_100m": 0.02228441,
+    "pedestrian_network_density_100m": 0.00936975
+  },
+  {
+    "cell_id": "demand_015",
+    "target_relative_heat_rank": 0.87288136,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.30165674,
+    "green_area_fraction_100m": 0.07824479,
+    "distance_to_mapped_park_m": 48.30366458,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.00696641
+  },
+  {
+    "cell_id": "demand_016",
+    "target_relative_heat_rank": 0.80508475,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.32672038,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 110.18774788,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01543566
+  },
+  {
+    "cell_id": "demand_017",
+    "target_relative_heat_rank": 0.5,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.43244456,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 118.08012955,
+    "building_area_fraction_100m": 0.01078965,
+    "pedestrian_network_density_100m": 0.01701971
+  },
+  {
+    "cell_id": "demand_018",
+    "target_relative_heat_rank": 0.1440678,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.51303198,
+    "green_area_fraction_100m": 0.05449284,
+    "distance_to_mapped_park_m": 79.30003783,
+    "building_area_fraction_100m": 0.01945365,
+    "pedestrian_network_density_100m": 0.01973228
+  },
+  {
+    "cell_id": "demand_019",
+    "target_relative_heat_rank": 0.59322034,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.32864233,
+    "green_area_fraction_100m": 0.33900774,
+    "distance_to_mapped_park_m": 7.98575064,
+    "building_area_fraction_100m": 0.01921741,
+    "pedestrian_network_density_100m": 0.01566201
+  },
+  {
+    "cell_id": "demand_020",
+    "target_relative_heat_rank": 0.6779661,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.35363419,
+    "green_area_fraction_100m": 0.45583002,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.12066155,
+    "pedestrian_network_density_100m": 0.00768351
+  },
+  {
+    "cell_id": "demand_021",
+    "target_relative_heat_rank": 0.56779661,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.24537542,
+    "green_area_fraction_100m": 0.29859119,
+    "distance_to_mapped_park_m": 32.17735658,
+    "building_area_fraction_100m": 0.22128979,
+    "pedestrian_network_density_100m": 0.00571446
+  },
+  {
+    "cell_id": "demand_022",
+    "target_relative_heat_rank": 0.10169492,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.2632027,
+    "green_area_fraction_100m": 0.09814374,
+    "distance_to_mapped_park_m": 66.6984618,
+    "building_area_fraction_100m": 0.25762928,
+    "pedestrian_network_density_100m": 0.01938559
+  },
+  {
+    "cell_id": "demand_023",
+    "target_relative_heat_rank": 0.04237288,
+    "spatial_block": 8,
+    "median_qa_masked_ndvi": 0.35457102,
+    "green_area_fraction_100m": 0.08761439,
+    "distance_to_mapped_park_m": 42.25955539,
+    "building_area_fraction_100m": 0.2813619,
+    "pedestrian_network_density_100m": 0.02095584
+  },
+  {
+    "cell_id": "demand_024",
+    "target_relative_heat_rank": 0.00847458,
+    "spatial_block": 8,
+    "median_qa_masked_ndvi": 0.36111754,
+    "green_area_fraction_100m": 0.15469198,
+    "distance_to_mapped_park_m": 0.45519728,
+    "building_area_fraction_100m": 0.2117225,
+    "pedestrian_network_density_100m": 0.01712683
+  },
+  {
+    "cell_id": "demand_025",
+    "target_relative_heat_rank": 0.73728814,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.18344076,
+    "green_area_fraction_100m": 0.07365342,
+    "distance_to_mapped_park_m": 58.65353325,
+    "building_area_fraction_100m": 0.09007986,
+    "pedestrian_network_density_100m": 0.01357856
+  },
+  {
+    "cell_id": "demand_026",
+    "target_relative_heat_rank": 0.91525424,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.24235016,
+    "green_area_fraction_100m": 0.00068591,
+    "distance_to_mapped_park_m": 95.24063225,
+    "building_area_fraction_100m": 0.07056832,
+    "pedestrian_network_density_100m": 0.01207908
+  },
+  {
+    "cell_id": "demand_027",
+    "target_relative_heat_rank": 0.72881356,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.31213996,
+    "green_area_fraction_100m": 0.05189231,
+    "distance_to_mapped_park_m": 34.86911628,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03032258
+  },
+  {
+    "cell_id": "demand_028",
+    "target_relative_heat_rank": 0.47457627,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.30547159,
+    "green_area_fraction_100m": 0.05189231,
+    "distance_to_mapped_park_m": 41.91686626,
+    "building_area_fraction_100m": 0.06202689,
+    "pedestrian_network_density_100m": 0.03158826
+  },
+  {
+    "cell_id": "demand_029",
+    "target_relative_heat_rank": 0.27118644,
+    "spatial_block": 6,
+    "median_qa_masked_ndvi": 0.42732935,
+    "green_area_fraction_100m": 0.00040942,
+    "distance_to_mapped_park_m": 96.97513422,
+    "building_area_fraction_100m": 0.06202689,
+    "pedestrian_network_density_100m": 0.02754275
+  },
+  {
+    "cell_id": "demand_030",
+    "target_relative_heat_rank": 0.38983051,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.22121584,
+    "green_area_fraction_100m": 0.07744388,
+    "distance_to_mapped_park_m": 62.289366,
+    "building_area_fraction_100m": 0.02769882,
+    "pedestrian_network_density_100m": 0.03244667
+  },
+  {
+    "cell_id": "demand_031",
+    "target_relative_heat_rank": 0.61864407,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.22628931,
+    "green_area_fraction_100m": 0.08843535,
+    "distance_to_mapped_park_m": 53.04037606,
+    "building_area_fraction_100m": 0.09061806,
+    "pedestrian_network_density_100m": 0.02038082
+  },
+  {
+    "cell_id": "demand_032",
+    "target_relative_heat_rank": 0.60169492,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.29285203,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 106.42500093,
+    "building_area_fraction_100m": 0.1974669,
+    "pedestrian_network_density_100m": 0.01578945
+  },
+  {
+    "cell_id": "demand_033",
+    "target_relative_heat_rank": 0.44067797,
+    "spatial_block": 7,
+    "median_qa_masked_ndvi": 0.31473662,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 150.36645504,
+    "building_area_fraction_100m": 0.19127383,
+    "pedestrian_network_density_100m": 0.01768655
+  },
+  {
+    "cell_id": "demand_034",
+    "target_relative_heat_rank": 0.30508475,
+    "spatial_block": 8,
+    "median_qa_masked_ndvi": 0.29084648,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 106.91371549,
+    "building_area_fraction_100m": 0.21809014,
+    "pedestrian_network_density_100m": 0.03507894
+  },
+  {
+    "cell_id": "demand_035",
+    "target_relative_heat_rank": 0.05932203,
+    "spatial_block": 8,
+    "median_qa_masked_ndvi": 0.34495112,
+    "green_area_fraction_100m": 0.01360262,
+    "distance_to_mapped_park_m": 80.77845905,
+    "building_area_fraction_100m": 0.22248759,
+    "pedestrian_network_density_100m": 0.04716821
+  },
+  {
+    "cell_id": "demand_036",
+    "target_relative_heat_rank": 0.07627119,
+    "spatial_block": 8,
+    "median_qa_masked_ndvi": 0.31926479,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 113.41995885,
+    "building_area_fraction_100m": 0.22598028,
+    "pedestrian_network_density_100m": 0.03762185
+  },
+  {
+    "cell_id": "demand_037",
+    "target_relative_heat_rank": 0.68644068,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.22819061,
+    "green_area_fraction_100m": 0.1271477,
+    "distance_to_mapped_park_m": 63.57951174,
+    "building_area_fraction_100m": 0.10346957,
+    "pedestrian_network_density_100m": 0.03176577
+  },
+  {
+    "cell_id": "demand_038",
+    "target_relative_heat_rank": 0.89830508,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.20877366,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 103.86704287,
+    "building_area_fraction_100m": 0.08184569,
+    "pedestrian_network_density_100m": 0.02565599
+  },
+  {
+    "cell_id": "demand_039",
+    "target_relative_heat_rank": 0.74576271,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.20385043,
+    "green_area_fraction_100m": 0.06941764,
+    "distance_to_mapped_park_m": 30.11692639,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.04453354
+  },
+  {
+    "cell_id": "demand_040",
+    "target_relative_heat_rank": 0.46610169,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.20110775,
+    "green_area_fraction_100m": 0.10391878,
+    "distance_to_mapped_park_m": 39.73208141,
+    "building_area_fraction_100m": 0.04150045,
+    "pedestrian_network_density_100m": 0.05256507
+  },
+  {
+    "cell_id": "demand_041",
+    "target_relative_heat_rank": 0.23728814,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.27431012,
+    "green_area_fraction_100m": 0.0669,
+    "distance_to_mapped_park_m": 18.6413425,
+    "building_area_fraction_100m": 0.04117684,
+    "pedestrian_network_density_100m": 0.05430518
+  },
+  {
+    "cell_id": "demand_042",
+    "target_relative_heat_rank": 0.15254237,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.21939084,
+    "green_area_fraction_100m": 0.10875437,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.05681736
+  },
+  {
+    "cell_id": "demand_043",
+    "target_relative_heat_rank": 0.3220339,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.33847502,
+    "green_area_fraction_100m": 0.18994361,
+    "distance_to_mapped_park_m": 1.03280364,
+    "building_area_fraction_100m": 0.00919551,
+    "pedestrian_network_density_100m": 0.04166677
+  },
+  {
+    "cell_id": "demand_044",
+    "target_relative_heat_rank": 0.31355932,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.29872757,
+    "green_area_fraction_100m": 0.18021377,
+    "distance_to_mapped_park_m": 34.37495084,
+    "building_area_fraction_100m": 0.09329853,
+    "pedestrian_network_density_100m": 0.0180373
+  },
+  {
+    "cell_id": "demand_045",
+    "target_relative_heat_rank": 0.45762712,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.25817892,
+    "green_area_fraction_100m": 0.02034711,
+    "distance_to_mapped_park_m": 89.80311468,
+    "building_area_fraction_100m": 0.17255673,
+    "pedestrian_network_density_100m": 0.02680214
+  },
+  {
+    "cell_id": "demand_046",
+    "target_relative_heat_rank": 0.33898305,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.34112138,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 142.2663955,
+    "building_area_fraction_100m": 0.19709314,
+    "pedestrian_network_density_100m": 0.04866331
+  },
+  {
+    "cell_id": "demand_047",
+    "target_relative_heat_rank": 0.11864407,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.2716391,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 172.80713736,
+    "building_area_fraction_100m": 0.22242666,
+    "pedestrian_network_density_100m": 0.06422859
+  },
+  {
+    "cell_id": "demand_048",
+    "target_relative_heat_rank": 0.13559322,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.28456207,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 195.34022462,
+    "building_area_fraction_100m": 0.27930583,
+    "pedestrian_network_density_100m": 0.0557836
+  },
+  {
+    "cell_id": "demand_049",
+    "target_relative_heat_rank": 0.77966102,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.16927997,
+    "green_area_fraction_100m": 0.08483399,
+    "distance_to_mapped_park_m": 50.95016276,
+    "building_area_fraction_100m": 0.03583959,
+    "pedestrian_network_density_100m": 0.03793132
+  },
+  {
+    "cell_id": "demand_050",
+    "target_relative_heat_rank": 0.93220339,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.25489458,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 125.11092619,
+    "building_area_fraction_100m": 0.02974377,
+    "pedestrian_network_density_100m": 0.02167884
+  },
+  {
+    "cell_id": "demand_051",
+    "target_relative_heat_rank": 0.88983051,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.21320225,
+    "green_area_fraction_100m": 0.04117185,
+    "distance_to_mapped_park_m": 67.29220988,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03108323
+  },
+  {
+    "cell_id": "demand_052",
+    "target_relative_heat_rank": 0.65254237,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.20205856,
+    "green_area_fraction_100m": 0.05248693,
+    "distance_to_mapped_park_m": 5.55415553,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.05038871
+  },
+  {
+    "cell_id": "demand_053",
+    "target_relative_heat_rank": 0.36440678,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.18051212,
+    "green_area_fraction_100m": 0.1200134,
+    "distance_to_mapped_park_m": 43.64086456,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.05726531
+  },
+  {
+    "cell_id": "demand_054",
+    "target_relative_heat_rank": 0.24576271,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.16697377,
+    "green_area_fraction_100m": 0.13005292,
+    "distance_to_mapped_park_m": 38.48934042,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.06260923
+  },
+  {
+    "cell_id": "demand_055",
+    "target_relative_heat_rank": 0.20338983,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.21746593,
+    "green_area_fraction_100m": 0.25604486,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.05025014
+  },
+  {
+    "cell_id": "demand_056",
+    "target_relative_heat_rank": 0.06779661,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.47240363,
+    "green_area_fraction_100m": 0.42090279,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.05865232,
+    "pedestrian_network_density_100m": 0.02737976
+  },
+  {
+    "cell_id": "demand_057",
+    "target_relative_heat_rank": 0.19491525,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.32883436,
+    "green_area_fraction_100m": 0.32311133,
+    "distance_to_mapped_park_m": 19.14802641,
+    "building_area_fraction_100m": 0.14132117,
+    "pedestrian_network_density_100m": 0.03124291
+  },
+  {
+    "cell_id": "demand_058",
+    "target_relative_heat_rank": 0.18644068,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.29202394,
+    "green_area_fraction_100m": 0.0425305,
+    "distance_to_mapped_park_m": 71.41699182,
+    "building_area_fraction_100m": 0.18631611,
+    "pedestrian_network_density_100m": 0.06595094
+  },
+  {
+    "cell_id": "demand_059",
+    "target_relative_heat_rank": 0.16101695,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.32398493,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 138.56602181,
+    "building_area_fraction_100m": 0.23876228,
+    "pedestrian_network_density_100m": 0.07058697
+  },
+  {
+    "cell_id": "demand_060",
+    "target_relative_heat_rank": 0.16949153,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.34466078,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 196.53951855,
+    "building_area_fraction_100m": 0.24744646,
+    "pedestrian_network_density_100m": 0.05907976
+  },
+  {
+    "cell_id": "demand_061",
+    "target_relative_heat_rank": 0.3559322,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.32178916,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 133.78458205,
+    "building_area_fraction_100m": 0.23908878,
+    "pedestrian_network_density_100m": 0.06417895
+  },
+  {
+    "cell_id": "demand_062",
+    "target_relative_heat_rank": 0.84745763,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.11853378,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 119.44615623,
+    "building_area_fraction_100m": 0.00946976,
+    "pedestrian_network_density_100m": 0.03971466
+  },
+  {
+    "cell_id": "demand_063",
+    "target_relative_heat_rank": 0.96610169,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.20462408,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 173.63918873,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02648433
+  },
+  {
+    "cell_id": "demand_064",
+    "target_relative_heat_rank": 0.99152542,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.22284966,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 118.60842823,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02429228
+  },
+  {
+    "cell_id": "demand_065",
+    "target_relative_heat_rank": 0.8559322,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.18147758,
+    "green_area_fraction_100m": 0.00617805,
+    "distance_to_mapped_park_m": 94.96601792,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03664032
+  },
+  {
+    "cell_id": "demand_066",
+    "target_relative_heat_rank": 0.51694915,
+    "spatial_block": 3,
+    "median_qa_masked_ndvi": 0.24454158,
+    "green_area_fraction_100m": 0.06422874,
+    "distance_to_mapped_park_m": 19.57795505,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.04635156
+  },
+  {
+    "cell_id": "demand_067",
+    "target_relative_heat_rank": 0.34745763,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.21636137,
+    "green_area_fraction_100m": 0.12399432,
+    "distance_to_mapped_park_m": 35.58644676,
+    "building_area_fraction_100m": 0.00540577,
+    "pedestrian_network_density_100m": 0.06066753
+  },
+  {
+    "cell_id": "demand_068",
+    "target_relative_heat_rank": 0.40677966,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.1939487,
+    "green_area_fraction_100m": 0.1438896,
+    "distance_to_mapped_park_m": 15.68062192,
+    "building_area_fraction_100m": 0.00415089,
+    "pedestrian_network_density_100m": 0.0590032
+  },
+  {
+    "cell_id": "demand_069",
+    "target_relative_heat_rank": 0.08474576,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.33308314,
+    "green_area_fraction_100m": 0.40081203,
+    "distance_to_mapped_park_m": 6.10463108,
+    "building_area_fraction_100m": 0.00789331,
+    "pedestrian_network_density_100m": 0.03962811
+  },
+  {
+    "cell_id": "demand_070",
+    "target_relative_heat_rank": 0.22881356,
+    "spatial_block": 4,
+    "median_qa_masked_ndvi": 0.29508651,
+    "green_area_fraction_100m": 0.40332373,
+    "distance_to_mapped_park_m": 9.13967412,
+    "building_area_fraction_100m": 0.01101099,
+    "pedestrian_network_density_100m": 0.03882426
+  },
+  {
+    "cell_id": "demand_071",
+    "target_relative_heat_rank": 0.26271186,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.27582022,
+    "green_area_fraction_100m": 0.10993677,
+    "distance_to_mapped_park_m": 59.26366586,
+    "building_area_fraction_100m": 0.08169542,
+    "pedestrian_network_density_100m": 0.05510181
+  },
+  {
+    "cell_id": "demand_072",
+    "target_relative_heat_rank": 0.25423729,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.29860968,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 132.71190115,
+    "building_area_fraction_100m": 0.16719014,
+    "pedestrian_network_density_100m": 0.06596674
+  },
+  {
+    "cell_id": "demand_073",
+    "target_relative_heat_rank": 0.27966102,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.27453354,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 150.40534179,
+    "building_area_fraction_100m": 0.23079669,
+    "pedestrian_network_density_100m": 0.05874182
+  },
+  {
+    "cell_id": "demand_074",
+    "target_relative_heat_rank": 0.41525424,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.2917752,
+    "green_area_fraction_100m": 0.0414693,
+    "distance_to_mapped_park_m": 75.95593203,
+    "building_area_fraction_100m": 0.25940248,
+    "pedestrian_network_density_100m": 0.05347654
+  },
+  {
+    "cell_id": "demand_075",
+    "target_relative_heat_rank": 0.22033898,
+    "spatial_block": 5,
+    "median_qa_masked_ndvi": 0.3441978,
+    "green_area_fraction_100m": 0.15720936,
+    "distance_to_mapped_park_m": 11.86268611,
+    "building_area_fraction_100m": 0.17684702,
+    "pedestrian_network_density_100m": 0.04579397
+  },
+  {
+    "cell_id": "demand_076",
+    "target_relative_heat_rank": 0.83898305,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.11265735,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 200.12369059,
+    "building_area_fraction_100m": 0.01841679,
+    "pedestrian_network_density_100m": 0.03710942
+  },
+  {
+    "cell_id": "demand_077",
+    "target_relative_heat_rank": 0.90677966,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.12699542,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 241.60666349,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02952283
+  },
+  {
+    "cell_id": "demand_078",
+    "target_relative_heat_rank": 1.0,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.19482975,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 200.1321191,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02493513
+  },
+  {
+    "cell_id": "demand_079",
+    "target_relative_heat_rank": 0.97457627,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.203263,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 134.33364099,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01996433
+  },
+  {
+    "cell_id": "demand_080",
+    "target_relative_heat_rank": 0.75423729,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.23825844,
+    "green_area_fraction_100m": 0.05145912,
+    "distance_to_mapped_park_m": 56.45511551,
+    "building_area_fraction_100m": 0.01321873,
+    "pedestrian_network_density_100m": 0.03757616
+  },
+  {
+    "cell_id": "demand_081",
+    "target_relative_heat_rank": 0.63559322,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.23785215,
+    "green_area_fraction_100m": 0.05229017,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.03449156,
+    "pedestrian_network_density_100m": 0.052966
+  },
+  {
+    "cell_id": "demand_082",
+    "target_relative_heat_rank": 0.66101695,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.20521361,
+    "green_area_fraction_100m": 0.09983253,
+    "distance_to_mapped_park_m": 42.37121513,
+    "building_area_fraction_100m": 0.04484752,
+    "pedestrian_network_density_100m": 0.04164715
+  },
+  {
+    "cell_id": "demand_083",
+    "target_relative_heat_rank": 0.49152542,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.29974077,
+    "green_area_fraction_100m": 0.30204318,
+    "distance_to_mapped_park_m": 11.42983635,
+    "building_area_fraction_100m": 0.02693523,
+    "pedestrian_network_density_100m": 0.03623459
+  },
+  {
+    "cell_id": "demand_084",
+    "target_relative_heat_rank": 0.1779661,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.38376099,
+    "green_area_fraction_100m": 0.40292117,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.01446133,
+    "pedestrian_network_density_100m": 0.04490913
+  },
+  {
+    "cell_id": "demand_085",
+    "target_relative_heat_rank": 0.21186441,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.31339408,
+    "green_area_fraction_100m": 0.26848485,
+    "distance_to_mapped_park_m": 24.08287103,
+    "building_area_fraction_100m": 0.00432265,
+    "pedestrian_network_density_100m": 0.04637822
+  },
+  {
+    "cell_id": "demand_086",
+    "target_relative_heat_rank": 0.38135593,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.24769409,
+    "green_area_fraction_100m": 0.04665986,
+    "distance_to_mapped_park_m": 48.90756046,
+    "building_area_fraction_100m": 0.05508392,
+    "pedestrian_network_density_100m": 0.05841544
+  },
+  {
+    "cell_id": "demand_087",
+    "target_relative_heat_rank": 0.42372881,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.36035649,
+    "green_area_fraction_100m": 0.00579866,
+    "distance_to_mapped_park_m": 90.2119771,
+    "building_area_fraction_100m": 0.14284658,
+    "pedestrian_network_density_100m": 0.06123025
+  },
+  {
+    "cell_id": "demand_088",
+    "target_relative_heat_rank": 0.29661017,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.27856383,
+    "green_area_fraction_100m": 0.32626498,
+    "distance_to_mapped_park_m": 38.19223771,
+    "building_area_fraction_100m": 0.13905851,
+    "pedestrian_network_density_100m": 0.05113814
+  },
+  {
+    "cell_id": "demand_089",
+    "target_relative_heat_rank": 0.28813559,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.45509809,
+    "green_area_fraction_100m": 0.72814199,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.09582007,
+    "pedestrian_network_density_100m": 0.03646639
+  },
+  {
+    "cell_id": "demand_090",
+    "target_relative_heat_rank": 0.86440678,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.11186363,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 277.06320166,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03552848
+  },
+  {
+    "cell_id": "demand_091",
+    "target_relative_heat_rank": 0.98305085,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.1555126,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 195.85554937,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02927824
+  },
+  {
+    "cell_id": "demand_092",
+    "target_relative_heat_rank": 0.94067797,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.2026441,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 115.00730945,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02414758
+  },
+  {
+    "cell_id": "demand_093",
+    "target_relative_heat_rank": 0.78813559,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.21902306,
+    "green_area_fraction_100m": 0.05190255,
+    "distance_to_mapped_park_m": 36.95794475,
+    "building_area_fraction_100m": 0.00499173,
+    "pedestrian_network_density_100m": 0.03680658
+  },
+  {
+    "cell_id": "demand_094",
+    "target_relative_heat_rank": 0.6440678,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.21414086,
+    "green_area_fraction_100m": 0.06663645,
+    "distance_to_mapped_park_m": 12.56366424,
+    "building_area_fraction_100m": 0.05772521,
+    "pedestrian_network_density_100m": 0.04778879
+  },
+  {
+    "cell_id": "demand_095",
+    "target_relative_heat_rank": 0.77118644,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.26417806,
+    "green_area_fraction_100m": 0.02542028,
+    "distance_to_mapped_park_m": 88.10305554,
+    "building_area_fraction_100m": 0.06508032,
+    "pedestrian_network_density_100m": 0.0412007
+  },
+  {
+    "cell_id": "demand_096",
+    "target_relative_heat_rank": 0.61016949,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.29427913,
+    "green_area_fraction_100m": 0.2014886,
+    "distance_to_mapped_park_m": 50.01554485,
+    "building_area_fraction_100m": 0.05757192,
+    "pedestrian_network_density_100m": 0.03491479
+  },
+  {
+    "cell_id": "demand_097",
+    "target_relative_heat_rank": 0.39830508,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.3122191,
+    "green_area_fraction_100m": 0.34478031,
+    "distance_to_mapped_park_m": 17.87798964,
+    "building_area_fraction_100m": 0.01549931,
+    "pedestrian_network_density_100m": 0.04877195
+  },
+  {
+    "cell_id": "demand_098",
+    "target_relative_heat_rank": 0.33050847,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.23212593,
+    "green_area_fraction_100m": 0.21075741,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.05435126
+  },
+  {
+    "cell_id": "demand_099",
+    "target_relative_heat_rank": 0.37288136,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.23785151,
+    "green_area_fraction_100m": 0.08796531,
+    "distance_to_mapped_park_m": 2.53365847,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.05300695
+  },
+  {
+    "cell_id": "demand_100",
+    "target_relative_heat_rank": 0.54237288,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.33377613,
+    "green_area_fraction_100m": 0.05596788,
+    "distance_to_mapped_park_m": 62.82990719,
+    "building_area_fraction_100m": 0.03104817,
+    "pedestrian_network_density_100m": 0.04575054
+  },
+  {
+    "cell_id": "demand_101",
+    "target_relative_heat_rank": 0.50847458,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.37849684,
+    "green_area_fraction_100m": 0.55128101,
+    "distance_to_mapped_park_m": 9.79279074,
+    "building_area_fraction_100m": 0.03602291,
+    "pedestrian_network_density_100m": 0.03383176
+  },
+  {
+    "cell_id": "demand_102",
+    "target_relative_heat_rank": 0.52542373,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.49073208,
+    "green_area_fraction_100m": 1.02376684,
+    "distance_to_mapped_park_m": 0.0,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02574114
+  },
+  {
+    "cell_id": "demand_103",
+    "target_relative_heat_rank": 0.95762712,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.13036499,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 208.56343712,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03470483
+  },
+  {
+    "cell_id": "demand_104",
+    "target_relative_heat_rank": 0.94915254,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.22378396,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 132.97836483,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01893285
+  },
+  {
+    "cell_id": "demand_105",
+    "target_relative_heat_rank": 0.8220339,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.30869851,
+    "green_area_fraction_100m": 0.04893654,
+    "distance_to_mapped_park_m": 59.63523068,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02988573
+  },
+  {
+    "cell_id": "demand_106",
+    "target_relative_heat_rank": 0.58474576,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.20909722,
+    "green_area_fraction_100m": 0.10209365,
+    "distance_to_mapped_park_m": 34.18940678,
+    "building_area_fraction_100m": 0.00950792,
+    "pedestrian_network_density_100m": 0.04950512
+  },
+  {
+    "cell_id": "demand_107",
+    "target_relative_heat_rank": 0.66949153,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.18965583,
+    "green_area_fraction_100m": 0.09726663,
+    "distance_to_mapped_park_m": 34.08912536,
+    "building_area_fraction_100m": 0.03270558,
+    "pedestrian_network_density_100m": 0.05474545
+  },
+  {
+    "cell_id": "demand_108",
+    "target_relative_heat_rank": 0.62711864,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.29225321,
+    "green_area_fraction_100m": 0.09160821,
+    "distance_to_mapped_park_m": 0.30993584,
+    "building_area_fraction_100m": 0.02210594,
+    "pedestrian_network_density_100m": 0.04804949
+  },
+  {
+    "cell_id": "demand_109",
+    "target_relative_heat_rank": 0.48305085,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.22470661,
+    "green_area_fraction_100m": 0.06738671,
+    "distance_to_mapped_park_m": 24.61355844,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.0394528
+  },
+  {
+    "cell_id": "demand_110",
+    "target_relative_heat_rank": 0.43220339,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.22184342,
+    "green_area_fraction_100m": 0.04853444,
+    "distance_to_mapped_park_m": 57.21145975,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03239372
+  },
+  {
+    "cell_id": "demand_111",
+    "target_relative_heat_rank": 0.44915254,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.25780735,
+    "green_area_fraction_100m": 0.00975019,
+    "distance_to_mapped_park_m": 89.30672344,
+    "building_area_fraction_100m": 0.00507455,
+    "pedestrian_network_density_100m": 0.02878684
+  },
+  {
+    "cell_id": "demand_112",
+    "target_relative_heat_rank": 0.57627119,
+    "spatial_block": 2,
+    "median_qa_masked_ndvi": 0.26134531,
+    "green_area_fraction_100m": 0.00997044,
+    "distance_to_mapped_park_m": 90.13994357,
+    "building_area_fraction_100m": 0.0110398,
+    "pedestrian_network_density_100m": 0.01635424
+  },
+  {
+    "cell_id": "demand_113",
+    "target_relative_heat_rank": 0.92372881,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.17556738,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 171.01041962,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.02222047
+  },
+  {
+    "cell_id": "demand_114",
+    "target_relative_heat_rank": 0.88135593,
+    "spatial_block": 0,
+    "median_qa_masked_ndvi": 0.33314269,
+    "green_area_fraction_100m": 0.00529067,
+    "distance_to_mapped_park_m": 95.05217629,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01891833
+  },
+  {
+    "cell_id": "demand_115",
+    "target_relative_heat_rank": 0.76271186,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.20482436,
+    "green_area_fraction_100m": 0.0501911,
+    "distance_to_mapped_park_m": 22.79230174,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03077687
+  },
+  {
+    "cell_id": "demand_116",
+    "target_relative_heat_rank": 0.69491525,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.21983628,
+    "green_area_fraction_100m": 0.05826583,
+    "distance_to_mapped_park_m": 45.15945028,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.03179026
+  },
+  {
+    "cell_id": "demand_117",
+    "target_relative_heat_rank": 0.55932203,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.22809756,
+    "green_area_fraction_100m": 0.02570518,
+    "distance_to_mapped_park_m": 77.99439967,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.01991895
+  },
+  {
+    "cell_id": "demand_118",
+    "target_relative_heat_rank": 0.12711864,
+    "spatial_block": 1,
+    "median_qa_masked_ndvi": 0.18288764,
+    "green_area_fraction_100m": 0.0,
+    "distance_to_mapped_park_m": 109.45644296,
+    "building_area_fraction_100m": 0.0,
+    "pedestrian_network_density_100m": 0.00857492
+  }
+]

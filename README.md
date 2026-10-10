@@ -42,6 +42,14 @@ supplied raw layers
 
 Candidates are generated only from filtered pedestrian-network vertices within 30 m of mapped green space or a school, college, or community facility, then spatially thinned to 100 m. They are labelled **Possible site — requires land, access, water, and operations verification.** The rules are fixed for the reported scenario; they were not tuned to improve coverage.
 
+## Experimental ML audit
+
+A local scikit-learn `HistGradientBoostingRegressor` feasibility experiment was run on 118 cells using 9 fixed spatial cross-validation blocks. Its held-out MAE was **0.187395**, compared with **0.255021** for the mean baseline (a **26.5%** improvement); held-out R² was **0.379254**.
+
+Features were NDVI, green-area fraction, distance to mapped park, building fraction, and pedestrian-network density; population was excluded. The surrogate is retained as reproducible experimental evidence only and does not replace the transparent satellite-derived heat-priority score. One held-out fold underperformed the mean baseline, and NDVI and the target share Landsat source signal.
+
+This experiment does not estimate air temperature, heat exposure, health risk, people protected, intervention effect, or site suitability. See the [model card](data/processed/ml_feasibility_model_card.md) and [validation chart](data/processed/ml_feasibility_validation.png).
+
 ## Limitations
 
 - The 400 m value is a network-distance planning assumption, **not** guaranteed five-minute walking access.

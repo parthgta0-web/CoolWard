@@ -33,6 +33,14 @@ The dashboard/API uses the **primary 400 m scenario**: no OSM feature is treated
 
 Every possible site requires land, access, water, and operations verification. The ₹5 lakh figure is a standard planning unit, not a procurement quote.
 
+## Experimental ML audit
+
+A local scikit-learn `HistGradientBoostingRegressor` feasibility experiment used 118 cells and 9 fixed spatial cross-validation blocks to estimate the existing relative multi-scene satellite-derived heat-priority rank. Held-out MAE was **0.187395**, versus **0.255021** for the mean baseline (a **26.5%** improvement); held-out R² was **0.379254**.
+
+The features were NDVI, green-area fraction, distance to mapped park, building fraction, and pedestrian-network density. Population was excluded. The surrogate is retained as reproducible experimental evidence only; it does not replace the transparent satellite-derived heat-priority score. One held-out fold underperformed the mean baseline, and NDVI/target share Landsat source signal, so this is not independent predictive validation.
+
+The experiment does not estimate air temperature, heat exposure, health risk, people protected, intervention effect, or site suitability. See [the model card](processed/ml_feasibility_model_card.md) and [the validation chart](processed/ml_feasibility_validation.png).
+
 ## Reproducibility
 
 The scripts in `pipeline/` are run locally and write derived outputs only to `data/processed/`. The Phase 3 integration export packages the validated primary scenario for the local Lambda-compatible API; it does not rerun the raw-data processing workflow.

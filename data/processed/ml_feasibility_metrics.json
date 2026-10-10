@@ -1,0 +1,103 @@
+{
+  "experiment": "Local supervised surrogate feasibility experiment",
+  "seed": 20261010,
+  "target": "existing relative multi-scene Landsat-derived heat-priority rank",
+  "samples": 118,
+  "spatial_blocks": 9,
+  "feature_names": [
+    "median_qa_masked_ndvi",
+    "green_area_fraction_100m",
+    "distance_to_mapped_park_m",
+    "building_area_fraction_100m",
+    "pedestrian_network_density_100m"
+  ],
+  "population_feature_used": false,
+  "model": "scikit-learn HistGradientBoostingRegressor (LightGBM unavailable locally)",
+  "metrics": {
+    "baseline_mean_predictor": {
+      "mae": 0.255021,
+      "r2": -0.056754
+    },
+    "hist_gradient_boosting": {
+      "mae": 0.187395,
+      "r2": 0.379254
+    },
+    "mae_reduction_vs_baseline": 0.265178
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_samples": 102,
+      "held_out_samples": 16,
+      "held_out_blocks": [
+        1
+      ],
+      "baseline_mae": 0.160363,
+      "model_mae": 0.201083
+    },
+    {
+      "fold": 2,
+      "train_samples": 91,
+      "held_out_samples": 27,
+      "held_out_blocks": [
+        4,
+        7
+      ],
+      "baseline_mae": 0.266796,
+      "model_mae": 0.227292
+    },
+    {
+      "fold": 3,
+      "train_samples": 96,
+      "held_out_samples": 22,
+      "held_out_blocks": [
+        3,
+        8
+      ],
+      "baseline_mae": 0.324995,
+      "model_mae": 0.178021
+    },
+    {
+      "fold": 4,
+      "train_samples": 91,
+      "held_out_samples": 27,
+      "held_out_blocks": [
+        2,
+        6
+      ],
+      "baseline_mae": 0.164583,
+      "model_mae": 0.180776
+    },
+    {
+      "fold": 5,
+      "train_samples": 92,
+      "held_out_samples": 26,
+      "held_out_blocks": [
+        0,
+        5
+      ],
+      "baseline_mae": 0.335752,
+      "model_mae": 0.152346
+    }
+  ],
+  "feature_importance": {
+    "median_qa_masked_ndvi": 0.031267,
+    "green_area_fraction_100m": 0.001419,
+    "distance_to_mapped_park_m": -0.001627,
+    "building_area_fraction_100m": 0.01268,
+    "pedestrian_network_density_100m": 0.015663
+  },
+  "recommendation": "KEEP ONLY AS OPTIONAL EXPLANATION",
+  "recommendation_reason": "Spatially held-out metrics meet the pre-set feasibility threshold, but this remains a small-area surrogate sharing Landsat inputs with the target.",
+  "data_leakage_risks": [
+    "NDVI and the target are derived from the same supplied Landsat scenes, so agreement may reflect shared remote-sensing signal rather than independent predictive validity.",
+    "Nearby cells have spatial autocorrelation even with block cross-validation.",
+    "Mapped green context and buildings are OSM-derived and may be incomplete or temporally mismatched."
+  ],
+  "limitations": [
+    "This predicts a satellite-derived relative priority rank only, not ground-truth air temperature, heat exposure, health risk, people protected, or intervention impact.",
+    "No population feature is used.",
+    "The sample is limited to supplied local cells and cannot establish transferability beyond this pilot."
+  ],
+  "optional_display_if_kept": "Show only as a collapsed 'ML heat-priority explanation (experimental)' panel beside the satellite score, with held-out MAE/R\u00b2, feature contributions, and the statement that it never replaces the transparent satellite-derived score."
+}
