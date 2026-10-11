@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { CircleMarker, GeoJSON, MapContainer, Polyline, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './App.css'
@@ -33,8 +33,11 @@ function App() {
   const [isRecomputing, setIsRecomputing] = useState(false)
   const [pendingCandidateId, setPendingCandidateId] = useState(null)
   const [simulationOrigin, setSimulationOrigin] = useState(null)
+  const latestRequest = useRef(0)
 
   async function loadPlans(forceLayers = false) {
+    const requestNumber = latestRequest.current + 1
+    latestRequest.current = requestNumber
     setIsRecomputing(true)
     setStatus('Recomputing validated local scenarios…')
     try {
@@ -48,14 +51,19 @@ function App() {
       if (JSON.stringify(body.excluded_candidate_ids) !== JSON.stringify(expectedExcluded)) {
         throw new Error('The local API did not confirm the active simulation.')
       }
+      if (requestNumber !== latestRequest.current) return
       setPlans(body.plans)
       if (body.layers) setLayers(body.layers)
       setStatus(`Recomputed locally by Lambda via SAM Local in ${Math.round(body.recomputed_local_ms)} ms.`)
     } catch (error) {
-      setStatus(`Local API unavailable — start SAM Local, then retry. (${error.message})`)
+      if (requestNumber === latestRequest.current) {
+        setStatus(`Local API unavailable — start SAM Local, then retry. (${error.message})`)
+      }
     } finally {
-      setIsRecomputing(false)
-      setPendingCandidateId(null)
+      if (requestNumber === latestRequest.current) {
+        setIsRecomputing(false)
+        setPendingCandidateId(null)
+      }
     }
   }
 
@@ -68,7 +76,7 @@ function App() {
   const references = layers?.osm_contextual_references?.features ?? []
 
   function simulateFailure(site, index) {
-    if (isRecomputing || excludedCandidateIds.length || !plan) return
+    if (isRecomputing || excludedCandidateIds.length || !plan || !site.verification_insight) return
     setPendingCandidateId(site.candidate_id)
     setSimulationOrigin({
       budget, threshold, coverage: plan.modelled_priority_coverage_percent,
@@ -100,7 +108,7 @@ function App() {
     <section className="results"><div className="result-intro"><p className="eyebrow">CURRENT SCENARIO</p><h2>{plan ? `₹${budget} lakh · ${plan.selected_sites.length} planning unit${plan.selected_sites.length === 1 ? '' : 's'}` : 'Waiting for SAM Local'}</h2></div><div className="metric accent coverage-metric"><span>Modelled-priority coverage</span><b>{plan ? coverage(plan.modelled_priority_coverage_percent) : '—'}</b><small>Not people protected or health impact</small></div><div className="metric"><span>Actual spend</span><b>{plan ? `₹${plan.spent_lakh}L` : '—'}</b><small>Within selected budget</small></div><div className={`metric unallocated-metric ${plan?.unallocated_lakh ? 'has-unallocated' : ''}`}><span>Unallocated</span><b>{plan ? `₹${plan.unallocated_lakh}L` : '—'}</b><small>{plan?.unallocated_lakh ? 'No further site adds modelled-priority coverage — unallocated by design.' : 'No remaining budget'}</small></div></section>
       <section className="verification-context" aria-label="Verification context"><p className="eyebrow">VERIFICATION CONTEXT · PRIMARY 400 M REFERENCE</p><h2>Why field verification comes first</h2><p className="reference-note">These reference checks belong to the primary 400 m scenario; the map above uses the currently selected planning assumption.</p><div className="verification-grid"><p><b>Primary scenario:</b> 0.0% baseline because no full-service relief site is verified.</p><p><b>Mapped-shelter sensitivity:</b> 0.0% baseline; the one mapped shelter does not reach core demand under this network assumption.</p><p><b>Upper-bound check:</b> 97.9% baseline only if every OSM-mapped amenity is verified as a functioning service.</p></div><p className="verification-takeaway">Verifying mapped parks and amenities is the highest-value next action. OSM mapping alone is not evidence of functioning heat-relief service.</p></section>
     <section className="assumptions" aria-label="Planning limitations and assumptions"><p className="eyebrow">⚠ LIMITATIONS & ASSUMPTIONS</p><div className="assumption-grid"><span>Relative multi-scene land-surface-temperature priority</span><span>2024 modelled WorldPop population</span><span>Unverified OSM context</span><span>Fragmented pedestrian network</span><span>One structurally unreachable demand cell</span><span>No verified full-service baseline assumed</span></div></section>
-    {plan && <section className="recommendations"><div><p className="eyebrow">SELECTED POSSIBLE SITES</p><h2>Verification is required before any action.</h2><p>{plan.explanation}</p><p>Each is a ₹5 lakh standard planning unit — not a procurement quote.</p></div><div className="site-list">{plan.selected_sites.map((site, index) => { const insight = site.verification_insight; const pending = pendingCandidateId === site.candidate_id; return <article key={site.candidate_id}><span>0{index + 1}</span><div><b>Site {String(index + 1).padStart(2, '0')}</b><p>{site.newly_covered_demand_cells} demand cells newly within {threshold} m · marginal priority score {Math.round(site.marginal_gain_modelled_priority_score).toLocaleString()}</p><p className={`verification-insight ${insight.classification}`}><b>{insight.classification === 'critical' ? 'Critical' : 'Replaceable'} in this simulation.</b> Excluding it changes modelled-priority coverage by {coverage(insight.coverage_consequence_percent)}. A backup plan reaches {coverage(insight.best_available_backup_plan.modelled_priority_coverage_percent)}.</p><button className="simulate-failure" onClick={() => simulateFailure(site, index)} disabled={isRecomputing || excludedCandidateIds.length > 0}>{pending ? 'Recomputing…' : excludedCandidateIds.length ? 'Simulation active — reset first' : 'Simulate failed verification'}</button><small>Possible site — requires land, access, water, and operations verification.</small><details className="audit-details"><summary>Show internal audit reference</summary><span>{site.candidate_id}</span></details></div></article>})}</div></section>}
+    {plan && <section className="recommendations"><div><p className="eyebrow">SELECTED POSSIBLE SITES</p><h2>Verification is required before any action.</h2><p>{plan.explanation}</p><p>Each is a ₹5 lakh standard planning unit — not a procurement quote.</p></div><div className="site-list">{plan.selected_sites.map((site, index) => { const insight = site.verification_insight; const pending = pendingCandidateId === site.candidate_id; return <article key={site.candidate_id}><span>0{index + 1}</span><div><b>Site {String(index + 1).padStart(2, '0')}</b><p>{site.newly_covered_demand_cells} demand cells newly within {threshold} m · marginal priority score {Math.round(site.marginal_gain_modelled_priority_score).toLocaleString()}</p>{insight ? <p className={`verification-insight ${insight.classification}`}><b>{insight.classification === 'critical' ? 'Critical' : 'Replaceable'} in this simulation.</b> Excluding it changes modelled-priority coverage by {coverage(insight.coverage_consequence_percent)}. A backup plan reaches {coverage(insight.best_available_backup_plan.modelled_priority_coverage_percent)}.</p> : <p className="verification-insight updating"><b>Verification impact is updating.</b> The current plan is being recomputed.</p>}<button className="simulate-failure" onClick={() => simulateFailure(site, index)} disabled={isRecomputing || excludedCandidateIds.length > 0 || !insight}>{pending ? 'Recomputing…' : !insight ? 'Updating plan…' : excludedCandidateIds.length ? 'Simulation active — reset first' : 'Simulate failed verification'}</button><small>Possible site — requires land, access, water, and operations verification.</small><details className="audit-details"><summary>Show internal audit reference</summary><span>{site.candidate_id}</span></details></div></article>})}</div></section>}
     {plans.length > 0 && <section className="budget-comparison"><div><p className="eyebrow">BUDGET TRADE-OFF</p><h2>{threshold === 400 && excludedCandidateIds.length === 0 ? 'Marginal gains plateau after ₹20L.' : `${threshold} m replanning comparison.`}</h2><p>Exact local maximum-coverage selection uses only remaining possible sites. OSM context remains unverified and is not baseline service.</p></div><div className="tier-list">{threshold === 400 && excludedCandidateIds.length === 0 && <div className="ceiling-note">Evidence-based spending ceiling · ₹20L</div>}{plans.map((tier) => <div className={`${tier.budget_lakh === budget ? 'tier active-tier' : 'tier'} ${tier.unallocated_lakh ? 'tier-unallocated' : ''}`} key={tier.budget_lakh}><b>₹{tier.budget_lakh}L</b><div className="tier-track"><span style={{ width: `${tier.modelled_priority_coverage_percent}%` }} /></div><strong>{coverage(tier.modelled_priority_coverage_percent)}</strong><small>{tier.unallocated_lakh ? `₹${tier.unallocated_lakh}L unallocated` : `₹${tier.spent_lakh}L spent`}</small></div>)}</div></section>}
     <footer>{plan?.disclaimer || 'Local scenario data is loading.'} {plan?.standard_unit_cost_label}<br />Map/data attribution: © OpenStreetMap contributors (ODbL) and WorldPop (CC BY 4.0).</footer>
   </main>

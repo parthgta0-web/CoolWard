@@ -90,6 +90,7 @@ input[type=range]:disabled { cursor: not-allowed; opacity: .58; }
 .verification-insight { padding: 7px 8px; border-left: 3px solid #8eb8a0; background: rgba(255,255,255,.07); line-height: 1.45; }
 .verification-insight.critical { border-left-color: #f2b94b; }
 .verification-insight.replaceable { border-left-color: #8eb8a0; }
+.verification-insight.updating { border-left-color: #c7a55a; }
 .simulate-failure { display: block; margin: 8px 0 7px; padding: 6px 8px; border: 1px solid #f2b94b; border-radius: 4px; color: #fff5d7; background: transparent; cursor: pointer; font-size: .72rem; font-weight: 700; }
 .simulate-failure:hover { background: rgba(242,185,75,.16); }
 .simulate-failure:disabled { cursor: not-allowed; opacity: .62; }
