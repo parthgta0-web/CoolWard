@@ -11,7 +11,7 @@
   "threshold_label": "network-distance planning assumption, not proof of a five-minute walk",
   "snap_rule": "closest graph vertex; distances over 100 m fail and are not treated as reachable",
   "candidate_cost": "\u20b95 lakh standard planning unit \u2014 not a procurement quote",
-  "optimiser": "deterministic greedy maximum marginal modelled-priority gain; ties resolve by candidate_id",
+  "optimiser": "deterministic exact equal-cost maximum modelled-priority coverage; validated primary 400 m equal-coverage ties are preserved, then candidate_id resolves ties",
   "scenario_interpretation": {
     "primary_no_verified_full_service_baseline": {
       "label": "Primary planning scenario \u2014 no verified full-service baseline",

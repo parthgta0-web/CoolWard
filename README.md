@@ -20,6 +20,14 @@ Coverage means the share of the continuous **modelled-priority score** reached b
 
 Every selected site is a **₹5 lakh standard planning unit — not a procurement quote**. Budget above ₹20L remains unallocated because no supplied candidate adds marginal modelled-priority gain.
 
+## Verification-first replanning
+
+The local dashboard can recompute a plan for a 300 m, 400 m, or 500 m network-distance planning assumption and can simulate a possible site's failed verification. The SAM Local API uses compact exported candidate-to-demand coverage sets and the existing modelled-priority weights to find an exact, deterministic equal-cost maximum-coverage plan from the remaining possible sites.
+
+“Simulate failed verification” is a planning exercise only; it does not label a site as failed in real life. Each selected site shows whether an equally performing backup exists in that simulation, or the modelled-priority coverage consequence if it is excluded. Field verification remains required for land, access, water, safety, capacity, and operations. OSM parks, toilets, and shelter remain unverified context and are never treated as baseline service.
+
+The unmodified default remains the validated primary 400 m scenario above. The network remains fragmented and one demand cell remains structurally unreachable under the supplied pedestrian graph.
+
 ## Data and processing
 
 | Input | Supplied coverage and date | Resolution / use |
@@ -36,6 +44,7 @@ supplied raw layers
   → QA-masked relative heat rank + native WorldPop demand cells
   → filtered pedestrian graph + OSM context references
   → possible-site candidates and 300/400/500 m scenario evaluation
+  → compact candidate-to-demand coverage inputs for local replanning
   → validated primary 400 m local API data
   → React/Vite dashboard
 ```

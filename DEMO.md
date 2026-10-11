@@ -45,7 +45,15 @@ Say: “The coverage remains 97.9%, with the same four sites and ₹20 lakh actu
 
 Show the unallocated-budget metric and the highlighted ₹35L trade-off row.
 
-## 2:20–3:00 — Limitations and close
+## 2:20–2:40 — Verification-first replanning
+
+Return to ₹20L and leave the 400 m assumption selected. Click “Simulate failed verification” for one selected possible site, then point out the revised markers, coverage outline, and the selected-site backup explanation. Use the reset action afterward.
+
+Say: “This is a simulation only — field verification is still required. The local API recomputes an exact plan from the remaining possible sites using the supplied pedestrian-network coverage inputs. A site is called critical only when excluding it reduces modelled-priority coverage in this simulation; otherwise it is replaceable by the shown backup plan. This does not verify any site in the real world.”
+
+Briefly select 300 m and 500 m to show that the map, coverage, and selected sites are recomputed under the chosen network-distance planning assumption. Return to 400 m before continuing.
+
+## 2:40–3:00 — Limitations and close
 
 Show the limitations panel.
 

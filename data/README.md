@@ -31,6 +31,8 @@ The pipeline creates:
 - possible sites generated from pedestrian-network vertices within 30 m of mapped green space or school/college/community-facility context, thinned to 100 m;
 - 300 m, 400 m, and 500 m network-distance planning scenarios.
 
+`processed/replanning_inputs.json` is the compact local replanning handoff: per-threshold candidate-to-demand coverage IDs, the existing modelled-priority weights, and candidate metadata. It supports exact deterministic, equal-cost maximum-coverage replanning after a simulated verification exclusion; it does not add any verified baseline service or change the supplied network limitations.
+
 The dashboard/API uses the **primary 400 m scenario**: no OSM feature is treated as a verified full-service baseline. Its coverage is modelled priority (WorldPop population × relative heat rank), not people protected. The `all_osm_amenities_stress_test` outputs retain the parks/toilet/shelter-as-services calculation only as an explicitly unrealistic optimistic sensitivity.
 
 Every possible site requires land, access, water, and operations verification. The ₹5 lakh figure is a standard planning unit, not a procurement quote.

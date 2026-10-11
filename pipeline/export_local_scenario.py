@@ -34,6 +34,7 @@ def main() -> None:
     context = load_json(RAW / "study_area_context.geojson")
     scenarios = load_json(PROCESSED / "primary_no_verified_full_service_baseline_budget_scenarios.json")
     coverage_manifest = load_json(PROCESSED / "selected_site_covered_demand_cells_400m.json")
+    replanning_inputs = load_json(PROCESSED / "replanning_inputs.json")
     methodology = load_json(PROCESSED / "optimiser_methodology.json")
     candidate_by_id = feature_index(candidates, "candidate_id")
     plans = {}
@@ -86,6 +87,7 @@ def main() -> None:
             "osm_contextual_references": references,
         },
         "plans": plans,
+        "replanning_inputs": replanning_inputs,
         "methodology": methodology,
     }
     OUTPUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")

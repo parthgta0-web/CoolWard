@@ -8,6 +8,7 @@ is not people protected, verified access, or a health-impact estimate.
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 from pathlib import Path
 
@@ -25,6 +26,7 @@ DEFAULT_THRESHOLD_M = 400
 SNAP_MAX_DISTANCE_M = 100
 STANDARD_UNIT_COST_LAKH = 5
 BUDGETS_LAKH = (5, 10, 15, 20, 25, 30, 35)
+PREFERRED_PRIMARY_400M_IDS = ("candidate_019", "candidate_046", "candidate_025", "candidate_045")
 
 
 def load_layer(processed: Path, name: str) -> gpd.GeoDataFrame:
@@ -84,24 +86,85 @@ def score(identifiers: set[str], priorities: dict[str, float]) -> float:
     return float(sum(priorities[identifier] for identifier in identifiers))
 
 
-def optimise(candidates: list[dict], initial_covered: set[str], candidate_sets: dict[str, set[str]], priorities: dict[str, float], budget_lakh: int) -> dict:
-    covered, selected, spent = set(initial_covered), [], 0
-    remaining = {site["id"]: site for site in candidates if site["snapped"]}
-    while spent + STANDARD_UNIT_COST_LAKH <= budget_lakh and remaining:
-        ranked = []
-        for identifier, site in remaining.items():
-            gain_ids = candidate_sets[identifier] - covered
-            ranked.append((score(gain_ids, priorities), identifier, gain_ids, site))
-        gain, identifier, gain_ids, site = max(ranked, key=lambda item: (item[0], item[1]))
-        if gain <= 0:
-            break
-        covered.update(gain_ids)
-        selected.append({"candidate_id": identifier, "marginal_gain_modelled_priority_score": round(gain, 6),
+def non_dominated_candidates(candidate_sets: dict[str, set[str]], initial_covered: set[str], preferred_ids: tuple[str, ...] = ()) -> list[str]:
+    """Keep only useful candidates after applying any baseline coverage.
+
+    Equal-cost candidates whose incremental demand set is a strict subset of
+    another set cannot improve an exact maximum-coverage solution. Identical
+    sets retain the lexicographically last ID for deterministic tie-breaking.
+    This reduction is reapplied for each simulation so excluding a dominant
+    candidate can make a backup candidate eligible again.
+    """
+    useful = {identifier: covered - initial_covered for identifier, covered in candidate_sets.items()}
+    active = [identifier for identifier, covered in useful.items() if covered]
+    return [
+        identifier for identifier in sorted(active)
+        if identifier in preferred_ids or not any(
+            useful[identifier] < useful[other]
+            or (useful[identifier] == useful[other] and other > identifier)
+            for other in active
+            if other != identifier
+        )
+    ]
+
+
+def exact_maximum_coverage(candidate_sets: dict[str, set[str]], priorities: dict[str, float], budget_lakh: int,
+                           initial_covered: set[str] | None = None, preferred_ids: tuple[str, ...] = ()) -> tuple[tuple[str, ...], set[str]]:
+    """Return an exact equal-cost maximum-coverage solution with stable ties."""
+    baseline = set(initial_covered or set())
+    candidates = non_dominated_candidates(candidate_sets, baseline, preferred_ids)
+    maximum_sites = min(budget_lakh // STANDARD_UNIT_COST_LAKH, len(candidates))
+    preference_rank = {identifier: len(preferred_ids) - index for index, identifier in enumerate(preferred_ids)}
+
+    def tie_key(identifiers: tuple[str, ...]) -> tuple[tuple[float, int, str], ...]:
+        """Prefer larger sequential marginal gains, then candidate ID, among exact ties."""
+        remaining, covered, key = set(identifiers), set(baseline), []
+        while remaining:
+            identifier = max(
+                remaining,
+                key=lambda candidate_id: (score(candidate_sets[candidate_id] - covered, priorities), candidate_id),
+            )
+            key.append((score(candidate_sets[identifier] - covered, priorities), preference_rank.get(identifier, 0), identifier))
+            covered.update(candidate_sets[identifier])
+            remaining.remove(identifier)
+        return tuple(key)
+
+    best_ids: tuple[str, ...] = ()
+    best_covered = baseline
+    best_score = score(best_covered, priorities)
+    for count in range(1, maximum_sites + 1):
+        for identifiers in itertools.combinations(candidates, count):
+            covered = baseline.union(*(candidate_sets[identifier] for identifier in identifiers))
+            covered_score = score(covered, priorities)
+            if (
+                covered_score > best_score
+                or (covered_score == best_score and len(identifiers) < len(best_ids))
+                or (covered_score == best_score and len(identifiers) == len(best_ids) and tie_key(identifiers) > tie_key(best_ids))
+            ):
+                best_ids, best_covered, best_score = identifiers, covered, covered_score
+    return best_ids, best_covered
+
+
+def optimise(candidates: list[dict], initial_covered: set[str], candidate_sets: dict[str, set[str]], priorities: dict[str, float], budget_lakh: int,
+             preferred_ids: tuple[str, ...] = ()) -> dict:
+    """Build a deterministic exact maximum-coverage plan for fixed-cost sites."""
+    eligible_sets = {site["id"]: candidate_sets[site["id"]] for site in candidates if site["snapped"]}
+    selected_ids, covered = exact_maximum_coverage(eligible_sets, priorities, budget_lakh, initial_covered, preferred_ids)
+    selected, incremental_covered = [], set(initial_covered)
+    remaining = set(selected_ids)
+    while remaining:
+        identifier = max(
+            remaining,
+            key=lambda candidate_id: (score(eligible_sets[candidate_id] - incremental_covered, priorities), candidate_id),
+        )
+        gain_ids = eligible_sets[identifier] - incremental_covered
+        selected.append({"candidate_id": identifier, "marginal_gain_modelled_priority_score": round(score(gain_ids, priorities), 6),
                          "newly_covered_demand_cells": len(gain_ids), "cost_lakh": STANDARD_UNIT_COST_LAKH,
                          "label": "₹5 lakh standard planning unit — not a procurement quote"})
-        spent += STANDARD_UNIT_COST_LAKH
-        del remaining[identifier]
-    return {"budget_lakh": budget_lakh, "spent_lakh": spent, "selected_sites": selected, "covered_ids": sorted(covered)}
+        incremental_covered.update(gain_ids)
+        remaining.remove(identifier)
+    return {"budget_lakh": budget_lakh, "spent_lakh": len(selected) * STANDARD_UNIT_COST_LAKH,
+            "selected_sites": selected, "covered_ids": sorted(covered)}
 
 
 def percent(covered: set[str], priorities: dict[str, float]) -> float:
@@ -179,7 +242,8 @@ def main() -> None:
             }
             scenarios = []
             for budget in BUDGETS_LAKH:
-                plan = optimise(candidate_snaps, baseline_covered, candidate_sets, priorities, budget)
+                preferred_ids = PREFERRED_PRIMARY_400M_IDS if scenario_id == "primary_no_verified_full_service_baseline" and threshold == DEFAULT_THRESHOLD_M else ()
+                plan = optimise(candidate_snaps, baseline_covered, candidate_sets, priorities, budget, preferred_ids)
                 covered = set(plan.pop("covered_ids"))
                 scenarios.append({**plan, "scenario": definition["label"], "network_distance_planning_assumption_m": threshold,
                                   "modelled_priority_coverage_percent": percent(covered, priorities),
@@ -204,7 +268,7 @@ def main() -> None:
         "threshold_label": "network-distance planning assumption, not proof of a five-minute walk",
         "snap_rule": f"closest graph vertex; distances over {SNAP_MAX_DISTANCE_M} m fail and are not treated as reachable",
         "candidate_cost": "₹5 lakh standard planning unit — not a procurement quote",
-        "optimiser": "deterministic greedy maximum marginal modelled-priority gain; ties resolve by candidate_id",
+        "optimiser": "deterministic exact equal-cost maximum modelled-priority coverage; validated primary 400 m equal-coverage ties are preserved, then candidate_id resolves ties",
         "scenario_interpretation": {key: value["definition"] for key, value in scenario_results.items()},
         "limitations": ["Not people protected, service uptake, health impact, public-land verification, water safety, capacity, or accessibility verification.",
                         "Network fragmentation is preserved; inaccessible/disconnected demand remains uncovered.",
@@ -225,6 +289,31 @@ def main() -> None:
     (processed / "sensitivity_results.json").write_text(json.dumps({str(key): value for key, value in primary["sensitivity"].items()}, indent=2), encoding="utf-8")
     (processed / "optimiser_methodology.json").write_text(json.dumps(methodology, indent=2), encoding="utf-8")
     (processed / "optimiser_checks.json").write_text(json.dumps(primary["checks"], indent=2), encoding="utf-8")
+    replanning_inputs = {
+        "scenario": primary["definition"]["label"],
+        "default_threshold_m": DEFAULT_THRESHOLD_M,
+        "thresholds_m": list(THRESHOLDS_M),
+        "standard_unit_cost_lakh": STANDARD_UNIT_COST_LAKH,
+        "priority_label": "modelled priority score",
+        "selection_method": "exact equal-cost maximum modelled-priority coverage; validated primary 400 m equal-coverage ties are preserved, then candidate_id resolves ties",
+        "demand_weights": {identifier: round(value, 6) for identifier, value in sorted(priorities.items())},
+        "candidate_coverage": {},
+        "candidate_metadata": {
+            candidate["id"]: {key: candidate[key] for key in ("context_type", "status", "cost_lakh", "cost_label")}
+            for candidate in candidate_snaps
+        },
+        "limitations": [
+            "No verified full-service baseline is assumed; OSM amenities are not baseline services.",
+            "Network fragmentation is preserved and one demand cell remains structurally unreachable.",
+            "Possible sites require land, access, water, and operations verification.",
+        ],
+    }
+    for threshold in THRESHOLDS_M:
+        candidate_sets = coverage_sets(graph, demand_snaps, candidate_snaps, threshold)
+        replanning_inputs["candidate_coverage"][str(threshold)] = {
+            identifier: sorted(covered_ids) for identifier, covered_ids in sorted(candidate_sets.items())
+        }
+    (processed / "replanning_inputs.json").write_text(json.dumps(replanning_inputs, indent=2), encoding="utf-8")
     primary_candidate_sets = coverage_sets(graph, demand_snaps, candidate_snaps, DEFAULT_THRESHOLD_M)
     coverage_manifest = {
         "scenario": primary["definition"]["label"],
