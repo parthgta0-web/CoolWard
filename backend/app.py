@@ -2,6 +2,8 @@
 
 import itertools
 import json
+import time
+from functools import lru_cache
 from pathlib import Path
 
 from aws_lambda_powertools import Logger
@@ -36,8 +38,8 @@ def non_dominated_candidates(candidate_sets, preferred_ids):
     ]
 
 
-def exact_solution(candidate_sets, weights, maximum_sites, preferred_ids=()):
-    """Return an exact maximum-coverage set with deterministic, documented ties."""
+def exact_solution_bruteforce(candidate_sets, weights, maximum_sites, preferred_ids=()):
+    """Reference implementation retained solely as an exact-regression oracle."""
     candidates = non_dominated_candidates(candidate_sets, preferred_ids)
     maximum_sites = min(maximum_sites, len(candidates))
     preference_rank = {identifier: len(preferred_ids) - index for index, identifier in enumerate(preferred_ids)}
@@ -68,6 +70,109 @@ def exact_solution(candidate_sets, weights, maximum_sites, preferred_ids=()):
     return best_ids, best_covered
 
 
+def prepare_bitmask_solver(data, threshold_m, excluded_candidate_ids=()):
+    """Prepare compact, deterministic coverage masks for one planning state."""
+    inputs = data["replanning_inputs"]
+    weights_by_id = {identifier: float(value) for identifier, value in inputs["demand_weights"].items()}
+    demand_ids = tuple(sorted(weights_by_id))
+    demand_index = {identifier: index for index, identifier in enumerate(demand_ids)}
+    excluded_ids = tuple(sorted(set(excluded_candidate_ids)))
+    coverage = inputs["candidate_coverage"][str(threshold_m)]
+    candidate_sets = {
+        identifier: set(demand_ids_covered)
+        for identifier, demand_ids_covered in coverage.items()
+        if identifier not in excluded_ids
+    }
+    candidate_masks = {
+        identifier: sum(1 << demand_index[demand_id] for demand_id in demand_ids_covered)
+        for identifier, demand_ids_covered in candidate_sets.items()
+    }
+    preferred_ids = PREFERRED_PRIMARY_400M_IDS if threshold_m == 400 else ()
+    active_ids = [identifier for identifier, mask in candidate_masks.items() if mask]
+    candidates = [
+        identifier for identifier in sorted(active_ids)
+        if identifier in preferred_ids or not any(
+            candidate_masks[identifier] | candidate_masks[other] == candidate_masks[other]
+            and (candidate_masks[identifier] != candidate_masks[other] or other > identifier)
+            for other in active_ids
+            if other != identifier
+        )
+    ]
+    weights = tuple(weights_by_id[identifier] for identifier in demand_ids)
+
+    @lru_cache(maxsize=None)
+    def score_mask(mask):
+        total = 0.0
+        while mask:
+            least_significant_bit = mask & -mask
+            index = least_significant_bit.bit_length() - 1
+            total += weights[index]
+            mask ^= least_significant_bit
+        return total
+
+    return {
+        "inputs": inputs,
+        "weights_by_id": weights_by_id,
+        "demand_ids": demand_ids,
+        "candidate_sets": candidate_sets,
+        "candidate_masks": candidate_masks,
+        "candidates": tuple(candidates),
+        "excluded_ids": excluded_ids,
+        "preferred_ids": preferred_ids,
+        "score_mask": score_mask,
+        "total_score": sum(weights),
+    }
+
+
+def bitmask_tie_key(identifiers, candidate_masks, score_mask, preferred_ids):
+    """Mirror the legacy deterministic marginal-gain tie rule using masks."""
+    preference_rank = {identifier: len(preferred_ids) - index for index, identifier in enumerate(preferred_ids)}
+    remaining, covered, key = set(identifiers), 0, []
+    while remaining:
+        identifier = max(
+            remaining,
+            key=lambda candidate_id: (score_mask(candidate_masks[candidate_id] & ~covered), candidate_id),
+        )
+        gain_mask = candidate_masks[identifier] & ~covered
+        key.append((score_mask(gain_mask), preference_rank.get(identifier, 0), identifier))
+        covered |= candidate_masks[identifier]
+        remaining.remove(identifier)
+    return tuple(key)
+
+
+def exact_bitmask_solutions(solver, maximum_sites):
+    """Solve all capacities up to maximum_sites in one exact combination pass."""
+    candidates = solver["candidates"]
+    candidate_masks = solver["candidate_masks"]
+    score_mask = solver["score_mask"]
+    maximum_sites = min(maximum_sites, len(candidates))
+    best = {capacity: ((), 0, 0.0) for capacity in range(1, maximum_sites + 1)}
+    for count in range(1, maximum_sites + 1):
+        for identifiers in itertools.combinations(candidates, count):
+            covered_mask = 0
+            for identifier in identifiers:
+                covered_mask |= candidate_masks[identifier]
+            covered_score = score_mask(covered_mask)
+            tie_key = None
+            for capacity in range(count, maximum_sites + 1):
+                best_ids, best_mask, best_score = best[capacity]
+                if covered_score < best_score:
+                    continue
+                if covered_score == best_score and len(identifiers) > len(best_ids):
+                    continue
+                if covered_score == best_score and len(identifiers) == len(best_ids):
+                    if tie_key is None:
+                        tie_key = bitmask_tie_key(identifiers, candidate_masks, score_mask, solver["preferred_ids"])
+                    if tie_key <= bitmask_tie_key(best_ids, candidate_masks, score_mask, solver["preferred_ids"]):
+                        continue
+                best[capacity] = (identifiers, covered_mask, covered_score)
+    return best
+
+
+def mask_to_ids(mask, demand_ids):
+    return [identifier for index, identifier in enumerate(demand_ids) if mask & (1 << index)]
+
+
 def ordered_selected_sites(selected_ids, candidate_sets, weights, candidate_features, inputs):
     """Report exact-plan sites in deterministic marginal-gain order."""
     remaining, covered, selected = set(selected_ids), set(), []
@@ -95,51 +200,32 @@ def ordered_selected_sites(selected_ids, candidate_sets, weights, candidate_feat
     return selected
 
 
-def build_plan(data, budget_lakh, threshold_m=400, excluded_candidate_ids=()):
-    """Recompute an exact local plan from exported snapped-network coverage inputs."""
-    inputs = data["replanning_inputs"]
-    weights = {identifier: float(value) for identifier, value in inputs["demand_weights"].items()}
-    excluded_ids = tuple(sorted(set(excluded_candidate_ids)))
-    coverage = inputs["candidate_coverage"][str(threshold_m)]
-    candidate_sets = {
-        identifier: set(demand_ids)
-        for identifier, demand_ids in coverage.items()
-        if identifier not in excluded_ids
-    }
-    preferred_ids = PREFERRED_PRIMARY_400M_IDS if threshold_m == 400 else ()
-    selected_ids, covered_ids = exact_solution(
-        candidate_sets,
-        weights,
-        budget_lakh // inputs["standard_unit_cost_lakh"],
-        preferred_ids,
-    )
+def build_plan_from_solution(data, budget_lakh, threshold_m, solver, solution, include_verification_insights=True):
+    """Format an exact bitmask solution without changing published planning semantics."""
+    inputs = solver["inputs"]
+    selected_ids, covered_mask, covered_score = solution
     candidate_features = {
         feature["properties"]["candidate_id"]: feature
         for feature in data["layers"]["possible_candidate_sites"]["features"]
     }
-    selected_sites = ordered_selected_sites(selected_ids, candidate_sets, weights, candidate_features, inputs)
-    total_score = score(weights, weights)
-    covered_score = score(covered_ids, weights)
-    for site in selected_sites:
-        backup_sets = {identifier: covered for identifier, covered in candidate_sets.items() if identifier != site["candidate_id"]}
-        backup_ids, backup_covered = exact_solution(
-            backup_sets,
-            weights,
-            budget_lakh // inputs["standard_unit_cost_lakh"],
-            preferred_ids,
-        )
-        backup_score = score(backup_covered, weights)
-        loss_score = covered_score - backup_score
-        loss_percent = round(100 * loss_score / total_score, 4) if total_score else 0.0
-        site["verification_insight"] = {
-            "classification": "critical" if loss_score > 0 else "replaceable",
-            "coverage_consequence_modelled_priority_score": round(loss_score, 6),
-            "coverage_consequence_percent": loss_percent,
-            "best_available_backup_plan": {
-                "selected_candidate_ids": list(backup_ids),
-                "modelled_priority_coverage_percent": round(100 * backup_score / total_score, 4) if total_score else 0.0,
-            },
-        }
+    selected_sites = ordered_selected_sites(selected_ids, solver["candidate_sets"], solver["weights_by_id"], candidate_features, inputs)
+    total_score = solver["total_score"]
+    if include_verification_insights:
+        for site in selected_sites:
+            backup_solver = prepare_bitmask_solver(data, threshold_m, (*solver["excluded_ids"], site["candidate_id"]))
+            backup_solution = exact_bitmask_solutions(backup_solver, budget_lakh // inputs["standard_unit_cost_lakh"])[min(budget_lakh // inputs["standard_unit_cost_lakh"], len(backup_solver["candidates"]))]
+            backup_ids, _, backup_score = backup_solution
+            loss_score = covered_score - backup_score
+            loss_percent = round(100 * loss_score / total_score, 4) if total_score else 0.0
+            site["verification_insight"] = {
+                "classification": "critical" if loss_score > 0 else "replaceable",
+                "coverage_consequence_modelled_priority_score": round(loss_score, 6),
+                "coverage_consequence_percent": loss_percent,
+                "best_available_backup_plan": {
+                    "selected_candidate_ids": list(backup_ids),
+                    "modelled_priority_coverage_percent": round(100 * backup_score / total_score, 4) if total_score else 0.0,
+                },
+            }
     spent_lakh = len(selected_sites) * inputs["standard_unit_cost_lakh"]
     return {
         "budget_lakh": budget_lakh,
@@ -147,12 +233,12 @@ def build_plan(data, budget_lakh, threshold_m=400, excluded_candidate_ids=()):
         "spent_lakh": spent_lakh,
         "unallocated_lakh": budget_lakh - spent_lakh,
         "selected_sites": selected_sites,
-        "covered_demand_cell_ids": sorted(covered_ids),
+        "covered_demand_cell_ids": sorted(mask_to_ids(covered_mask, solver["demand_ids"])),
         "modelled_priority_coverage_percent": round(100 * covered_score / total_score, 4) if total_score else 0.0,
         "modelled_priority_score_covered": round(covered_score, 6),
         "baseline_modelled_priority_coverage_percent": 0.0,
         "coverage_label": "Modelled-priority coverage — not people protected or health impact.",
-        "excluded_candidate_ids": list(excluded_ids),
+        "excluded_candidate_ids": list(solver["excluded_ids"]),
         "explanation": "Simulation only — field verification is still required. OSM context is not treated as baseline service.",
         "study_area": data["study_area"],
         "scenario": data["scenario"],
@@ -160,8 +246,31 @@ def build_plan(data, budget_lakh, threshold_m=400, excluded_candidate_ids=()):
         "standard_unit_cost_label": data["standard_unit_cost_label"],
         "disclaimer": data["disclaimer"],
         "limitations": data["limitations"],
-        "layers": data["layers"],
     }
+
+
+def build_plan(data, budget_lakh, threshold_m=400, excluded_candidate_ids=()):
+    """Return one exact local plan, including insights for its active budget."""
+    solver = prepare_bitmask_solver(data, threshold_m, excluded_candidate_ids)
+    capacity = min(budget_lakh // solver["inputs"]["standard_unit_cost_lakh"], len(solver["candidates"]))
+    solution = exact_bitmask_solutions(solver, capacity)[capacity]
+    return build_plan_from_solution(data, budget_lakh, threshold_m, solver, solution)
+
+
+def build_all_plans(data, threshold_m=400, excluded_candidate_ids=(), active_budget_lakh=20):
+    """Return all tiers from shared exact work; insights exist only for active budget."""
+    solver = prepare_bitmask_solver(data, threshold_m, excluded_candidate_ids)
+    unit_cost = solver["inputs"]["standard_unit_cost_lakh"]
+    maximum_sites = min(max(SUPPORTED_BUDGETS) // unit_cost, len(solver["candidates"]))
+    solutions = exact_bitmask_solutions(solver, maximum_sites)
+    plans = []
+    for budget_lakh in sorted(SUPPORTED_BUDGETS):
+        capacity = min(budget_lakh // unit_cost, maximum_sites)
+        plans.append(build_plan_from_solution(
+            data, budget_lakh, threshold_m, solver, solutions[capacity],
+            include_verification_insights=budget_lakh == active_budget_lakh,
+        ))
+    return plans
 
 
 def parse_request(event, data):
@@ -172,11 +281,12 @@ def parse_request(event, data):
     if not isinstance(body, dict):
         raise ValueError("JSON request body must be an object.")
     try:
-        budget_lakh = int(body.get("budget_lakh", 20))
+        budget_lakh = body.get("budget_lakh")
+        budget_lakh = int(budget_lakh) if budget_lakh is not None else None
         threshold_m = int(body.get("threshold_m", 400))
     except (TypeError, ValueError) as error:
         raise ValueError("budget_lakh and threshold_m must be whole numbers.") from error
-    if budget_lakh not in SUPPORTED_BUDGETS:
+    if budget_lakh is not None and budget_lakh not in SUPPORTED_BUDGETS:
         raise ValueError("Budget must be one of ₹5L, ₹10L, ₹15L, ₹20L, ₹25L, ₹30L, or ₹35L.")
     if threshold_m not in SUPPORTED_THRESHOLDS:
         raise ValueError("threshold_m must be one of 300, 400, or 500.")
@@ -187,16 +297,42 @@ def parse_request(event, data):
     unknown_ids = sorted(set(excluded_ids) - known_ids)
     if unknown_ids:
         raise ValueError(f"Unknown candidate ID(s): {', '.join(unknown_ids)}.")
-    return budget_lakh, threshold_m, excluded_ids
+    include_layers = body.get("include_layers", False)
+    if not isinstance(include_layers, bool):
+        raise ValueError("include_layers must be true or false.")
+    active_budget_lakh = body.get("active_budget_lakh", 20)
+    try:
+        active_budget_lakh = int(active_budget_lakh)
+    except (TypeError, ValueError) as error:
+        raise ValueError("active_budget_lakh must be a whole number.") from error
+    if active_budget_lakh not in SUPPORTED_BUDGETS:
+        raise ValueError("active_budget_lakh must be one of ₹5L, ₹10L, ₹15L, ₹20L, ₹25L, ₹30L, or ₹35L.")
+    return budget_lakh, threshold_m, excluded_ids, include_layers, active_budget_lakh
 
 
 @logger.inject_lambda_context
 def handler(event, context):
     try:
+        started = time.perf_counter()
         data = load_data()
-        budget_lakh, threshold_m, excluded_ids = parse_request(event, data)
-        result = build_plan(data, budget_lakh, threshold_m, excluded_ids)
-        logger.info("Local planning scenario recomputed", extra={"budget_lakh": budget_lakh, "threshold_m": threshold_m, "excluded_count": len(excluded_ids), "site_count": len(result["selected_sites"])})
+        budget_lakh, threshold_m, excluded_ids, include_layers, active_budget_lakh = parse_request(event, data)
+        if budget_lakh is None:
+            result = {
+                "plans": build_all_plans(data, threshold_m, excluded_ids, active_budget_lakh),
+                "threshold_m": threshold_m,
+                "active_budget_lakh": active_budget_lakh,
+                "excluded_candidate_ids": sorted(set(excluded_ids)),
+                "explanation": "Simulation only — field verification is still required. OSM context is not treated as baseline service.",
+            }
+            if include_layers:
+                result["layers"] = data["layers"]
+        else:
+            # Preserve the single-plan response for existing local integrations.
+            result = build_plan(data, budget_lakh, threshold_m, excluded_ids)
+            if include_layers:
+                result["layers"] = data["layers"]
+        result["recomputed_local_ms"] = round((time.perf_counter() - started) * 1000, 1)
+        logger.info("Local planning scenario recomputed", extra={"budget_lakh": budget_lakh, "threshold_m": threshold_m, "excluded_count": len(excluded_ids), "tier_count": len(result.get("plans", [])) or 1, "include_layers": include_layers})
         return response(200, result)
     except ValueError as error:
         logger.warning("Invalid planning-scenario request", extra={"error": str(error)})

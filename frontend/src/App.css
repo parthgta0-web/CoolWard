@@ -23,13 +23,14 @@ button, input { font: inherit; }
 .budget-value { margin: 17px 0 8px; font-size: 2.45rem; font-weight: 800; letter-spacing: -.07em; }
 .budget-value small { color: #64726a; font-size: .95rem; letter-spacing: 0; }
 input[type=range] { width: calc(100% + 16px); margin-left: -8px; padding: 0 8px; accent-color: #087266; }
+input[type=range]:disabled { cursor: not-allowed; opacity: .58; }
 .range-labels { display: flex; justify-content: space-between; padding: 0 2px; color: #738078; font-size: .75rem; }
 .threshold-selector { margin-top: 16px; color: #53665d; font-size: .72rem; font-weight: 700; }
 .threshold-selector > div { display: flex; gap: 5px; margin-top: 6px; }
 .threshold { flex: 1; padding: 6px 3px; border: 1px solid #cbd8d0; border-radius: 4px; color: #53665d; background: #fff; cursor: pointer; font-size: .72rem; }
 .threshold.active-threshold { border-color: #087266; color: #fff; background: #087266; }
 .reload { margin-top: 12px; padding: 2px 0; border: 0; color: #087266; background: transparent; cursor: pointer; font-size: .78rem; font-weight: 700; text-align: left; text-decoration: underline; text-underline-offset: 3px; }
-.reload:disabled, .threshold:disabled { cursor: wait; opacity: .6; }
+.reload:disabled, .threshold:disabled { cursor: not-allowed; opacity: .6; }
 .reset-simulation { display: block; margin-top: 8px; padding: 2px 0; border: 0; color: #9b5e05; background: transparent; cursor: pointer; font-size: .74rem; font-weight: 700; text-align: left; text-decoration: underline; text-underline-offset: 3px; }
 .simulation-banner { margin-top: 13px; padding: 10px; border: 1px solid #dda531; border-left: 4px solid #a76500; color: #6c4704; background: #fff0c7; font-size: .76rem; line-height: 1.4; }
 .simulation-banner b, .simulation-banner small { display: block; }

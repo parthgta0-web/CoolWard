@@ -1,64 +1,48 @@
 # CoolWard three-minute demo script
 
-This script demonstrates the local primary planning scenario. It does not claim verified relief access, people protected, water availability, land permission, or procurement cost.
+This demo starts with the planning problem: how can field teams prioritise possible heat-respite locations when no full-service relief site has been verified? CoolWard is a local planning aid; it does not claim verified access, people protected, water availability, land permission, or procurement cost.
 
 ## Before recording
 
-1. Start Docker Desktop and confirm its Linux engine is running.
-2. In the repository root, run `sam build` and then `sam local start-api --port 3000 --warm-containers EAGER`.
-3. In a second terminal, run `cd frontend` and `npm.cmd run dev`.
-4. Open the Vite URL. Keep the SAM Local terminal visible or ready to show briefly.
+1. Start Docker Desktop.
+2. At the repository root, run `sam build`, then `sam local start-api --port 3000 --warm-containers EAGER`.
+3. In a second terminal, run `cd frontend` and `npm run dev`. On Windows, use `npm.cmd run dev` if needed.
+4. Open the Vite URL at the default 400 m, ₹20L scenario.
 
-## 0:00–0:25 — Local proof and purpose
+## 0:00–0:35 — The planning problem
 
-Show the SAM Local terminal, then the dashboard header.
+Show the map, the core outline, demand cells, pedestrian network, and muted OSM context.
 
-Say: “CoolWard is a local heat-refuge planning aid for the Wazirpur–Bharat Nagar pilot. The React dashboard calls a Python Lambda-compatible API through SAM Local and Docker. Lambda Powertools provides local structured logging. No AWS cloud services, credentials, credits, or deployment are used.”
+Say: “CoolWard helps the Wazirpur–Bharat Nagar pilot prioritise possible shade, drinking-water, and rest-site locations before field verification. Its primary scenario starts with a 0.0% baseline because no full-service relief site is verified. OSM parks, toilets, and shelter are context only, not assumed services.”
 
-## 0:25–0:50 — Read the planning frame
+## 0:35–1:15 — The 400 m plan
 
-Show the map, reporting-core outline, heat-priority demand cells, network, and muted OSM context points.
+Show ₹5L, then set ₹20L.
 
-Say: “The coloured cells are a relative multi-scene land-surface-temperature priority combined with 2024 modelled WorldPop population. The grey parks, toilet, and shelter are OSM-mapped contextual references only; the primary scenario does not assume they are functioning heat-refuge services.”
+Say: “At ₹5 lakh, one possible site reaches 58.2% of the modelled-priority score. At ₹20 lakh, four possible sites reach 97.9% under a 400 m network-distance planning assumption. This is modelled-priority coverage, not people protected or measured cooling. Every possible site still needs land, access, water, safety, and operations verification.”
 
-## 0:50–1:20 — ₹5L state
+Point out the 400 m assumption, selected possible-site markers, covered-demand outlines, and local recomputation status.
 
-Set the budget to ₹5L.
+## 1:15–2:05 — Site 02 critical-failure replan
 
-Say: “At ₹5 lakh, one possible site is selected. The modelled-priority coverage is 58.2%. This is not people protected or a measured health impact. The point is a possible site that still requires land, access, water, and operations verification.”
+At ₹20L and 400 m, select Site 02’s “Simulate failed verification” control.
 
-Point out the selected marker, selected-site card, and highlighted trade-off row.
+Say: “This is a simulation only — not a real-world failure label. Site 02 is critical in this model. The local Lambda-compatible API, through SAM Local, recomputes the exact deterministic plan from the remaining candidates. Coverage changes from 97.9% to 94.3%, and the map distinguishes the excluded possible site and any replacement.”
 
-## 1:20–1:55 — ₹20L state
+Show the amber simulation banner, active excluded candidate ID, map summary, replacement marker, and the locked budget and 300/400/500 m controls. Say: “The controls lock until reset so this before-and-after comparison remains interpretable.”
 
-Set the budget to ₹20L.
+Use “Reset simulation and restore original plan.” Confirm the original four sites and 97.9% return.
 
-Say: “At ₹20 lakh, four possible sites reach 97.9% of the modelled-priority score under the 400 m network-distance planning assumption. Each is a ₹5 lakh standard planning unit, not a procurement quote. The selected-site cards show the deterministic marginal gains.”
+## 2:05–2:30 — Budget ceiling
 
-Point out the four selected map markers and the total actual spend.
+Set ₹35L.
 
-## 1:55–2:20 — ₹35L plateau
+Say: “The same four sites remain selected, actual spend is ₹20 lakh, and ₹15 lakh is unallocated by design because no supplied candidate adds marginal modelled-priority coverage. This is an evidence-based spending ceiling, not a reason to invent locations.”
 
-Set the budget to ₹35L.
+## 2:30–3:00 — Limits and local proof
 
-Say: “The coverage remains 97.9%, with the same four sites and ₹20 lakh actual spend. The remaining ₹15 lakh is deliberately unallocated because no supplied candidate has marginal gain. That plateau is a planning finding, not an invitation to invent extra sites.”
+Show the verification-context and limitations panels.
 
-Show the unallocated-budget metric and the highlighted ₹35L trade-off row.
+Say: “The 400 m value is a network-distance planning assumption, not a guaranteed five-minute walk. The supplied walking graph is fragmented and one demand cell is structurally unreachable. There is no verified public land, water, access, capacity, safety, or operations plan.”
 
-## 2:20–2:40 — Verification-first replanning
-
-Return to ₹20L and leave the 400 m assumption selected. Click “Simulate failed verification” for one selected possible site, then point out the revised markers, coverage outline, and the selected-site backup explanation. Use the reset action afterward.
-
-Say: “This is a simulation only — field verification is still required. The local API recomputes an exact plan from the remaining possible sites using the supplied pedestrian-network coverage inputs. A site is called critical only when excluding it reduces modelled-priority coverage in this simulation; otherwise it is replaceable by the shown backup plan. This does not verify any site in the real world.”
-
-Briefly select 300 m and 500 m to show that the map, coverage, and selected sites are recomputed under the chosen network-distance planning assumption. Return to 400 m before continuing.
-
-## 2:40–3:00 — Limitations and close
-
-Show the limitations panel.
-
-Say: “The 400 m value is a network-distance planning assumption, not a guaranteed five-minute walk. The graph is fragmented and one demand cell is structurally unreachable. OSM context is unverified; there is no verified water, land, access, operations, capacity, or safety assessment. CoolWard helps prioritise field verification and accountable discussion; it does not authorise installation.”
-
-Say: “The experimental ML audit is retained as documented evidence only and does not drive site selection because its features and target share Landsat signal.”
-
-End on the selected-site list and limitations panel.
+Say: “The React/Vite dashboard calls a Lambda-compatible Python API through SAM Local and Docker, with Lambda Powertools logging. No AWS cloud services, credentials, credits, or deployment are used. The experimental ML audit is retained as documented evidence only and does not drive site selection because its features and target share Landsat signal.”

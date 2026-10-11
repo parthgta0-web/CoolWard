@@ -4,6 +4,8 @@ CoolWard is a heat-refuge planning aid for selecting possible shade, drinking-wa
 
 It is a local decision-support tool, not a forecast, service guarantee, procurement plan, or public-land verification system. The primary dashboard scenario uses the validated **400 m network-distance planning assumption** and no verified full-service baseline.
 
+Map/data attribution: © OpenStreetMap contributors ([ODbL](https://www.openstreetmap.org/copyright)); WorldPop population data ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
+
 ## Primary planning scenario
 
 Coverage means the share of the continuous **modelled-priority score** reached by possible sites: 2024 modelled WorldPop population × relative multi-scene land-surface-temperature rank. It is **not people protected, service uptake, health impact, or measured cooling**.
@@ -23,6 +25,8 @@ Every selected site is a **₹5 lakh standard planning unit — not a procuremen
 ## Verification-first replanning
 
 The local dashboard can recompute a plan for a 300 m, 400 m, or 500 m network-distance planning assumption and can simulate a possible site's failed verification. The SAM Local API uses compact exported candidate-to-demand coverage sets and the existing modelled-priority weights to find an exact, deterministic equal-cost maximum-coverage plan from the remaining possible sites.
+
+One local API request returns every budget tier for the selected network-distance assumption. Static map layers are requested only when the dashboard first loads (or when manually refreshed). Exact-solver ties retain the validated primary 400 m ordering where applicable, then use deterministic candidate-ID ordering; ties are never resolved at random.
 
 “Simulate failed verification” is a planning exercise only; it does not label a site as failed in real life. Each selected site shows whether an equally performing backup exists in that simulation, or the modelled-priority coverage consequence if it is excluded. Field verification remains required for land, access, water, safety, capacity, and operations. OSM parks, toilets, and shelter remain unverified context and are never treated as baseline service.
 
@@ -89,14 +93,16 @@ AWS SAM CLI and SAM Local are used only as local developer tools. No AWS cloud s
 
 Start Docker Desktop first. Then run:
 
-```powershell
+```text
 # terminal 1, repository root
 sam build
 sam local start-api --port 3000 --warm-containers EAGER
 
 # terminal 2
 cd frontend
-npm.cmd run dev
+npm run dev
 ```
+
+On Windows, `npm.cmd run dev` is an equivalent fallback when PowerShell command resolution requires it.
 
 Open the local Vite URL. The frontend calls the SAM Local `/api/optimise` endpoint; it does not call AWS cloud services.
